@@ -28,6 +28,7 @@
 		A084C7081F96825500F286C5 /* UIButton+Designable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A084C7071F96825500F286C5 /* UIButton+Designable.swift */; };
 		A0CE0BA11F69F4980076152D /* PontoMaisService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A017F3F11F69BE4F007BB2FA /* PontoMaisService.swift */; };
 		A35628DBF92E8089D261E64F /* Pods_MatchPointTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F9F6229A4F4CA55D46931EC /* Pods_MatchPointTests.framework */; };
+		A5DD41051FB283D4005DF529 /* Mappeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DD41041FB283D4005DF529 /* Mappeable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +95,7 @@
 		A05AA1CA1F980D3F009FA699 /* MatchPoint.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MatchPoint.entitlements; sourceTree = "<group>"; };
 		A05AA1CB1F980D44009FA699 /* MatchPointWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MatchPointWidget.entitlements; sourceTree = "<group>"; };
 		A084C7071F96825500F286C5 /* UIButton+Designable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Designable.swift"; sourceTree = "<group>"; };
+		A5DD41041FB283D4005DF529 /* Mappeable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mappeable.swift; sourceTree = "<group>"; };
 		B72EF7AF6E9AB9825F8121EA /* Pods-MatchPoint.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatchPoint.release.xcconfig"; path = "Pods/Target Support Files/Pods-MatchPoint/Pods-MatchPoint.release.xcconfig"; sourceTree = "<group>"; };
 		B9CE6BC5185EB04878A9DA7D /* Pods_MatchPoint.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MatchPoint.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F177379F12F8FCAC48D95B62 /* Pods-MatchPoint.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatchPoint.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MatchPoint/Pods-MatchPoint.debug.xcconfig"; sourceTree = "<group>"; };
@@ -183,6 +185,7 @@
 				A017F3E91F69BA76007BB2FA /* TimeCard.swift */,
 				A017F3EB1F69BC64007BB2FA /* Register.swift */,
 				A017F3ED1F69BD12007BB2FA /* LoginResponse.swift */,
+				A5DD41041FB283D4005DF529 /* Mappeable.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -443,7 +446,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		4FC024689855B54F95642785 /* [CP] Copy Pods Resources */ = {
@@ -504,7 +507,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		BC7DBC7706C99993706093FF /* [CP] Check Pods Manifest.lock */ = {
@@ -522,7 +525,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		F9BB59A9DDB1A6731A8F5416 /* [CP] Copy Pods Resources */ = {
@@ -554,6 +557,7 @@
 				A017F3EA1F69BA76007BB2FA /* TimeCard.swift in Sources */,
 				A017F3C51F69B528007BB2FA /* AppDelegate.swift in Sources */,
 				A05AA1C91F97F32B009FA699 /* LoggedInViewController.swift in Sources */,
+				A5DD41051FB283D4005DF529 /* Mappeable.swift in Sources */,
 				A017F3EC1F69BC64007BB2FA /* Register.swift in Sources */,
 				A084C7081F96825500F286C5 /* UIButton+Designable.swift in Sources */,
 			);

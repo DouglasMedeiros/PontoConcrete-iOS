@@ -30,7 +30,6 @@ class LoggedInViewController: UIViewController, CLLocationManagerDelegate {
         locationManager.delegate = self
         locationManager.distanceFilter = kCLLocationAccuracyNearestTenMeters;
         locationManager.desiredAccuracy = kCLLocationAccuracyBest;
-    
     }
     
     @objc func stateChanged(state: UISwitch) {

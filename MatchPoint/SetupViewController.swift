@@ -53,11 +53,10 @@ class SetupViewController: UIViewController, UITextFieldDelegate {
         loginButton.isEnabled = false
         loginButton.alpha = 0.5
         
-        
         provider.request(.login(login: self.loginTextField.text!, password: self.passwordTextField.text!)) { result in
             switch result {
             case let .success(response):
-                let login = LoginResponse(JSONString: String(data: response.data, encoding: String.Encoding.utf8) as String!)
+                let login = LoginResponse(jsonString: String(data: response.data, encoding: String.Encoding.utf8) as String!)
                 if let validLogin = login {
                     
                     guard let _ = validLogin.token, let _ = validLogin.clientId else {

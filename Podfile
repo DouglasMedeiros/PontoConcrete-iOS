@@ -5,7 +5,6 @@ use_frameworks!
 
 def sharedPods 
   pod 'Moya'
-  pod 'ObjectMapper', '~> 2.2.8'
   pod 'KeychainSwift'
 end
 
