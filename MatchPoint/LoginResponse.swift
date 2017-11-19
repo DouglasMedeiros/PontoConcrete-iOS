@@ -5,18 +5,14 @@
 //  Created by Lucas Salton Cardinali on 13/09/17.
 //  Copyright © 2017 Lucas Salton Cardinali. All rights reserved.
 //
-import ObjectMapper
+import Foundation
 
-struct LoginResponse: Mappable {
+struct LoginResponse: Codable {
     var token: String?
     var clientId: String?
-    
-    init?(map: Map) {
-        
-    }
-    
-    mutating func mapping(map: Map) {
-        token       <- map["token"]
-        clientId    <- map["client_id"]
+
+    enum CodingKeys: String, CodingKey {
+        case token = "token"
+        case clientId = "client_id"
     }
 }

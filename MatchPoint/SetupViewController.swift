@@ -9,17 +9,17 @@
 import UIKit
 import Moya
 import KeychainSwift
+import Foundation
 
 class SetupViewController: UIViewController, UITextFieldDelegate {
+
     @IBOutlet weak var statusLabel: UILabel!
     @IBOutlet weak var loginTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var loginContainer: UIView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var loginButton: UIButton!
-    
     @IBOutlet weak var incorrectLoginLabel: UILabel!
-    
     
     let provider = MoyaProvider<PontoMaisService>()
     let keychain = KeychainSwift()
@@ -57,20 +57,22 @@ class SetupViewController: UIViewController, UITextFieldDelegate {
         provider.request(.login(login: self.loginTextField.text!, password: self.passwordTextField.text!)) { result in
             switch result {
             case let .success(response):
-                let login = LoginResponse(JSONString: String(data: response.data, encoding: String.Encoding.utf8) as String!)
-                if let validLogin = login {
-                    
-                    guard let _ = validLogin.token, let _ = validLogin.clientId else {
-                        self.showLoginError()
-                        return
-                    }
 
-                    self.keychain.set(validLogin.token!, forKey: "token", withAccess: .accessibleAfterFirstUnlock)
-                    self.keychain.set(validLogin.clientId!, forKey: "clientId", withAccess: .accessibleAfterFirstUnlock)
-                    self.keychain.set(self.loginTextField.text!, forKey: "email", withAccess: .accessibleAfterFirstUnlock)
-                    
-                    self.performSegue(withIdentifier: "loggedin", sender: self)
-                    
+                do {
+                    let login = try JSONDecoder().decode(LoginResponse.self, from: response.data)
+
+                        guard let _ = login.token, let _ = login.clientId else {
+                            self.showLoginError()
+                            return
+                        }
+
+                        self.keychain.set(login.token!, forKey: "token", withAccess: .accessibleAfterFirstUnlock)
+                        self.keychain.set(login.clientId!, forKey: "clientId", withAccess: .accessibleAfterFirstUnlock)
+                        self.keychain.set(self.loginTextField.text!, forKey: "email", withAccess: .accessibleAfterFirstUnlock)
+
+                        self.performSegue(withIdentifier: "loggedin", sender: self)
+                } catch {
+                    print(error) //TODO handle decoding erros
                 }
             case .failure(_):
                 self.showLoginError()
