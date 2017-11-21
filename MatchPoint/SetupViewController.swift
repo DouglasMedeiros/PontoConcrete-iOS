@@ -20,7 +20,7 @@ class SetupViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var incorrectLoginLabel: UILabel!
-  
+
     let provider = MoyaProvider<PontoMaisService>()
     let keychain = KeychainSwift()
 
@@ -60,20 +60,20 @@ class SetupViewController: UIViewController, UITextFieldDelegate {
                 do {
                     let login = try JSONDecoder().decode(LoginResponse.self, from: response.data)
 
-                        guard let _ = login.token, let _ = login.clientId else {
+                        guard let token = login.token, let clientId = login.clientId else {
                             self.showLoginError()
                             return
                         }
 
-                        self.keychain.set(login.token!, forKey: "token", withAccess: .accessibleAfterFirstUnlock)
-                        self.keychain.set(login.clientId!, forKey: "clientId", withAccess: .accessibleAfterFirstUnlock)
+                        self.keychain.set(token, forKey: "token", withAccess: .accessibleAfterFirstUnlock)
+                        self.keychain.set(clientId, forKey: "clientId", withAccess: .accessibleAfterFirstUnlock)
                         self.keychain.set(self.loginTextField.text!, forKey: "email", withAccess: .accessibleAfterFirstUnlock)
 
                         self.performSegue(withIdentifier: "loggedin", sender: self)
                 } catch {
                     print(error) //TODO handle decoding erros
                 }
-            case .failure(_):
+            case .failure:
                 self.showLoginError()
             }
         }
