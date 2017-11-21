@@ -1,5 +1,6 @@
+[![BuddyBuild](https://dashboard.buddybuild.com/api/statusImage?appID=5a144ecae2978a000134c466&branch=master&build=latest)](https://dashboard.buddybuild.com/apps/5a144ecae2978a000134c466/build/latest?branch=master)
 <p><img align="left" width="100" height="100" src="https://github.com/lscardinali/MatchPoint-iOS/blob/master/MatchPoint/Assets.xcassets/AppIcon.appiconset/iconnnn-1.png?raw=true"></p>
-<h1>MatchPoint</h1> [![BuddyBuild](https://dashboard.buddybuild.com/api/statusImage?appID=5a144ecae2978a000134c466&branch=master&build=latest)](https://dashboard.buddybuild.com/apps/5a144ecae2978a000134c466/build/latest?branch=master)
+<h1>MatchPoint</h1> 
 <p>MatchPoint is an iOS app that improves the way you check-in at Concrete</p>
 
 <p align="center">
