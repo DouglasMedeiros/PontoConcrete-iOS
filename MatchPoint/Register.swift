@@ -12,7 +12,7 @@ struct Register: Codable {
     var path: String?
     var device: Device?
     var appVersion: String?
-
+  
     enum CodingKeys: String, CodingKey {
         case timeCard = "time_card"
         case path = "_path"

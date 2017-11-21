@@ -20,10 +20,10 @@ class SetupViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var incorrectLoginLabel: UILabel!
-    
+  
     let provider = MoyaProvider<PontoMaisService>()
     let keychain = KeychainSwift()
-    
+
     func showLoginError() {
         self.incorrectLoginLabel.alpha = 0
         UIView.animate(withDuration: 0.5, animations: {
@@ -34,26 +34,25 @@ class SetupViewController: UIViewController, UITextFieldDelegate {
             self.loginButton.alpha = 1.0
         })
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.incorrectLoginLabel.alpha = 0
         loginTextField.delegate = self
         passwordTextField.delegate = self
-    
+
         loginButton.setTitle("", for: .disabled)
     }
-    
+
     @IBAction func didTapLoginButton(_ sender: Any) {
         login()
     }
-    
+
     func login() {
         activityIndicator.startAnimating()
         loginButton.isEnabled = false
         loginButton.alpha = 0.5
-        
-        
+
         provider.request(.login(login: self.loginTextField.text!, password: self.passwordTextField.text!)) { result in
             switch result {
             case let .success(response):
@@ -79,11 +78,11 @@ class SetupViewController: UIViewController, UITextFieldDelegate {
             }
         }
     }
-    
+
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
-    
+
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         if loginTextField.text != "" && passwordTextField.text != "" {
