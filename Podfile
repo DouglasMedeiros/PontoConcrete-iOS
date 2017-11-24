@@ -18,7 +18,8 @@ target 'MatchPoint' do
 
   target 'MatchPointTests' do
       inherit! :search_paths
-      pod 'Nimble', '~> 6.0.0'
+      pod 'Nimble-Snapshots'
+      pod 'Quick'
   end
 end
 
