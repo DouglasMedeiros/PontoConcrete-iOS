@@ -1,23 +1,34 @@
-# Uncomment the next line to define a global platform for your project
 platform :ios, '10.0'
-
+inhibit_all_warnings!
 use_frameworks!
 
-def sharedPods 
+def sharedPods
+  pod 'SnapKit'
   pod 'Moya'
   pod 'KeychainSwift'
+  pod 'JVFloatLabeledTextField'
+  pod 'SwiftLint'
+  pod 'SwiftyAttributes'
+  pod 'FontAwesome.swift'
+  pod 'SwiftWatchConnectivity'
 end
 
 target 'MatchPoint' do
   sharedPods
-  pod 'SVProgressHUD'
 
   target 'MatchPointTests' do
-    inherit! :search_paths
-    # Pods for testing
+      inherit! :search_paths
+      pod 'Nimble', '~> 6.0.0'
   end
 end
 
 target 'MatchPointWidget' do
-  sharedPods
+    sharedPods
+end
+
+target 'MatchPoint WatchOS Extension' do
+    platform :watchos, '4.0'
+    pod 'Moya'
+    pod 'SwiftyAttributes'
+    pod 'SwiftWatchConnectivity'
 end

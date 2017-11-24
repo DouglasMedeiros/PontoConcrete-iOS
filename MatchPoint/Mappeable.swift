@@ -17,6 +17,12 @@ extension Mappable {
         guard let data = jsonString.data(using: .utf8) else {
             return nil
         }
-        self = try! JSONDecoder().decode(Self.self, from: data)
+        
+        do {
+            self = try JSONDecoder().decode(Self.self, from: data)
+        } catch {
+            return nil
+        }
+        
     }
 }

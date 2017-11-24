@@ -11,7 +11,7 @@ struct LoginResponse: Mappable {
     let token: String?
     let clientId: String?
     
-    private enum CodingKeys : String, CodingKey {
+    private enum CodingKeys: String, CodingKey {
         case token = "token"
         case clientId = "client_id"
     }
