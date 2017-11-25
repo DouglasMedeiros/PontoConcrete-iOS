@@ -75,6 +75,7 @@
 		3CA95B1E1FC9119D00383EA7 /* UIViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA95B1D1FC9119D00383EA7 /* UIViewSpec.swift */; };
 		3CFBA3471FC917C000D96FD4 /* DateSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFBA3461FC917C000D96FD4 /* DateSpec.swift */; };
 		3CFBA3491FC9C46600D96FD4 /* UIButtonSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFBA3481FC9C46600D96FD4 /* UIButtonSpec.swift */; };
+		3CFBA34B1FC9D95900D96FD4 /* NotificationPointFactorySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFBA34A1FC9D95900D96FD4 /* NotificationPointFactorySpec.swift */; };
 		3CFE1E1C1FC34F5A0013D72E /* ConcreteBH.gpx in Resources */ = {isa = PBXBuildFile; fileRef = A5398C1E1FB76E710064CD0D /* ConcreteBH.gpx */; };
 		3CFE1E1D1FC34F5B0013D72E /* ConcreteBH.gpx in Resources */ = {isa = PBXBuildFile; fileRef = A5398C1E1FB76E710064CD0D /* ConcreteBH.gpx */; };
 		3CFE1E1E1FC34F5B0013D72E /* ConcreteBH.gpx in Resources */ = {isa = PBXBuildFile; fileRef = A5398C1E1FB76E710064CD0D /* ConcreteBH.gpx */; };
@@ -252,6 +253,7 @@
 		3CA95B1D1FC9119D00383EA7 /* UIViewSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewSpec.swift; sourceTree = "<group>"; };
 		3CFBA3461FC917C000D96FD4 /* DateSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSpec.swift; sourceTree = "<group>"; };
 		3CFBA3481FC9C46600D96FD4 /* UIButtonSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonSpec.swift; sourceTree = "<group>"; };
+		3CFBA34A1FC9D95900D96FD4 /* NotificationPointFactorySpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationPointFactorySpec.swift; sourceTree = "<group>"; };
 		5B4F249E0CB67D9914182760 /* Pods_MatchPointWidget.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MatchPointWidget.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DCBBD3093B7E0523C04CBFA /* Pods_MatchPoint_WatchOS_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MatchPoint_WatchOS_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EB1CFB5A098234D4D2FCA06 /* Pods-MatchPoint.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatchPoint.release.xcconfig"; path = "Pods/Target Support Files/Pods-MatchPoint/Pods-MatchPoint.release.xcconfig"; sourceTree = "<group>"; };
@@ -489,6 +491,7 @@
 				3C04A2C51FC915E000811125 /* NotificationPointRJSpec.swift */,
 				3C04A2C71FC9163200811125 /* NotificationPointBHSpec.swift */,
 				3CFBA3481FC9C46600D96FD4 /* UIButtonSpec.swift */,
+				3CFBA34A1FC9D95900D96FD4 /* NotificationPointFactorySpec.swift */,
 			);
 			path = MatchPointTests;
 			sourceTree = "<group>";
@@ -1210,6 +1213,7 @@
 				3C04A2C81FC9163200811125 /* NotificationPointBHSpec.swift in Sources */,
 				3C04A2C61FC915E000811125 /* NotificationPointRJSpec.swift in Sources */,
 				3CA95B1C1FC90E8300383EA7 /* SessionDataSpec.swift in Sources */,
+				3CFBA34B1FC9D95900D96FD4 /* NotificationPointFactorySpec.swift in Sources */,
 				3CFBA3471FC917C000D96FD4 /* DateSpec.swift in Sources */,
 				3C04A2C41FC9138100811125 /* NotificationPointSPSpec.swift in Sources */,
 			);
