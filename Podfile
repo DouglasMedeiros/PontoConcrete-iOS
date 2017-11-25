@@ -18,6 +18,7 @@ target 'MatchPoint' do
 
   target 'MatchPointTests' do
       inherit! :search_paths
+      pod 'OHHTTPStubs/Swift'
       pod 'Nimble-Snapshots'
       pod 'Quick'
   end

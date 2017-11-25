@@ -1,0 +1,8 @@
+xcodeproj: MatchPoint.xcodeproj
+workspace: MatchPoint.xcworkspace
+source_directory: MatchPoint
+output_directory: html
+scheme: MatchPoint
+coverage_service: html
+ignore:
+    - Pods/*

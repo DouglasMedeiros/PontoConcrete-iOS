@@ -17,8 +17,4 @@ extension String {
     static let logout = "logout"
     static let location = "location"
     static let command = "command"
-    
-    static func abc(abc: String) -> String {
-        return "abc"
-    }
 }

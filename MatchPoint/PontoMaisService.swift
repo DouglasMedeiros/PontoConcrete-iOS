@@ -7,10 +7,11 @@
 //
 
 import Foundation
+import Moya
 
 protocol IPontoMaisService {
-    func login(email: String, password: String, callback: @escaping IPontoMaisAPI.LoginCompletion)
-    func register(credentials: SessionData, point: PointData, callback: @escaping IPontoMaisAPI.RegisterCompletion)
+    func login(email: String, password: String, callback: @escaping IPontoMaisAPI.LoginCompletion) -> Cancellable
+    func register(credentials: SessionData, point: PointData, callback: @escaping IPontoMaisAPI.RegisterCompletion) -> Cancellable
 }
 
 class PontoMaisService: NSObject {
@@ -22,11 +23,11 @@ class PontoMaisService: NSObject {
 }
 
 extension PontoMaisService: IPontoMaisService {
-    func register(credentials: SessionData, point: PointData, callback: @escaping IPontoMaisAPI.RegisterCompletion) {
-        self.api.register(credentials: credentials, point: point, callback: callback)
+    func register(credentials: SessionData, point: PointData, callback: @escaping IPontoMaisAPI.RegisterCompletion) -> Cancellable {
+        return self.api.register(credentials: credentials, point: point, callback: callback)
     }
     
-    func login(email: String, password: String, callback: @escaping IPontoMaisAPI.LoginCompletion) {
-        self.api.login(email: email, password: password, callback: callback)
+    func login(email: String, password: String, callback: @escaping IPontoMaisAPI.LoginCompletion) -> Cancellable {
+        return self.api.login(email: email, password: password, callback: callback)
     }
 }
