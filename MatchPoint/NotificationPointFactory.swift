@@ -15,9 +15,9 @@ enum NotificationPointFactory {
         case .saoPaulo:
             return NotificationPointSP(content: NotificationDefaultContent())
         case .rioDeJaneiro:
-            return NotificationPointSP(content: NotificationDefaultContent())
+            return NotificationPointRJ(content: NotificationDefaultContent())
         case .minasGerais:
-            return NotificationPointSP(content: NotificationDefaultContent())
+            return NotificationPointBH(content: NotificationDefaultContent())
         }
 
     }

@@ -27,6 +27,12 @@
 		3C1F8A421FC355CC001B9873 /* SessionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50EA7181FB8ECC700F21A88 /* SessionData.swift */; };
 		3C25FAD51FBD392D007A8EC8 /* TodayReadyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C25FAD41FBD392D007A8EC8 /* TodayReadyView.swift */; };
 		3C25FAD71FBD3A48007A8EC8 /* TodayErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C25FAD61FBD3A48007A8EC8 /* TodayErrorView.swift */; };
+		3C268C711FCA07B1000D47C4 /* HomeViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C268C701FCA07B1000D47C4 /* HomeViewSpec.swift */; };
+		3C268C731FCA0B42000D47C4 /* LoginViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C268C721FCA0B42000D47C4 /* LoginViewSpec.swift */; };
+		3C268C751FCA0CE7000D47C4 /* ColorsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C268C741FCA0CE7000D47C4 /* ColorsSpec.swift */; };
+		3C268C771FCA0F8F000D47C4 /* FontsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C268C761FCA0F8F000D47C4 /* FontsSpec.swift */; };
+		3C268C791FCA1190000D47C4 /* CLPlacemarkSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C268C781FCA1190000D47C4 /* CLPlacemarkSpec.swift */; };
+		3C268C7B1FCA208F000D47C4 /* MappeableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C268C7A1FCA208F000D47C4 /* MappeableSpec.swift */; };
 		3C47A3C31FC1F79000EA7EF3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A017F3CB1F69B528007BB2FA /* Assets.xcassets */; };
 		3C47A3C51FC1F7AE00EA7EF3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A017F3CB1F69B528007BB2FA /* Assets.xcassets */; };
 		3C47A3C71FC21A4500EA7EF3 /* TodaySuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C47A3C61FC21A4500EA7EF3 /* TodaySuccessView.swift */; };
@@ -46,8 +52,17 @@
 		3C47A4151FC3427400EA7EF3 /* GeocoderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C47A4121FC33ED300EA7EF3 /* GeocoderManager.swift */; };
 		3C47A4161FC3427700EA7EF3 /* GeocoderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C47A4121FC33ED300EA7EF3 /* GeocoderManager.swift */; };
 		3C47A4171FC3439900EA7EF3 /* CLPlacemark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C9E04D61FC1071500DC0986 /* CLPlacemark.swift */; };
+		3C5300091FCA2D770056553E /* AppCoordinatorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5300081FCA2D770056553E /* AppCoordinatorSpec.swift */; };
+		3C53000B1FCA3EE80056553E /* PontoMaisServiceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C53000A1FCA3EE80056553E /* PontoMaisServiceSpec.swift */; };
+		3C53000D1FCA472E0056553E /* HomeViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C53000C1FCA472E0056553E /* HomeViewControllerSpec.swift */; };
+		3C5300151FCAEE700056553E /* LabelAttributedSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5300141FCAEE700056553E /* LabelAttributedSpec.swift */; };
+		3C5300171FCAF57C0056553E /* LoginViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5300161FCAF57C0056553E /* LoginViewControllerSpec.swift */; };
+		3C5300191FCB09ED0056553E /* UIAlertAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5300181FCB09ED0056553E /* UIAlertAction.swift */; };
 		3C74848A1FC380560007E7F0 /* LabelAttributed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7484891FC380560007E7F0 /* LabelAttributed.swift */; };
 		3C74848B1FC3814D0007E7F0 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0A34CF1FBD1B2E00567391 /* Date.swift */; };
+		3C770BB61FCB229A0041B231 /* UIAlertActionSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C770BB51FCB229A0041B231 /* UIAlertActionSpec.swift */; };
+		3C770BB81FCB23D30041B231 /* CurrentUserSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C770BB71FCB23D30041B231 /* CurrentUserSpec.swift */; };
+		3C770BBA1FCB64A80041B231 /* GeocoderManagerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C770BB91FCB64A80041B231 /* GeocoderManagerSpec.swift */; };
 		3C9E04BA1FC08DD600DC0986 /* TodayLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C9E04B91FC08DD600DC0986 /* TodayLoadingView.swift */; };
 		3C9E04BB1FC09EEE00DC0986 /* RegisterResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A017F3EB1F69BC64007BB2FA /* RegisterResponse.swift */; };
 		3C9E04BC1FC09EF500DC0986 /* TimeCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A017F3E91F69BA76007BB2FA /* TimeCard.swift */; };
@@ -127,7 +142,6 @@
 		A5398C471FB79FE20064CD0D /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5398C461FB79FE20064CD0D /* LogoView.swift */; };
 		A5398C4A1FB7A06C0064CD0D /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5398C491FB7A06C0064CD0D /* Colors.swift */; };
 		A5398C531FB7AC8E0064CD0D /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5398C521FB7AC8E0064CD0D /* HomeView.swift */; };
-		A5398C5A1FB7BE460064CD0D /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5398C591FB7BE460064CD0D /* Coordinator.swift */; };
 		A5398C5C1FB7BE5D0064CD0D /* RootViewControllerProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5398C5B1FB7BE5D0064CD0D /* RootViewControllerProvider.swift */; };
 		A5398C621FB7D8590064CD0D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5398C611FB7D8590064CD0D /* LoginView.swift */; };
 		A5398C681FB7E8920064CD0D /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5398C671FB7E8920064CD0D /* Fonts.swift */; };
@@ -223,6 +237,12 @@
 		3C13F7301FC66123003E50ED /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		3C25FAD41FBD392D007A8EC8 /* TodayReadyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayReadyView.swift; sourceTree = "<group>"; };
 		3C25FAD61FBD3A48007A8EC8 /* TodayErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayErrorView.swift; sourceTree = "<group>"; };
+		3C268C701FCA07B1000D47C4 /* HomeViewSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewSpec.swift; sourceTree = "<group>"; };
+		3C268C721FCA0B42000D47C4 /* LoginViewSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewSpec.swift; sourceTree = "<group>"; };
+		3C268C741FCA0CE7000D47C4 /* ColorsSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsSpec.swift; sourceTree = "<group>"; };
+		3C268C761FCA0F8F000D47C4 /* FontsSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontsSpec.swift; sourceTree = "<group>"; };
+		3C268C781FCA1190000D47C4 /* CLPlacemarkSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLPlacemarkSpec.swift; sourceTree = "<group>"; };
+		3C268C7A1FCA208F000D47C4 /* MappeableSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MappeableSpec.swift; sourceTree = "<group>"; };
 		3C47A3C61FC21A4500EA7EF3 /* TodaySuccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodaySuccessView.swift; sourceTree = "<group>"; };
 		3C47A3CA1FC220FF00EA7EF3 /* MatchPoint WatchOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MatchPoint WatchOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C47A3CD1FC220FF00EA7EF3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
@@ -237,8 +257,17 @@
 		3C47A3F21FC2263800EA7EF3 /* HomeInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInterfaceController.swift; sourceTree = "<group>"; };
 		3C47A4101FC336BA00EA7EF3 /* UserNotificationCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNotificationCenter.swift; sourceTree = "<group>"; };
 		3C47A4121FC33ED300EA7EF3 /* GeocoderManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeocoderManager.swift; sourceTree = "<group>"; };
+		3C5300081FCA2D770056553E /* AppCoordinatorSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinatorSpec.swift; sourceTree = "<group>"; };
+		3C53000A1FCA3EE80056553E /* PontoMaisServiceSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PontoMaisServiceSpec.swift; sourceTree = "<group>"; };
+		3C53000C1FCA472E0056553E /* HomeViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerSpec.swift; sourceTree = "<group>"; };
+		3C5300141FCAEE700056553E /* LabelAttributedSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelAttributedSpec.swift; sourceTree = "<group>"; };
+		3C5300161FCAF57C0056553E /* LoginViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerSpec.swift; sourceTree = "<group>"; };
+		3C5300181FCB09ED0056553E /* UIAlertAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertAction.swift; sourceTree = "<group>"; };
 		3C7484891FC380560007E7F0 /* LabelAttributed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelAttributed.swift; sourceTree = "<group>"; };
 		3C74848C1FC38E690007E7F0 /* MatchPoint WatchOS Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "MatchPoint WatchOS Extension.entitlements"; sourceTree = "<group>"; };
+		3C770BB51FCB229A0041B231 /* UIAlertActionSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertActionSpec.swift; sourceTree = "<group>"; };
+		3C770BB71FCB23D30041B231 /* CurrentUserSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUserSpec.swift; sourceTree = "<group>"; };
+		3C770BB91FCB64A80041B231 /* GeocoderManagerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeocoderManagerSpec.swift; sourceTree = "<group>"; };
 		3C9E04B91FC08DD600DC0986 /* TodayLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayLoadingView.swift; sourceTree = "<group>"; };
 		3C9E04BE1FC0BDDA00DC0986 /* login.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = login.json; sourceTree = "<group>"; };
 		3C9E04C01FC0BFEB00DC0986 /* loginError.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = loginError.json; sourceTree = "<group>"; };
@@ -298,7 +327,6 @@
 		A5398C461FB79FE20064CD0D /* LogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoView.swift; sourceTree = "<group>"; };
 		A5398C491FB7A06C0064CD0D /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		A5398C521FB7AC8E0064CD0D /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		A5398C591FB7BE460064CD0D /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		A5398C5B1FB7BE5D0064CD0D /* RootViewControllerProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewControllerProvider.swift; sourceTree = "<group>"; };
 		A5398C611FB7D8590064CD0D /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		A5398C671FB7E8920064CD0D /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
@@ -487,11 +515,25 @@
 				3CA95B1D1FC9119D00383EA7 /* UIViewSpec.swift */,
 				3CFBA3461FC917C000D96FD4 /* DateSpec.swift */,
 				3CA95B1B1FC90E8300383EA7 /* SessionDataSpec.swift */,
+				3C268C701FCA07B1000D47C4 /* HomeViewSpec.swift */,
+				3C268C761FCA0F8F000D47C4 /* FontsSpec.swift */,
+				3C268C741FCA0CE7000D47C4 /* ColorsSpec.swift */,
 				3C04A2C31FC9138100811125 /* NotificationPointSPSpec.swift */,
 				3C04A2C51FC915E000811125 /* NotificationPointRJSpec.swift */,
+				3C268C721FCA0B42000D47C4 /* LoginViewSpec.swift */,
 				3C04A2C71FC9163200811125 /* NotificationPointBHSpec.swift */,
+				3C770BB71FCB23D30041B231 /* CurrentUserSpec.swift */,
 				3CFBA3481FC9C46600D96FD4 /* UIButtonSpec.swift */,
 				3CFBA34A1FC9D95900D96FD4 /* NotificationPointFactorySpec.swift */,
+				3C268C781FCA1190000D47C4 /* CLPlacemarkSpec.swift */,
+				3C268C7A1FCA208F000D47C4 /* MappeableSpec.swift */,
+				3C5300081FCA2D770056553E /* AppCoordinatorSpec.swift */,
+				3C53000A1FCA3EE80056553E /* PontoMaisServiceSpec.swift */,
+				3C5300141FCAEE700056553E /* LabelAttributedSpec.swift */,
+				3C53000C1FCA472E0056553E /* HomeViewControllerSpec.swift */,
+				3C5300161FCAF57C0056553E /* LoginViewControllerSpec.swift */,
+				3C770BB51FCB229A0041B231 /* UIAlertActionSpec.swift */,
+				3C770BB91FCB64A80041B231 /* GeocoderManagerSpec.swift */,
 			);
 			path = MatchPointTests;
 			sourceTree = "<group>";
@@ -571,7 +613,6 @@
 			isa = PBXGroup;
 			children = (
 				A5398C371FB77D560064CD0D /* AppCoordinator.swift */,
-				A5398C591FB7BE460064CD0D /* Coordinator.swift */,
 				A5398C5B1FB7BE5D0064CD0D /* RootViewControllerProvider.swift */,
 			);
 			name = Coordinator;
@@ -636,6 +677,7 @@
 				3C0A34CF1FBD1B2E00567391 /* Date.swift */,
 				3C13F7301FC66123003E50ED /* String.swift */,
 				3C9E04D61FC1071500DC0986 /* CLPlacemark.swift */,
+				3C5300181FCB09ED0056553E /* UIAlertAction.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -1173,7 +1215,6 @@
 				A5398C3B1FB78B930064CD0D /* LoginViewController.swift in Sources */,
 				A5398C681FB7E8920064CD0D /* Fonts.swift in Sources */,
 				A5398C6B1FB80A860064CD0D /* UIView.swift in Sources */,
-				A5398C5A1FB7BE460064CD0D /* Coordinator.swift in Sources */,
 				A017F3F21F69BE4F007BB2FA /* PontoMaisRoute.swift in Sources */,
 				3C0A34D01FBD1B2E00567391 /* Date.swift in Sources */,
 				3C0A34BC1FBCFD8400567391 /* CurrentUser.swift in Sources */,
@@ -1189,6 +1230,7 @@
 				A5398C2A1FB776DC0064CD0D /* NotificationPointRJ.swift in Sources */,
 				A5398C451FB79AD40064CD0D /* ViewConfiguration.swift in Sources */,
 				A5398C2E1FB7770C0064CD0D /* Point.swift in Sources */,
+				3C5300191FCB09ED0056553E /* UIAlertAction.swift in Sources */,
 				A50EA7191FB8ECC700F21A88 /* SessionData.swift in Sources */,
 				A5398C321FB777280064CD0D /* NotificationPointFactory.swift in Sources */,
 				3C47A4131FC33ED300EA7EF3 /* GeocoderManager.swift in Sources */,
@@ -1207,12 +1249,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C268C751FCA0CE7000D47C4 /* ColorsSpec.swift in Sources */,
 				3CA95B1E1FC9119D00383EA7 /* UIViewSpec.swift in Sources */,
+				3C268C791FCA1190000D47C4 /* CLPlacemarkSpec.swift in Sources */,
+				3C5300091FCA2D770056553E /* AppCoordinatorSpec.swift in Sources */,
 				3CA95B1A1FC8803900383EA7 /* PontoMaisAPISpec.swift in Sources */,
 				3CFBA3491FC9C46600D96FD4 /* UIButtonSpec.swift in Sources */,
+				3C53000D1FCA472E0056553E /* HomeViewControllerSpec.swift in Sources */,
 				3C04A2C81FC9163200811125 /* NotificationPointBHSpec.swift in Sources */,
+				3C53000B1FCA3EE80056553E /* PontoMaisServiceSpec.swift in Sources */,
+				3C770BBA1FCB64A80041B231 /* GeocoderManagerSpec.swift in Sources */,
 				3C04A2C61FC915E000811125 /* NotificationPointRJSpec.swift in Sources */,
+				3C5300151FCAEE700056553E /* LabelAttributedSpec.swift in Sources */,
+				3C268C771FCA0F8F000D47C4 /* FontsSpec.swift in Sources */,
+				3C268C7B1FCA208F000D47C4 /* MappeableSpec.swift in Sources */,
+				3C268C731FCA0B42000D47C4 /* LoginViewSpec.swift in Sources */,
 				3CA95B1C1FC90E8300383EA7 /* SessionDataSpec.swift in Sources */,
+				3C268C711FCA07B1000D47C4 /* HomeViewSpec.swift in Sources */,
+				3C770BB61FCB229A0041B231 /* UIAlertActionSpec.swift in Sources */,
+				3C770BB81FCB23D30041B231 /* CurrentUserSpec.swift in Sources */,
+				3C5300171FCAF57C0056553E /* LoginViewControllerSpec.swift in Sources */,
 				3CFBA34B1FC9D95900D96FD4 /* NotificationPointFactorySpec.swift in Sources */,
 				3CFBA3471FC917C000D96FD4 /* DateSpec.swift in Sources */,
 				3C04A2C41FC9138100811125 /* NotificationPointSPSpec.swift in Sources */,

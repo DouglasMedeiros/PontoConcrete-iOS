@@ -30,10 +30,6 @@ extension UIColor {
         return UIColor(red: 0.32, green: 0.48, blue: 0.93, alpha: 1.0)
     }
     
-    static var defaultColor: UIColor {
-        return UIColor(red: 0.00, green: 0.16, blue: 0.55, alpha: 1.0)
-    }
-    
     static var error: UIColor {
         return UIColor(red: 0.65, green: 0.00, blue: 0.00, alpha: 1.0)
     }

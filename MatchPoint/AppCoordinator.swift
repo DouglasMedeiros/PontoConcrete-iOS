@@ -9,7 +9,7 @@ import UIKit
 
 class AppCoordinator: RootViewCoordinator {
     
-    var childCoordinators: [Coordinator] = []
+    var currentUser: CurrentUserProtocol
     
     var rootViewController: UIViewController {
         return self.navigationController
@@ -17,7 +17,7 @@ class AppCoordinator: RootViewCoordinator {
     
     let window: UIWindow
     
-    private lazy var navigationController: UINavigationController = {
+    private(set) lazy var navigationController: UINavigationController = {
         let navigationController = UINavigationController()
         navigationController.isNavigationBarHidden = true
         return navigationController
@@ -26,12 +26,13 @@ class AppCoordinator: RootViewCoordinator {
     public init(window: UIWindow) {
         self.window = window
         
+        self.currentUser = CurrentUser.shared
         self.window.rootViewController = self.rootViewController
         self.window.makeKeyAndVisible()
     }
     
     public func start() {
-        if CurrentUser.shared.isLoggedIn() {
+        if self.currentUser.isLoggedIn() {
             self.showHomeViewController()
         } else {
             self.showLoginViewController()

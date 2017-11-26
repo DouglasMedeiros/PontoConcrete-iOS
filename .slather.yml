@@ -6,3 +6,4 @@ scheme: MatchPoint
 coverage_service: html
 ignore:
     - Pods/*
+    - MatchPoint/SkyFloatingLabelTextField/*

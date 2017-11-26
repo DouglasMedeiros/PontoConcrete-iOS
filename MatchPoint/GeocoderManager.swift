@@ -11,7 +11,9 @@ import CoreLocation
 
 class GeocoderManager {
     
-    lazy var geocoder = CLGeocoder()
+    var geocoder = CLGeocoder()
+    
+    private(set) var lastPoint: PointData?
     
     func reverse(location: CLLocation, completeHandler: @escaping (PointData?, Error?) -> Void) {
         self.geocoder.reverseGeocodeLocation(location) { (placemarks, error) in
@@ -21,13 +23,10 @@ class GeocoderManager {
                 completeHandler(nil, error)
             } else {
                 if let placemarks = placemarks, let placemark = placemarks.first {
-                    guard let address = placemark.compactAddress else {
-                        return
-                    }
                     
-                    let pointData = PointData(location: location, address: address)
+                    self.lastPoint = PointData(location: location, address: placemark.compactAddress)
                     
-                    completeHandler(pointData, nil)
+                    completeHandler(self.lastPoint, nil)
                 } else {
                     let error = NSError(domain: "", code: 9912, userInfo: nil)
                     completeHandler(nil, error)

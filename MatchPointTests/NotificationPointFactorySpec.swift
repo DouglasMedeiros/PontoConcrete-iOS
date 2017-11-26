@@ -36,7 +36,7 @@ class NotificationPointFactorySpec: QuickSpec {
                 
                 it("mg") {
                     sut = NotificationPointFactory.notification(for: Point.minasGerais)
-                    expect(sut.name).to(equal("ConcreteMG"))
+                    expect(sut.name).to(equal("ConcreteBH"))
                 }
             }
         }

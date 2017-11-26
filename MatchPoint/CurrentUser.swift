@@ -9,9 +9,14 @@
 import KeychainSwift
 import CoreLocation
 
-struct CurrentUser {
+protocol CurrentUserProtocol: class {
+    func isLoggedIn() -> Bool
+    func user() -> SessionData?
+}
+
+class CurrentUser: CurrentUserProtocol {
     
-    let keychain: KeychainSwift
+    var keychain: KeychainSwift
     
     static let shared = CurrentUser()
     
@@ -49,6 +54,7 @@ struct CurrentUser {
         return notification
     }
     
+    @discardableResult
     func new(user: SessionData) -> Bool {
         return self.keychain.set(user.token, forKey: .token, withAccess: .accessibleAfterFirstUnlock) && self.keychain.set(user.clientId, forKey: .clientId, withAccess: .accessibleAfterFirstUnlock) && self.keychain.set(user.email, forKey: .email, withAccess: .accessibleAfterFirstUnlock)
     }

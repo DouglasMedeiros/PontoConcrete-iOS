@@ -25,10 +25,16 @@ class HomeViewController: UIViewController {
     let containerView = HomeView()
     let location: LocationManager
     let userNotificationCenter: UserNotificationCenter
+    let currentUser: CurrentUser
+    let watchConnectivity: SwiftWatchConnectivity
     
-    init(location: LocationManager = LocationManager(), userNotificationCenter: UserNotificationCenter = UserNotificationCenter()) {
+    var uiAlertAction = UIAlertAction.self
+    
+    init(location: LocationManager = LocationManager(), userNotificationCenter: UserNotificationCenter = UserNotificationCenter(), currentUser: CurrentUser = CurrentUser.shared, watchConnectivity: SwiftWatchConnectivity = SwiftWatchConnectivity.shared) {
         self.location = location
         self.userNotificationCenter = userNotificationCenter
+        self.currentUser = currentUser
+        self.watchConnectivity = watchConnectivity
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -56,11 +62,10 @@ extension HomeViewController {
         
         location.authorizationStatusCallback = { authorizationStatus in
             if authorizationStatus == .denied {
-                let alert = UIAlertController(title: "Localização",
-                                              message: "O acesso à localização foi negado, ative-a nas Configurações",
-                                              preferredStyle: UIAlertControllerStyle.alert)
-                alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
                 
+                let alert = UIAlertController(title: "Localização", message: "O acesso à localização foi negado, ative-a nas Configurações", preferredStyle: .alert)
+                let actionOk = self.uiAlertAction.createUIAlertAction(title: "Ok", style: .default, handler: nil)
+                alert.addAction(actionOk)
                 self.present(alert, animated: true, completion: nil)
             } else if CLLocationManager.authorizationStatus() == .notDetermined {
                 self.location.locationManager.requestWhenInUseAuthorization()
@@ -83,41 +88,35 @@ extension HomeViewController {
     }
     
     @objc
-    func stateChanged(state: UISwitch) {        
+    fileprivate func stateChanged(state: UISwitch) {        
         if state.isOn {
             self.requestLocationManager()
         } else {
             self.userNotificationCenter.removeAll()
         }
-        CurrentUser.shared.saveConfigNotification(isEnabled: state.isOn)
+        self.currentUser.saveConfigNotification(isEnabled: state.isOn)
     }
     
     @objc
     func didTapLogoutButton() {
-        let alert = UIAlertController(title: "Sair",
-                                      message: "Tem certeza que deseja sair?",
-                                      preferredStyle: UIAlertControllerStyle.alert)
-        
-        let actionYes = UIAlertAction(title: "Sim",
-                                      style: UIAlertActionStyle.destructive,
-                                      handler: { _ in
-                        
+        let alert = UIAlertController(title: "Sair", message: "Tem certeza que deseja sair?", preferredStyle: .alert)
+        let actionOK = self.uiAlertAction.createUIAlertAction(title: "Sim", style: .destructive, handler: {(actionSheet: UIAlertAction) in
+            
             let data: [String: AnyObject] = [
                 "command": "logout" as AnyObject
             ]
-                                        
-            SwiftWatchConnectivity.shared.sendMesssage(message: data)
             
-            CurrentUser.shared.remove()
+            self.watchConnectivity.sendMesssage(message: data)
+            
+            self.currentUser.remove()
             
             self.delegate?.homeViewControllerDidLogout(viewController: self)
+        })
+        alert.addAction(actionOK)
+        let actionCancel = self.uiAlertAction.createUIAlertAction(title: "Não", style: .default, handler: {(actionSheet: UIAlertAction) in
             
         })
-        alert.addAction(actionYes)
-        
-        let actionNot = UIAlertAction(title: "Não", style: .cancel, handler: nil)
-        alert.addAction(actionNot)
-        
+        alert.addAction(actionCancel)
         self.present(alert, animated: true, completion: nil)
     }
 }

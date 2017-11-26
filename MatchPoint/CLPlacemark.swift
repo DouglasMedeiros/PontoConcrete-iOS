@@ -10,29 +10,34 @@ import CoreLocation
 
 extension CLPlacemark {
     
-    var compactAddress: String? {
+    var compactAddress: String {
+        
+        var result = ""
+        
         if let name = name {
-            var result = name
-            
-            if let subLocality = subLocality {
-                result += " - \(subLocality)"
-            }
-            
-            if let city = locality {
-                result += ", \(city)"
-            }
-            
-            if let administrativeArea = administrativeArea {
-                result += " - \(administrativeArea)"
-            }
-            
-            if let country = country {
-                result += ", \(country)"
-            }
-            
-            return result
+            result += name
         }
         
-        return nil
+        if let thoroughfare = thoroughfare {
+            result += thoroughfare
+        }
+        
+        if let subLocality = subLocality {
+            result += " - \(subLocality)"
+        }
+        
+        if let city = locality {
+            result += ", \(city)"
+        }
+        
+        if let administrativeArea = administrativeArea {
+            result += " - \(administrativeArea)"
+        }
+        
+        if let country = country {
+            result += ", \(country)"
+        }
+        
+        return result
     }
 }

@@ -12,4 +12,4 @@ public protocol RootViewControllerProvider: class {
     var rootViewController: UIViewController { get }
 }
 
-public typealias RootViewCoordinator = Coordinator & RootViewControllerProvider
+public typealias RootViewCoordinator = RootViewControllerProvider

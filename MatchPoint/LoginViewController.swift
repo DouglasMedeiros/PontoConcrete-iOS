@@ -49,10 +49,6 @@ class LoginViewController: UIViewController {
 
 extension LoginViewController: UITextFieldDelegate {
     
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        
-    }
-    
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         if let text = textField.text {
             if let floatingLabelTextField = textField as? SkyFloatingLabelTextField, floatingLabelTextField.tag == 99 {
@@ -98,9 +94,6 @@ extension LoginViewController {
         self.login()
     }
     
-    private func showLoginError() {
-        containerView.updateUI(state: .error("Dados Incorretos"))
-    }
     
     private func login() {
         containerView.updateUI(state: .loading)
@@ -116,7 +109,7 @@ extension LoginViewController {
                 if let validLogin = loginResponse {
                     
                     guard let token = validLogin.token, let clientId = validLogin.clientId else {
-                        self.showLoginError()
+                        self.containerView.updateUI(state: .error("Dados Incorretos"))
                         return
                     }
                     
