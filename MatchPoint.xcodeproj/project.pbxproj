@@ -63,18 +63,15 @@
 		3C770BB61FCB229A0041B231 /* UIAlertActionSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C770BB51FCB229A0041B231 /* UIAlertActionSpec.swift */; };
 		3C770BB81FCB23D30041B231 /* CurrentUserSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C770BB71FCB23D30041B231 /* CurrentUserSpec.swift */; };
 		3C770BBA1FCB64A80041B231 /* GeocoderManagerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C770BB91FCB64A80041B231 /* GeocoderManagerSpec.swift */; };
+		3C770BBF1FCB95520041B231 /* LabelAttributed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C9E04D31FC0FC0F00DC0986 /* LabelAttributed.swift */; };
 		3C9E04BA1FC08DD600DC0986 /* TodayLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C9E04B91FC08DD600DC0986 /* TodayLoadingView.swift */; };
 		3C9E04BB1FC09EEE00DC0986 /* RegisterResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A017F3EB1F69BC64007BB2FA /* RegisterResponse.swift */; };
 		3C9E04BC1FC09EF500DC0986 /* TimeCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A017F3E91F69BA76007BB2FA /* TimeCard.swift */; };
 		3C9E04BD1FC09EF800DC0986 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = A017F3E71F69B919007BB2FA /* Device.swift */; };
-		3C9E04BF1FC0BDDA00DC0986 /* login.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C9E04BE1FC0BDDA00DC0986 /* login.json */; };
-		3C9E04C11FC0BFEB00DC0986 /* loginError.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C9E04C01FC0BFEB00DC0986 /* loginError.json */; };
-		3C9E04C31FC0C0A000DC0986 /* register.json in Resources */ = {isa = PBXBuildFile; fileRef = 3C9E04C21FC0C0A000DC0986 /* register.json */; };
 		3C9E04CA1FC0CF1F00DC0986 /* SkyFloatingLabelTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C9E04C71FC0CF1E00DC0986 /* SkyFloatingLabelTextField.swift */; };
 		3C9E04CB1FC0CF1F00DC0986 /* UITextField+fixCaretPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C9E04C81FC0CF1E00DC0986 /* UITextField+fixCaretPosition.swift */; };
 		3C9E04CC1FC0CF1F00DC0986 /* SkyFloatingLabelTextFieldWithIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C9E04C91FC0CF1E00DC0986 /* SkyFloatingLabelTextFieldWithIcon.swift */; };
 		3C9E04D41FC0FC0F00DC0986 /* LabelAttributed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C9E04D31FC0FC0F00DC0986 /* LabelAttributed.swift */; };
-		3C9E04D51FC0FC1300DC0986 /* LabelAttributed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C9E04D31FC0FC0F00DC0986 /* LabelAttributed.swift */; };
 		3C9E04D71FC1071500DC0986 /* CLPlacemark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C9E04D61FC1071500DC0986 /* CLPlacemark.swift */; };
 		3C9E04D81FC1071500DC0986 /* CLPlacemark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C9E04D61FC1071500DC0986 /* CLPlacemark.swift */; };
 		3CA108771FC3A08900B8CA4F /* PontoMaisService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0A34C71FBD15DE00567391 /* PontoMaisService.swift */; };
@@ -268,10 +265,8 @@
 		3C770BB51FCB229A0041B231 /* UIAlertActionSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertActionSpec.swift; sourceTree = "<group>"; };
 		3C770BB71FCB23D30041B231 /* CurrentUserSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUserSpec.swift; sourceTree = "<group>"; };
 		3C770BB91FCB64A80041B231 /* GeocoderManagerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeocoderManagerSpec.swift; sourceTree = "<group>"; };
+		3C770BE51FCB98FD0041B231 /* MatchPointTests copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "MatchPointTests copy-Info.plist"; path = "/Users/douglasmedeiros/Development/MatchPoint-iOS/MatchPointTests copy-Info.plist"; sourceTree = "<absolute>"; };
 		3C9E04B91FC08DD600DC0986 /* TodayLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayLoadingView.swift; sourceTree = "<group>"; };
-		3C9E04BE1FC0BDDA00DC0986 /* login.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = login.json; sourceTree = "<group>"; };
-		3C9E04C01FC0BFEB00DC0986 /* loginError.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = loginError.json; sourceTree = "<group>"; };
-		3C9E04C21FC0C0A000DC0986 /* register.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = register.json; sourceTree = "<group>"; };
 		3C9E04C71FC0CF1E00DC0986 /* SkyFloatingLabelTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkyFloatingLabelTextField.swift; sourceTree = "<group>"; };
 		3C9E04C81FC0CF1E00DC0986 /* UITextField+fixCaretPosition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+fixCaretPosition.swift"; sourceTree = "<group>"; };
 		3C9E04C91FC0CF1E00DC0986 /* SkyFloatingLabelTextFieldWithIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkyFloatingLabelTextFieldWithIcon.swift; sourceTree = "<group>"; };
@@ -438,6 +433,36 @@
 			path = "MatchPoint WatchOS Extension";
 			sourceTree = "<group>";
 		};
+		3C770BBB1FCB8A6F0041B231 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3CA95B191FC8803900383EA7 /* PontoMaisAPISpec.swift */,
+				3CA95B1D1FC9119D00383EA7 /* UIViewSpec.swift */,
+				3CFBA3461FC917C000D96FD4 /* DateSpec.swift */,
+				3CA95B1B1FC90E8300383EA7 /* SessionDataSpec.swift */,
+				3C268C701FCA07B1000D47C4 /* HomeViewSpec.swift */,
+				3C268C761FCA0F8F000D47C4 /* FontsSpec.swift */,
+				3C268C741FCA0CE7000D47C4 /* ColorsSpec.swift */,
+				3C04A2C31FC9138100811125 /* NotificationPointSPSpec.swift */,
+				3C04A2C51FC915E000811125 /* NotificationPointRJSpec.swift */,
+				3C268C721FCA0B42000D47C4 /* LoginViewSpec.swift */,
+				3C04A2C71FC9163200811125 /* NotificationPointBHSpec.swift */,
+				3C770BB71FCB23D30041B231 /* CurrentUserSpec.swift */,
+				3CFBA3481FC9C46600D96FD4 /* UIButtonSpec.swift */,
+				3CFBA34A1FC9D95900D96FD4 /* NotificationPointFactorySpec.swift */,
+				3C268C781FCA1190000D47C4 /* CLPlacemarkSpec.swift */,
+				3C268C7A1FCA208F000D47C4 /* MappeableSpec.swift */,
+				3C5300081FCA2D770056553E /* AppCoordinatorSpec.swift */,
+				3C53000A1FCA3EE80056553E /* PontoMaisServiceSpec.swift */,
+				3C5300141FCAEE700056553E /* LabelAttributedSpec.swift */,
+				3C53000C1FCA472E0056553E /* HomeViewControllerSpec.swift */,
+				3C5300161FCAF57C0056553E /* LoginViewControllerSpec.swift */,
+				3C770BB51FCB229A0041B231 /* UIAlertActionSpec.swift */,
+				3C770BB91FCB64A80041B231 /* GeocoderManagerSpec.swift */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
 		3C9E04C51FC0CF1200DC0986 /* External */ = {
 			isa = PBXGroup;
 			children = (
@@ -467,6 +492,7 @@
 				A017F3F81F69C7F1007BB2FA /* Frameworks */,
 				A017F3C21F69B528007BB2FA /* Products */,
 				2C2E6477E3EDBD8920578805 /* Pods */,
+				3C770BE51FCB98FD0041B231 /* MatchPointTests copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -508,32 +534,7 @@
 			isa = PBXGroup;
 			children = (
 				A017F3DB1F69B528007BB2FA /* Info.plist */,
-				3C9E04BE1FC0BDDA00DC0986 /* login.json */,
-				3C9E04C01FC0BFEB00DC0986 /* loginError.json */,
-				3C9E04C21FC0C0A000DC0986 /* register.json */,
-				3CA95B191FC8803900383EA7 /* PontoMaisAPISpec.swift */,
-				3CA95B1D1FC9119D00383EA7 /* UIViewSpec.swift */,
-				3CFBA3461FC917C000D96FD4 /* DateSpec.swift */,
-				3CA95B1B1FC90E8300383EA7 /* SessionDataSpec.swift */,
-				3C268C701FCA07B1000D47C4 /* HomeViewSpec.swift */,
-				3C268C761FCA0F8F000D47C4 /* FontsSpec.swift */,
-				3C268C741FCA0CE7000D47C4 /* ColorsSpec.swift */,
-				3C04A2C31FC9138100811125 /* NotificationPointSPSpec.swift */,
-				3C04A2C51FC915E000811125 /* NotificationPointRJSpec.swift */,
-				3C268C721FCA0B42000D47C4 /* LoginViewSpec.swift */,
-				3C04A2C71FC9163200811125 /* NotificationPointBHSpec.swift */,
-				3C770BB71FCB23D30041B231 /* CurrentUserSpec.swift */,
-				3CFBA3481FC9C46600D96FD4 /* UIButtonSpec.swift */,
-				3CFBA34A1FC9D95900D96FD4 /* NotificationPointFactorySpec.swift */,
-				3C268C781FCA1190000D47C4 /* CLPlacemarkSpec.swift */,
-				3C268C7A1FCA208F000D47C4 /* MappeableSpec.swift */,
-				3C5300081FCA2D770056553E /* AppCoordinatorSpec.swift */,
-				3C53000A1FCA3EE80056553E /* PontoMaisServiceSpec.swift */,
-				3C5300141FCAEE700056553E /* LabelAttributedSpec.swift */,
-				3C53000C1FCA472E0056553E /* HomeViewControllerSpec.swift */,
-				3C5300161FCAF57C0056553E /* LoginViewControllerSpec.swift */,
-				3C770BB51FCB229A0041B231 /* UIAlertActionSpec.swift */,
-				3C770BB91FCB64A80041B231 /* GeocoderManagerSpec.swift */,
+				3C770BBB1FCB8A6F0041B231 /* iOS */,
 			);
 			path = MatchPointTests;
 			sourceTree = "<group>";
@@ -913,9 +914,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C9E04C11FC0BFEB00DC0986 /* loginError.json in Resources */,
-				3C9E04C31FC0C0A000DC0986 /* register.json in Resources */,
-				3C9E04BF1FC0BDDA00DC0986 /* login.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1285,6 +1283,7 @@
 				3C0A34D11FBD1C1100567391 /* Date.swift in Sources */,
 				A50EA7251FB90B9B00F21A88 /* Point.swift in Sources */,
 				3C25FAD71FBD3A48007A8EC8 /* TodayErrorView.swift in Sources */,
+				3C770BBF1FCB95520041B231 /* LabelAttributed.swift in Sources */,
 				A50EA71D1FB8EE3E00F21A88 /* PointData.swift in Sources */,
 				A50EA7231FB90B9600F21A88 /* NotificationPointRJ.swift in Sources */,
 				3C47A3C71FC21A4500EA7EF3 /* TodaySuccessView.swift in Sources */,
@@ -1308,7 +1307,6 @@
 				A50EA7261FB90B9E00F21A88 /* NotificationDefaultContent.swift in Sources */,
 				A5398C721FB8A3390064CD0D /* Colors.swift in Sources */,
 				3C9E04BA1FC08DD600DC0986 /* TodayLoadingView.swift in Sources */,
-				3C9E04D51FC0FC1300DC0986 /* LabelAttributed.swift in Sources */,
 				A5398C711FB8A3370064CD0D /* Fonts.swift in Sources */,
 				3C0A34CC1FBD161600567391 /* PontoMaisService.swift in Sources */,
 				3C0A34BD1FBD024200567391 /* CurrentUser.swift in Sources */,
