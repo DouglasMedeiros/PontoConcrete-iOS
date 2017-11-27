@@ -7,7 +7,7 @@
 </p>
 
 ## What's left? (Feel free to open Pull Requests!)
-- [ ] Migrate from ObjectMapper to Swift 4 Codeable
+- [X] Migrate from ObjectMapper to Swift 4 Codeable
 - [ ] Migrate from Cocoapods to Carthage
-- [ ] Migrate from Storyboards to ViewCode
-- [ ] Write unit tests
+- [X] Migrate from Storyboards to ViewCode
+- [X] Write unit tests

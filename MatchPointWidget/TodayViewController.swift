@@ -8,123 +8,208 @@
 
 import UIKit
 import NotificationCenter
-import KeychainSwift
-import Moya
+import CoreLocation
 
-class TodayViewController: UIViewController, NCWidgetProviding {
-    @IBOutlet weak var registerButton: UIButton!
+fileprivate extension Selector {
+    static let registerTapped = #selector(TodayViewController.didTapRegisterButton)
+    static let reloadTapped = #selector(TodayViewController.didTapReloadButton)
+    static let setupReadyView = #selector(TodayViewController.setupReadyView)
+    static let setupErrorView = #selector(TodayViewController.setupErrorView)
+}
+
+@objc (TodayViewController)
+class TodayViewController: UIViewController {
+    
+    let geocoder = GeocoderManager()
+    let locationManager: LocationManager = LocationManager()
+    let containerView = TodayView()
+    
+    let api = PontoMaisService()
+    let currentUser: CurrentUser
+    
+    var pointData: PointData?
+    var keychainData: SessionData?
+    
+    var timerStartup: Timer?
+    var timerTimout: Timer?
+    
+    init() {
+        self.currentUser = CurrentUser.shared
         
-    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
-    let keychain = KeychainSwift()
-    let provider = MoyaProvider<PontoMaisService>()
-    var token: String = ""
-    var clientId: String = ""
-    var email: String = ""
+        super.init(nibName: nil, bundle: nil)
+        
+        self.preferredContentSize = CGSize(width: 320, height: 110)
+        self.extensionContext?.widgetLargestAvailableDisplayMode = .expanded
+    }
     
-    let successColor = UIColor(red:0.32, green:0.48, blue:0.93, alpha:1.0)
-    let defaultColor = UIColor(red:0.00, green:0.16, blue:0.55, alpha:1.0)
-    let errorColor = UIColor(red:0.65, green:0.00, blue:0.00, alpha:1.0)
+    override func loadView() {
+        view = containerView
+    }
     
-    
-    @IBOutlet weak var tryAgainLabel: UILabel!
-    @IBOutlet weak var loginMessage: UILabel!
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.activityIndicator.stopAnimating()
+        containerView.readyView.reloadAddressButton.addTarget(self, action: .reloadTapped, for: .touchUpInside)
+        containerView.readyView.registerButton.addTarget(self, action: .registerTapped, for: .touchUpInside)
         
-
-        if let validToken = self.keychain.get("token"), let validClientId = self.keychain.get("clientId"), let validEmail = self.keychain.get("email") {
-            self.token = validToken
-            self.clientId = validClientId
-            self.email = validEmail
-        } else {
-            self.registerButton.isHidden = true
-            self.registerButton.isEnabled = false
-            self.loginMessage.isHidden = false
-        }
-
-    
+        self.checkLogin()
     }
+}
+
+extension TodayViewController {
     
-    @IBAction func didTapRegisterButton(_ sender: Any) {
-        self.activityIndicator.startAnimating()
-        self.registerButton.isEnabled = false
-        
-        provider.request(.register(token: token, client: clientId, uid: email)) {
-            result in
+    private func register(credentials: SessionData, point: PointData) {
+        self.api.register(credentials: credentials, point: point) { (response, result) in
             switch result {
-            case let .success(response):
-                let register = String(data: response.data, encoding: String.Encoding.utf8) as String!
-                
-                if let _ = register {
-                    self.setSuccessButton()
+            case .success:
+                if response != nil {
+                    self.containerView.updateUI(state: .success)
+                    self.registerTimer()
                 } else {
-                    self.setErrorButton()
+                    self.containerView.updateUI(state: .error(.request({
+                        self.checkLogin()
+                    })))
                 }
-            
-            case .failure(_):
-                self.setErrorButton()
+            case .failure(let error):
+                
+                if case let .underlying(nsError as NSError, _) = error {
+                    if nsError.code == URLError.notConnectedToInternet.rawValue {
+                        let message = LabelAttributed.errorInternet
+                        self.containerView.updateUI(state: .error(.custom(message, {
+                            self.checkLogin()
+                        })))
+                        
+                        return
+                    }
+                }
+               
+                self.containerView.updateUI(state: .error(.request({
+                    self.checkLogin()
+                })))
             }
         }
-        
+    }
+}
+
+extension TodayViewController {
+    
+    private func registerTimer() {
+        self.timerStartup?.invalidate()
+        timerStartup = Timer.scheduledTimer(timeInterval: 30, target: self,
+                                     selector: .setupReadyView, userInfo: nil, repeats: false)
     }
     
-    func setErrorButton() {
-        self.registerButton.setTitle("", for: .disabled)
-        UIView.animate(withDuration: 0.5, animations: {
-            self.registerButton.setTitle("Erro ao bater o Ponto", for: .normal)
-            self.registerButton.backgroundColor = self.errorColor
-            self.tryAgainLabel.isHidden = false
-            self.registerButton.isEnabled = true
-        })
+    private func checkTimout() {
+        self.timerTimout?.invalidate()
+        timerTimout = Timer.scheduledTimer(timeInterval: 15, target: self,
+                                            selector: .setupErrorView, userInfo: nil, repeats: false)
     }
     
-    func setSuccessButton() {
-        
-        UIView.animate(withDuration: 0.5, animations: {
-            let hour = Calendar.current.component(.hour, from: Date())
-            var message = ""
-            
-            if hour >= 0 && hour <= 11 {
-                message = "Bom Trabalho!"
-            } else if hour >= 12 && hour <= 13 {
-                message = "Bom Almoço!"
-            } else if hour >= 14 && hour <= 16 {
-                message = "Bom Trabalho!"
-            } else if hour >= 17 && hour <= 23 {
-                message = "Boa Volta!"
+    @discardableResult
+    func checkLogin() -> Bool {
+        if self.currentUser.isLoggedIn() {
+            self.keychainData = self.currentUser.user()
+            self.requestLocationManager()
+            self.containerView.updateUI(state: .loading)
+            return true
+        } else {
+            self.containerView.updateUI(state: .error(.login))
+            return false
+        }
+    }
+    
+    private func setupLocationCallback() {
+        self.locationManager.locationCallback = { location in
+            if !self.currentUser.isLoggedIn() {
+                self.containerView.updateUI(state: .error(.login))
+                return
             }
-        
-            self.registerButton.setTitle(message, for: .normal)
-            self.registerButton.setTitle(message, for: .disabled)
-            self.tryAgainLabel.isHidden = true
-            self.activityIndicator.stopAnimating()
             
-            self.registerButton.backgroundColor = self.successColor
-            self.tryAgainLabel.isHidden = true
-            self.registerButton.isEnabled = false
-        })
+            self.geocoder.reverse(location: location, completeHandler: { (pointData, error) in
+                if error != nil {
+                    let message = LabelAttributed.errorGeocodeLocation
+                    self.containerView.updateUI(state: .error(.custom(message, {
+                        self.checkLogin()
+                    })))
+                } else {
+                    guard let address = pointData?.address else {
+                        return
+                    }
+                    
+                    self.pointData = pointData
+                    
+                    self.timerTimout?.invalidate()
+                    
+                    let message = LabelAttributed.address(address)
+                    self.containerView.updateUI(state: .ready(.start(message)))
+                }
+            })
+        }
     }
     
-    func setDefaultButton() {
-        self.registerButton.setTitle("", for: .disabled)
-        registerButton.setTitle("Bater o Ponto", for: .normal)
-        registerButton.backgroundColor = defaultColor
-        tryAgainLabel.isHidden = false
-        registerButton.isEnabled = true
+    private func setupAuthorizationStatusCallback() {
+        self.locationManager.authorizationStatusCallback = { authorizationStatus in
+            if authorizationStatus == .denied {
+                let alert = UIAlertController(title: "Localização",
+                                              message: "O acesso à localização foi negado, ative-a nas Configurações",
+                                              preferredStyle: UIAlertControllerStyle.alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
+                
+                self.present(alert, animated: true, completion: nil)
+            } else if CLLocationManager.authorizationStatus() == .notDetermined {
+                self.locationManager.locationManager.requestWhenInUseAuthorization()
+            } else if CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
+                self.locationManager.locationManager.requestLocation()
+            }
+        }
     }
     
+    func requestLocationManager() {
+        self.checkTimout()
+        self.setupLocationCallback()
+        self.setupAuthorizationStatusCallback()
+        locationManager.requestAuthorization()
+    }
     
-  //  func widgetPerformUpdate(completionHandler: (@escaping (NCUpdateResult) -> Void)) {
-        // Perform any setup necessary in order to update the view.
-        
-        // If an error is encountered, use NCUpdateResult.Failed
-        // If there's no update required, use NCUpdateResult.NoData
-        // If there's an update, use NCUpdateResult.NewData
-        
-       // completionHandler(NCUpdateResult.noData)
-    //}
+    @objc
+    func setupErrorView() {
+        self.timerTimout?.invalidate()
+        containerView.updateUI(state: .error(.custom(LabelAttributed.errorLocation, {
+            self.checkLogin()
+        })))
+    }
     
+    @objc
+    func setupReadyView() {
+        self.timerStartup?.invalidate()
+        containerView.updateUI(state: .loading)
+        self.requestLocationManager()
+    }
+    
+    @objc
+    func didTapReloadButton() {
+        self.requestLocationManager()
+        containerView.updateUI(state: .loading)
+    }
+    
+    @objc
+    func didTapRegisterButton() {
+        containerView.updateUI(state: .loading)
+        
+        guard let keychainData = self.keychainData, let pointData = self.pointData else {
+            return
+        }
+        
+        self.register(credentials: keychainData, point: pointData)
+    }
+}
+
+extension TodayViewController: NCWidgetProviding {
+    func widgetPerformUpdate(completionHandler: (@escaping (NCUpdateResult) -> Void)) {
+        completionHandler(self.checkLogin() ? .newData : .noData)
+    }
 }
