@@ -29,7 +29,7 @@ class CurrentUser: CurrentUserProtocol {
             return false
         }
         
-        return token.count > 0
+        return !token.isEmpty
     }
     
     func user() -> SessionData? {
