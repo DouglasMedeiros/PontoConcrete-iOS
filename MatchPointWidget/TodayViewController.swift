@@ -144,14 +144,9 @@ extension TodayViewController {
                         self.checkLogin()
                     })))
                 } else {
-                    guard let address = pointData?.address else {
-                        return
-                    }
-                    
+                    guard let address = pointData?.address else { return }
                     self.pointData = pointData
-                    
                     self.timerTimout?.invalidate()
-                    
                     let message = LabelAttributed.address(address)
                     self.containerView.updateUI(state: .ready(.start(message)))
                 }

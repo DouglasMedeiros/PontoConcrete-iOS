@@ -34,18 +34,11 @@ extension GoogleGeocodeAPI: IGoogleGeocodeAPI {
                 do {
                     let json = try JSONSerialization.jsonObject(with: response.data, options: .allowFragments) as? [String: Any]
                     if let responseJSON = json {
-                        if let status = responseJSON["status"] as? String {
-                            switch status {
-                            case "OK":
-                                if let resultResponse = responseJSON["results"] as? [[String: Any]] {
-                                    if let address = resultResponse[0]["formatted_address"] as? String {
-                                        let geocode = GeocodeResponse(address: address)
-                                        callback(geocode, result)
-                                        return
-                                    }
-                                }
-                            default:
-                                callback(nil, result)
+                        if let status = responseJSON["status"] as? String, status == "OK" {
+                            if let resultResponse = responseJSON["results"] as? [[String: Any]], let address = resultResponse[0]["formatted_address"] as? String {
+                                let geocode = GeocodeResponse(address: address)
+                                callback(geocode, result)
+                                return
                             }
                         }
                     }

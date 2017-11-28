@@ -105,7 +105,7 @@ extension HomeViewController {
     @objc
     func didTapLogoutButton() {
         let alert = UIAlertController(title: "Sair", message: "Tem certeza que deseja sair?", preferredStyle: .alert)
-        let actionOK = self.uiAlertAction.createUIAlertAction(title: "Sim", style: .destructive, handler: {(actionSheet: UIAlertAction) in
+        let actionOK = self.uiAlertAction.createUIAlertAction(title: "Sim", style: .destructive, handler: {(_ ) in
             
             let data: [String: AnyObject] = [
                 "command": "logout" as AnyObject
@@ -118,7 +118,7 @@ extension HomeViewController {
             self.delegate?.homeViewControllerDidLogout(viewController: self)
         })
         alert.addAction(actionOK)
-        let actionCancel = self.uiAlertAction.createUIAlertAction(title: "Não", style: .default, handler: {(actionSheet: UIAlertAction) in
+        let actionCancel = self.uiAlertAction.createUIAlertAction(title: "Não", style: .default, handler: {(_ ) in
             
         })
         alert.addAction(actionCancel)

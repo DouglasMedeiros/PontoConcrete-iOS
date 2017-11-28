@@ -184,22 +184,14 @@ extension LoginView: ViewConfiguration {
         
         self.setupTextFields()
         
-        incorrectLoginLabel.snp.makeConstraints { make in
-            make.left.equalTo(passwordTextField.snp.left)
-            make.top.equalTo(passwordTextField.snp.bottom).inset(-10)
-            make.width.equalTo(276)
-            make.height.equalTo(30)
-        }
-        
         activityIndicator.snp.makeConstraints { make in
             make.width.height.equalTo(20)
-            make.centerX.centerY.equalTo(loginButton)
+            make.center.equalTo(loginButton)
         }
         
         loginButton.snp.makeConstraints { make in
             make.height.equalTo(50)
-            make.left.right.equalTo(0).inset(20)
-            make.bottom.equalTo(0).inset(20)
+            make.bottom.left.right.equalTo(0).inset(20)
         }
     }
     
@@ -218,5 +210,11 @@ extension LoginView: ViewConfiguration {
             make.height.equalTo(45)
         }
         
+        incorrectLoginLabel.snp.makeConstraints { make in
+            make.left.equalTo(passwordTextField.snp.left)
+            make.top.equalTo(passwordTextField.snp.bottom).inset(-10)
+            make.width.equalTo(276)
+            make.height.equalTo(30)
+        }
     }
 }

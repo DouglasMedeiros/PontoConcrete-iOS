@@ -33,6 +33,7 @@ class UIAlertActionMock : UIAlertAction {
         styleMock = style
         self.handler = handler
     }
+    
     override class func createUIAlertAction(title: String?, style: UIAlertActionStyle, handler: ((UIAlertAction) -> Void)?) -> UIAlertActionMock {
         return UIAlertActionMock(title: title, style: style, handler: handler)
     }

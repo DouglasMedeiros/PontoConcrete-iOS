@@ -280,7 +280,6 @@
 		3C770BB51FCB229A0041B231 /* UIAlertActionSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertActionSpec.swift; sourceTree = "<group>"; };
 		3C770BB71FCB23D30041B231 /* CurrentUserSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUserSpec.swift; sourceTree = "<group>"; };
 		3C770BB91FCB64A80041B231 /* GeocoderManagerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeocoderManagerSpec.swift; sourceTree = "<group>"; };
-		3C770BE51FCB98FD0041B231 /* MatchPointTests copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "MatchPointTests copy-Info.plist"; path = "/Users/douglasmedeiros/Development/MatchPoint-iOS/MatchPointTests copy-Info.plist"; sourceTree = "<absolute>"; };
 		3C9E04B91FC08DD600DC0986 /* TodayLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayLoadingView.swift; sourceTree = "<group>"; };
 		3C9E04C71FC0CF1E00DC0986 /* SkyFloatingLabelTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkyFloatingLabelTextField.swift; sourceTree = "<group>"; };
 		3C9E04C81FC0CF1E00DC0986 /* UITextField+fixCaretPosition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+fixCaretPosition.swift"; sourceTree = "<group>"; };
@@ -512,7 +511,6 @@
 				A017F3F81F69C7F1007BB2FA /* Frameworks */,
 				A017F3C21F69B528007BB2FA /* Products */,
 				2C2E6477E3EDBD8920578805 /* Pods */,
-				3C770BE51FCB98FD0041B231 /* MatchPointTests copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -1610,7 +1608,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
@@ -1632,7 +1630,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
