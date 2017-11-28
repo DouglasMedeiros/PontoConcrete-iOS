@@ -13,17 +13,17 @@ import Moya
 
 class TodayViewController: UIViewController, NCWidgetProviding {
     @IBOutlet weak var registerButton: UIButton!
-
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+
     let keychain = KeychainSwift()
     let provider = MoyaProvider<PontoMaisService>()
     var token: String = ""
     var clientId: String = ""
     var email: String = ""
 
-    let successColor = UIColor(red:0.32, green:0.48, blue:0.93, alpha:1.0)
-    let defaultColor = UIColor(red:0.00, green:0.16, blue:0.55, alpha:1.0)
-    let errorColor = UIColor(red:0.65, green:0.00, blue:0.00, alpha:1.0)
+    let successColor = UIColor(red: 0.32, green: 0.48, blue: 0.93, alpha: 1.0)
+    let defaultColor = UIColor(red: 0.00, green: 0.16, blue: 0.55, alpha: 1.0)
+    let errorColor = UIColor(red: 0.65, green: 0.00, blue: 0.00, alpha: 1.0)
 
     @IBOutlet weak var tryAgainLabel: UILabel!
     @IBOutlet weak var loginMessage: UILabel!
@@ -42,30 +42,26 @@ class TodayViewController: UIViewController, NCWidgetProviding {
             self.registerButton.isEnabled = false
             self.loginMessage.isHidden = false
         }
-
     }
 
     @IBAction func didTapRegisterButton(_ sender: Any) {
         self.activityIndicator.startAnimating()
         self.registerButton.isEnabled = false
 
-        provider.request(.register(token: token, client: clientId, uid: email)) {
-            result in
+        provider.request(.register(token: token, client: clientId, uid: email)) { result in
             switch result {
             case let .success(response):
-                let register = String(data: response.data, encoding: String.Encoding.utf8) as String!
-
-                if let _ = register {
+                let register = String(data: response.data, encoding: .utf8)
+                if register != nil {
                     self.setSuccessButton()
                 } else {
                     self.setErrorButton()
                 }
 
-            case .failure(_):
+            case .failure:
                 self.setErrorButton()
             }
         }
-
     }
 
     func setErrorButton() {
@@ -112,15 +108,4 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         tryAgainLabel.isHidden = false
         registerButton.isEnabled = true
     }
-
-  //  func widgetPerformUpdate(completionHandler: (@escaping (NCUpdateResult) -> Void)) {
-        // Perform any setup necessary in order to update the view.
-
-        // If an error is encountered, use NCUpdateResult.Failed
-        // If there's no update required, use NCUpdateResult.NoData
-        // If there's an update, use NCUpdateResult.NewData
-
-       // completionHandler(NCUpdateResult.noData)
-    //}
-
 }

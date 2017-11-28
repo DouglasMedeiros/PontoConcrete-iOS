@@ -50,19 +50,17 @@ class LoggedInViewController: UIViewController, CLLocationManagerDelegate {
         if CLLocationManager.authorizationStatus() == .notDetermined {
             locationManager.requestWhenInUseAuthorization()
         } else if CLLocationManager.authorizationStatus() == .denied {
-            let alert = UIAlertController(title: "Localização", message: "O acesso à localização foi negado, ative-a nas Configurações", preferredStyle: UIAlertControllerStyle.alert)
-            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler:nil))
+            let alert = UIAlertController(title: "Localização", message: "O acesso à localização foi negado, ative-a nas Configurações", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
 
             self.present(alert, animated: true, completion: nil)
         } else if CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
             requestNotifications()
         }
-
     }
 
     func requestNotifications() {
-        center.requestAuthorization(options: options) {
-            (granted, error) in
+        center.requestAuthorization(options: options) { (granted, _ error) in
             if !granted {
                 print("Something went wrong")
             } else {
@@ -71,7 +69,7 @@ class LoggedInViewController: UIViewController, CLLocationManagerDelegate {
         }
     }
 
-    // MARK CLLocationManagerDelegate:
+    // MARK: CLLocationManagerDelegate
 
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         if status == .authorizedWhenInUse {
@@ -114,13 +112,13 @@ class LoggedInViewController: UIViewController, CLLocationManagerDelegate {
     }
 
     @IBAction func didTapLogoutButton(_ sender: Any) {
-        let alert = UIAlertController(title: "Sair", message: "Tem certeza que deseja sair?", preferredStyle: UIAlertControllerStyle.alert)
+        let alert = UIAlertController(title: "Sair", message: "Tem certeza que deseja sair?", preferredStyle: .alert)
 
-        alert.addAction(UIAlertAction(title: "Sim", style: UIAlertActionStyle.destructive, handler: { action in
+        alert.addAction(UIAlertAction(title: "Sim", style: .destructive, handler: { _ in
             self.logout()
         }))
 
-        alert.addAction(UIAlertAction(title: "Não", style: UIAlertActionStyle.cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: "Não", style: .cancel, handler: nil))
 
         self.present(alert, animated: true, completion: nil)
     }

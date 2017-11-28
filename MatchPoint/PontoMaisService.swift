@@ -16,9 +16,9 @@ extension PontoMaisService: TargetType {
     var baseURL: URL { return URL(string: "https://api.pontomaisweb.com.br")! }
     var path: String {
         switch self {
-        case .login(_, _):
+        case .login:
             return "/api/auth/sign_in"
-        case .register(_, _, _):
+        case .register:
             return "/api/time_cards/register"
         }
     }
@@ -32,7 +32,7 @@ extension PontoMaisService: TargetType {
 
     var task: Task {
         switch self {
-        case .register(_, _, _):
+        case .register:
             return .requestParameters(parameters: ["time_card": [
             "latitude": -23.6015042,
             "longitude": -46.694538,
