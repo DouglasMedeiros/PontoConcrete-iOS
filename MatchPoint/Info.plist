@@ -25,9 +25,9 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
-    <key>NSLocationAlwaysUsageDescription</key>
-    <string>Usaremos a localização para enviar lembretes para bater o ponto</string>
-    <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Usaremos a localização para enviar lembretes para bater o ponto</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
 	<string>Usaremos a localização para enviar lembretes para bater o ponto</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Usaremos a localização para enviar lembretes para bater o ponto</string>

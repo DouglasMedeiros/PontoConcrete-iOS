@@ -1,5 +1,5 @@
 //
-//  Contants.swift
+//  Constants.swift
 //  MatchPoint
 //
 //  Created by Douglas Brito de Medeiros on 12/11/17.
@@ -8,10 +8,8 @@
 
 import Foundation
 
-struct Contants {
-    
-    struct Debug {
-        let enabled: Bool = true
+struct Constants {
+    struct Google {
+        static let apiKey = "AIzaSyBWBnyfSlY6sQxDbXVKfQUUshWtXukq-RI"
     }
-    
 }

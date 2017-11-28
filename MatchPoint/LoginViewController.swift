@@ -94,7 +94,6 @@ extension LoginViewController {
         self.login()
     }
     
-    
     private func login() {
         containerView.updateUI(state: .loading)
         

@@ -74,7 +74,12 @@ extension HomeViewController {
             }
         }
         
-        location.locationCallback = { (location) in
+        location.locationCallback = { (location, error) in
+            
+            guard location != nil else {
+                return
+            }
+            
             self.userNotificationCenter.requestNotifications()
         }
         

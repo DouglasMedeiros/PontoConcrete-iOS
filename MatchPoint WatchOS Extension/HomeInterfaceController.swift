@@ -25,13 +25,14 @@ class HomeInterfaceController: WKInterfaceController {
         case loading
     }
     
-    lazy var geocoder: GeocoderManager = {
-        let manager = GeocoderManager()
+    lazy var geocoder: IGeocoderManager = {
+        let manager = GGeocoderManager()
         return manager
     }()
     
-    let location: LocationManager = LocationManager()
-    let service: PontoMaisService = PontoMaisService()
+    let location: LocationManager
+    let service: PontoMaisService
+    let watchConnectivity: SwiftWatchConnectivity
     
     var doneTimer: Timer?
     
@@ -43,9 +44,23 @@ class HomeInterfaceController: WKInterfaceController {
     @IBOutlet private(set) var reloadButton: WKInterfaceButton?
     @IBOutlet private(set) var registerButton: WKInterfaceButton?
     
-    private func awakeApp() {
+    override init() {
+        self.watchConnectivity = SwiftWatchConnectivity.shared
+        self.service = PontoMaisService()
+        self.location = LocationManager()
+        super.init()
+
+        awakeApp()
         
-        SwiftWatchConnectivity.shared.delegate = self
+        addMenuItem(with: WKMenuItemIcon.resume, title: "Atualizar endereço", action: #selector(HomeInterfaceController.updateAddress))
+    }
+    
+    private func sleepApp() {
+        self.location.locationManager.stopUpdatingLocation()
+        self.watchConnectivity.delegate = nil
+    }
+    private func awakeApp() {
+        self.watchConnectivity.delegate = self
     }
     
     override func awake(withContext context: Any?) {
@@ -55,9 +70,7 @@ class HomeInterfaceController: WKInterfaceController {
    
     override func willDisappear() {
         super.willDisappear()
-        
-        self.location.locationManager.stopUpdatingLocation()
-        SwiftWatchConnectivity.shared.delegate = nil
+        self.sleepApp()
     }
     
     @objc
@@ -75,13 +88,11 @@ class HomeInterfaceController: WKInterfaceController {
                 let data: [String: AnyObject] = [
                     .command: "login" as AnyObject
                 ]
-                SwiftWatchConnectivity.shared.sendMesssage(message: data)
+                self.watchConnectivity.sendMesssage(message: data)
             }
         }
-        
         super.willActivate()
     }
-    
 }
 
 extension HomeInterfaceController {
@@ -144,7 +155,13 @@ extension HomeInterfaceController {
     }
     
     private func setupLocationCallback() {
-        self.location.locationCallback = { (location) in
+        self.location.locationCallback = { (location, error) in
+            
+            guard let location = location else {
+                let message = LabelAttributed.custom(error?.localizedDescription ?? "Erro!")
+                self.updateUI(state: .error(.custom(message)))
+                return
+            }
             
             self.location.locationManager.stopUpdatingLocation()
             
@@ -183,13 +200,9 @@ extension HomeInterfaceController {
     }
     
     private func requestLocationManager() {
-        
         self.updateUI(state: .loading)
-        
         self.setupAuthorizationStatusCallback()
-        
         self.setupLocationCallback()
-    
         self.location.requestAuthorization()
     }
     
@@ -221,7 +234,6 @@ extension HomeInterfaceController {
     }
     
     private func updateUI(state: HomeInterfaceUIState) {
-        
         self.addressLabel?.sizeToFitHeight()
         self.separator?.setHidden(true)
         self.registerButton?.setHidden(true)

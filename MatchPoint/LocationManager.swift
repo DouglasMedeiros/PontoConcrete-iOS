@@ -12,7 +12,7 @@ import CoreLocation
 class LocationManager: NSObject {
     
     var authorizationStatusCallback: ((_ authorizationStatus: CLAuthorizationStatus) -> Void)?
-    var locationCallback: ((_ location: CLLocation) -> Void)?
+    var locationCallback: ((_ location: CLLocation?, _ error: Error?) -> Void)?
     
     let locationManager: CLLocationManager
     
@@ -38,11 +38,12 @@ extension LocationManager: CLLocationManagerDelegate {
             return
         }
         
-        locationCallback?(location)
+        locationCallback?(location, nil)
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print("Error location: \(error.localizedDescription)")
+        locationCallback?(nil, error)
     }
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {

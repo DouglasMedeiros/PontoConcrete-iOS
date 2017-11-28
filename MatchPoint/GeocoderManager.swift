@@ -9,28 +9,22 @@
 import Foundation
 import CoreLocation
 
-class GeocoderManager {
+protocol IGeocoderManager {
+    func reverse(location: CLLocation, completeHandler: @escaping (PointData?, Error?) -> Void)
+}
+
+class GGeocoderManager: IGeocoderManager {
     
-    var geocoder = CLGeocoder()
-    
-    private(set) var lastPoint: PointData?
+    var geocoder: IGoogleGeocodeService = GoogleGeocodeService()
     
     func reverse(location: CLLocation, completeHandler: @escaping (PointData?, Error?) -> Void) {
-        self.geocoder.reverseGeocodeLocation(location) { (placemarks, error) in
-            if let error = error {
-                print("Unable to Reverse Geocode Location (\(error))")
-                print("Unable to Find Address for Location")
+        self.geocoder.geocode(coordinate: location.coordinate) { (response, result) in
+            switch result {
+            case .success:
+                let point = PointData(location: location, address: response?.address ?? "")
+                completeHandler(point, nil)
+            case .failure(let error):
                 completeHandler(nil, error)
-            } else {
-                if let placemarks = placemarks, let placemark = placemarks.first {
-                    
-                    self.lastPoint = PointData(location: location, address: placemark.compactAddress)
-                    
-                    completeHandler(self.lastPoint, nil)
-                } else {
-                    let error = NSError(domain: "", code: 9912, userInfo: nil)
-                    completeHandler(nil, error)
-                }
             }
         }
     }

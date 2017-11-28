@@ -37,7 +37,17 @@ extension AppDelegate: SwiftWatchConnectivityDelegate {
     func connectivity(_ swiftWatchConnectivity: SwiftWatchConnectivity, updatedWithTask task: SwiftWatchConnectivity.Task) {
         
         if case .sendMessage = task {
-            guard let currentUser = CurrentUser.shared.user() else { return }
+            guard let currentUser = CurrentUser.shared.user() else {
+                
+                let data: [String: AnyObject] = [
+                    .command: "logout" as AnyObject
+                ]
+                
+                DispatchQueue.main.async {
+                    self.swiftWatchConnectivity?.sendMesssage(message: data)
+                }
+                return
+            }
             
             DispatchQueue.main.async {
                 self.swiftWatchConnectivity?.sendMesssage(message: currentUser.asDict())

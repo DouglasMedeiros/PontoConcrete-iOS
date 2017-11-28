@@ -20,7 +20,7 @@ fileprivate extension Selector {
 @objc (TodayViewController)
 class TodayViewController: UIViewController {
     
-    let geocoder = GeocoderManager()
+    let geocoder = GGeocoderManager()
     let locationManager: LocationManager = LocationManager()
     let containerView = TodayView()
     
@@ -123,9 +123,17 @@ extension TodayViewController {
     }
     
     private func setupLocationCallback() {
-        self.locationManager.locationCallback = { location in
+        self.locationManager.locationCallback = { (location, error) in
             if !self.currentUser.isLoggedIn() {
                 self.containerView.updateUI(state: .error(.login))
+                return
+            }
+            
+            guard let location = location else {
+                let message = LabelAttributed.custom(error?.localizedDescription ?? "Erro")
+                self.containerView.updateUI(state: .error(.custom(message, {
+                    self.requestLocationManager()
+                })))
                 return
             }
             
