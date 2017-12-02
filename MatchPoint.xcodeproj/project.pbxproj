@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		263A4AFD7DA9E212675C681C /* Pods_MatchPointUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 541F3E7B49FCF97E0334BB11 /* Pods_MatchPointUITests.framework */; };
+		280A22862AA17D3A639E2B44 /* Pods_MatchPoint_WatchOS_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59B161D7147315680CF50C0F /* Pods_MatchPoint_WatchOS_Extension.framework */; };
 		3C04A2C41FC9138100811125 /* NotificationPointSPSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C04A2C31FC9138100811125 /* NotificationPointSPSpec.swift */; };
 		3C04A2C61FC915E000811125 /* NotificationPointRJSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C04A2C51FC915E000811125 /* NotificationPointRJSpec.swift */; };
 		3C04A2C81FC9163200811125 /* NotificationPointBHSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C04A2C71FC9163200811125 /* NotificationPointBHSpec.swift */; };
@@ -113,9 +113,8 @@
 		3CFE1E221FC34F690013D72E /* ConcreteSP.gpx in Resources */ = {isa = PBXBuildFile; fileRef = A5398C201FB76E710064CD0D /* ConcreteSP.gpx */; };
 		3CFE1E231FC34F6A0013D72E /* ConcreteSP.gpx in Resources */ = {isa = PBXBuildFile; fileRef = A5398C201FB76E710064CD0D /* ConcreteSP.gpx */; };
 		3CFE1E241FC34F6B0013D72E /* ConcreteSP.gpx in Resources */ = {isa = PBXBuildFile; fileRef = A5398C201FB76E710064CD0D /* ConcreteSP.gpx */; };
-		4BEE0117649DDEF5D47A031C /* Pods_MatchPointTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F68167C68FB9C5B9FCDFD9C /* Pods_MatchPointTests.framework */; };
-		55C059C7C4147F50CD550F5D /* Pods_MatchPoint_WatchOS_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD689E8366751B8BDAAF5270 /* Pods_MatchPoint_WatchOS_Extension.framework */; };
-		7CF9141AAC73391586E24A7B /* Pods_MatchPoint.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 264A8AB4651B4BD5AB9B8461 /* Pods_MatchPoint.framework */; };
+		667C5DA006DE713D6581C303 /* Pods_MatchPointTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 531F09D5C7D67C01B701A245 /* Pods_MatchPointTests.framework */; };
+		7F41925ACBCF4143C4F9302C /* Pods_MatchPointWidget.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FDA9DD021A3795EFE09D19D /* Pods_MatchPointWidget.framework */; };
 		A017F3C51F69B528007BB2FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A017F3C41F69B528007BB2FA /* AppDelegate.swift */; };
 		A017F3CF1F69B528007BB2FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A017F3CD1F69B528007BB2FA /* LaunchScreen.storyboard */; };
 		A017F3E81F69B919007BB2FA /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = A017F3E71F69B919007BB2FA /* Device.swift */; };
@@ -169,7 +168,8 @@
 		A5A3DCCB1FB8B4740015AB1B /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A3DCC91FB8B4740015AB1B /* TodayView.swift */; };
 		A5BEBB4C1FB8DB110006F02E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BEBB4B1FB8DB110006F02E /* Constants.swift */; };
 		A5DD41051FB283D4005DF529 /* Mappeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DD41041FB283D4005DF529 /* Mappeable.swift */; };
-		F15FEA2E2E6C805370E2F98D /* Pods_MatchPointWidget.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B99EB32C455D64848BB434D4 /* Pods_MatchPointWidget.framework */; };
+		B4EB9308E4E17B7BC8A3BBEF /* Pods_MatchPoint.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC8E9852B28DC3B178EA3F8C /* Pods_MatchPoint.framework */; };
+		C16183D18CF896919567B916 /* Pods_MatchPointUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 125F4B614D24CAA71150A1E3 /* Pods_MatchPointUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -247,10 +247,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0474B31C647D9F27A119E40F /* Pods-MatchPointUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatchPointUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MatchPointUITests/Pods-MatchPointUITests.release.xcconfig"; sourceTree = "<group>"; };
-		14F0ABCF7046FBBDDB56E2B2 /* Pods-MatchPointUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatchPointUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MatchPointUITests/Pods-MatchPointUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		1F8F1895BF5B054AEEF120AB /* Pods-MatchPoint.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatchPoint.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MatchPoint/Pods-MatchPoint.debug.xcconfig"; sourceTree = "<group>"; };
-		264A8AB4651B4BD5AB9B8461 /* Pods_MatchPoint.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MatchPoint.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		011A8309596E40C570F1ABBD /* Pods-MatchPointTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatchPointTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MatchPointTests/Pods-MatchPointTests.release.xcconfig"; sourceTree = "<group>"; };
+		125F4B614D24CAA71150A1E3 /* Pods_MatchPointUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MatchPointUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		23522B39C4E05BDA9FA5B6A4 /* Pods-MatchPoint WatchOS Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatchPoint WatchOS Extension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MatchPoint WatchOS Extension/Pods-MatchPoint WatchOS Extension.debug.xcconfig"; sourceTree = "<group>"; };
 		3C04A2C31FC9138100811125 /* NotificationPointSPSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationPointSPSpec.swift; sourceTree = "<group>"; };
 		3C04A2C51FC915E000811125 /* NotificationPointRJSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationPointRJSpec.swift; sourceTree = "<group>"; };
 		3C04A2C71FC9163200811125 /* NotificationPointBHSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationPointBHSpec.swift; sourceTree = "<group>"; };
@@ -312,11 +311,13 @@
 		3CFBA3461FC917C000D96FD4 /* DateSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSpec.swift; sourceTree = "<group>"; };
 		3CFBA3481FC9C46600D96FD4 /* UIButtonSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonSpec.swift; sourceTree = "<group>"; };
 		3CFBA34A1FC9D95900D96FD4 /* NotificationPointFactorySpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationPointFactorySpec.swift; sourceTree = "<group>"; };
-		4AE0C8AFFA7362BBDACC6BC2 /* Pods-MatchPointTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatchPointTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MatchPointTests/Pods-MatchPointTests.debug.xcconfig"; sourceTree = "<group>"; };
-		541F3E7B49FCF97E0334BB11 /* Pods_MatchPointUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MatchPointUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6EEBB842FC673B061EE2DE94 /* Pods-MatchPoint WatchOS Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatchPoint WatchOS Extension.release.xcconfig"; path = "Pods/Target Support Files/Pods-MatchPoint WatchOS Extension/Pods-MatchPoint WatchOS Extension.release.xcconfig"; sourceTree = "<group>"; };
-		6F68167C68FB9C5B9FCDFD9C /* Pods_MatchPointTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MatchPointTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		95902D5F8EA3C0617C9031A5 /* Pods-MatchPoint.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatchPoint.release.xcconfig"; path = "Pods/Target Support Files/Pods-MatchPoint/Pods-MatchPoint.release.xcconfig"; sourceTree = "<group>"; };
+		49992F4BFD4B4F97BA4C0C2F /* Pods-MatchPointUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatchPointUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MatchPointUITests/Pods-MatchPointUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		4FDA9DD021A3795EFE09D19D /* Pods_MatchPointWidget.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MatchPointWidget.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		531F09D5C7D67C01B701A245 /* Pods_MatchPointTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MatchPointTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		59B161D7147315680CF50C0F /* Pods_MatchPoint_WatchOS_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MatchPoint_WatchOS_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B46CA97D30CB1016D3D53F2 /* Pods-MatchPointUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatchPointUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MatchPointUITests/Pods-MatchPointUITests.release.xcconfig"; sourceTree = "<group>"; };
+		6238616BB325506397110FBE /* Pods-MatchPoint WatchOS Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatchPoint WatchOS Extension.release.xcconfig"; path = "Pods/Target Support Files/Pods-MatchPoint WatchOS Extension/Pods-MatchPoint WatchOS Extension.release.xcconfig"; sourceTree = "<group>"; };
+		78E9CCCA71D27C46F19A76A9 /* Pods-MatchPointTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatchPointTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MatchPointTests/Pods-MatchPointTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A017F3C11F69B528007BB2FA /* MatchPoint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MatchPoint.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A017F3C41F69B528007BB2FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A017F3CB1F69B528007BB2FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -363,12 +364,11 @@
 		A5A3DCC91FB8B4740015AB1B /* TodayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodayView.swift; sourceTree = "<group>"; };
 		A5BEBB4B1FB8DB110006F02E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		A5DD41041FB283D4005DF529 /* Mappeable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mappeable.swift; sourceTree = "<group>"; };
-		A65CCD79EA1D407D14B36489 /* Pods-MatchPointWidget.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatchPointWidget.release.xcconfig"; path = "Pods/Target Support Files/Pods-MatchPointWidget/Pods-MatchPointWidget.release.xcconfig"; sourceTree = "<group>"; };
-		B99EB32C455D64848BB434D4 /* Pods_MatchPointWidget.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MatchPointWidget.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CD689E8366751B8BDAAF5270 /* Pods_MatchPoint_WatchOS_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MatchPoint_WatchOS_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CE85D33D6F5E6028E6E12303 /* Pods-MatchPointTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatchPointTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MatchPointTests/Pods-MatchPointTests.release.xcconfig"; sourceTree = "<group>"; };
-		D811AE2133EFBCE61C5C27F9 /* Pods-MatchPointWidget.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatchPointWidget.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MatchPointWidget/Pods-MatchPointWidget.debug.xcconfig"; sourceTree = "<group>"; };
-		E5CCD0F906670FAA83E82214 /* Pods-MatchPoint WatchOS Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatchPoint WatchOS Extension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MatchPoint WatchOS Extension/Pods-MatchPoint WatchOS Extension.debug.xcconfig"; sourceTree = "<group>"; };
+		D9A4941104731AD7E1762640 /* Pods-MatchPoint.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatchPoint.release.xcconfig"; path = "Pods/Target Support Files/Pods-MatchPoint/Pods-MatchPoint.release.xcconfig"; sourceTree = "<group>"; };
+		EC8E9852B28DC3B178EA3F8C /* Pods_MatchPoint.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MatchPoint.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F44C5B5DF13BBCC164B1C3B0 /* Pods-MatchPointWidget.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatchPointWidget.release.xcconfig"; path = "Pods/Target Support Files/Pods-MatchPointWidget/Pods-MatchPointWidget.release.xcconfig"; sourceTree = "<group>"; };
+		FC67E601DED941CB353D084E /* Pods-MatchPointWidget.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatchPointWidget.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MatchPointWidget/Pods-MatchPointWidget.debug.xcconfig"; sourceTree = "<group>"; };
+		FF123C6D8232DD18EDF68FA8 /* Pods-MatchPoint.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatchPoint.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MatchPoint/Pods-MatchPoint.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -383,7 +383,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				55C059C7C4147F50CD550F5D /* Pods_MatchPoint_WatchOS_Extension.framework in Frameworks */,
+				280A22862AA17D3A639E2B44 /* Pods_MatchPoint_WatchOS_Extension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,7 +391,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				263A4AFD7DA9E212675C681C /* Pods_MatchPointUITests.framework in Frameworks */,
+				C16183D18CF896919567B916 /* Pods_MatchPointUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,7 +399,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7CF9141AAC73391586E24A7B /* Pods_MatchPoint.framework in Frameworks */,
+				B4EB9308E4E17B7BC8A3BBEF /* Pods_MatchPoint.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,7 +407,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4BEE0117649DDEF5D47A031C /* Pods_MatchPointTests.framework in Frameworks */,
+				667C5DA006DE713D6581C303 /* Pods_MatchPointTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,7 +416,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A017F3FA1F69C7F1007BB2FA /* NotificationCenter.framework in Frameworks */,
-				F15FEA2E2E6C805370E2F98D /* Pods_MatchPointWidget.framework in Frameworks */,
+				7F41925ACBCF4143C4F9302C /* Pods_MatchPointWidget.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -521,6 +521,23 @@
 			path = SkyFloatingLabelTextField;
 			sourceTree = "<group>";
 		};
+		8DD63BB43B088C0683DB4D26 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FF123C6D8232DD18EDF68FA8 /* Pods-MatchPoint.debug.xcconfig */,
+				D9A4941104731AD7E1762640 /* Pods-MatchPoint.release.xcconfig */,
+				23522B39C4E05BDA9FA5B6A4 /* Pods-MatchPoint WatchOS Extension.debug.xcconfig */,
+				6238616BB325506397110FBE /* Pods-MatchPoint WatchOS Extension.release.xcconfig */,
+				78E9CCCA71D27C46F19A76A9 /* Pods-MatchPointTests.debug.xcconfig */,
+				011A8309596E40C570F1ABBD /* Pods-MatchPointTests.release.xcconfig */,
+				49992F4BFD4B4F97BA4C0C2F /* Pods-MatchPointUITests.debug.xcconfig */,
+				5B46CA97D30CB1016D3D53F2 /* Pods-MatchPointUITests.release.xcconfig */,
+				FC67E601DED941CB353D084E /* Pods-MatchPointWidget.debug.xcconfig */,
+				F44C5B5DF13BBCC164B1C3B0 /* Pods-MatchPointWidget.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		A017F3B81F69B528007BB2FA = {
 			isa = PBXGroup;
 			children = (
@@ -532,7 +549,7 @@
 				3C693C1B1FCE29740018DA22 /* MatchPointUITests */,
 				A017F3F81F69C7F1007BB2FA /* Frameworks */,
 				A017F3C21F69B528007BB2FA /* Products */,
-				F7E2B60D4E699FC767430A00 /* Pods */,
+				8DD63BB43B088C0683DB4D26 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -605,11 +622,11 @@
 			isa = PBXGroup;
 			children = (
 				A017F3F91F69C7F1007BB2FA /* NotificationCenter.framework */,
-				264A8AB4651B4BD5AB9B8461 /* Pods_MatchPoint.framework */,
-				CD689E8366751B8BDAAF5270 /* Pods_MatchPoint_WatchOS_Extension.framework */,
-				6F68167C68FB9C5B9FCDFD9C /* Pods_MatchPointTests.framework */,
-				541F3E7B49FCF97E0334BB11 /* Pods_MatchPointUITests.framework */,
-				B99EB32C455D64848BB434D4 /* Pods_MatchPointWidget.framework */,
+				EC8E9852B28DC3B178EA3F8C /* Pods_MatchPoint.framework */,
+				59B161D7147315680CF50C0F /* Pods_MatchPoint_WatchOS_Extension.framework */,
+				531F09D5C7D67C01B701A245 /* Pods_MatchPointTests.framework */,
+				125F4B614D24CAA71150A1E3 /* Pods_MatchPointUITests.framework */,
+				4FDA9DD021A3795EFE09D19D /* Pods_MatchPointWidget.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -726,23 +743,6 @@
 			name = Extensions;
 			sourceTree = "<group>";
 		};
-		F7E2B60D4E699FC767430A00 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				1F8F1895BF5B054AEEF120AB /* Pods-MatchPoint.debug.xcconfig */,
-				95902D5F8EA3C0617C9031A5 /* Pods-MatchPoint.release.xcconfig */,
-				E5CCD0F906670FAA83E82214 /* Pods-MatchPoint WatchOS Extension.debug.xcconfig */,
-				6EEBB842FC673B061EE2DE94 /* Pods-MatchPoint WatchOS Extension.release.xcconfig */,
-				4AE0C8AFFA7362BBDACC6BC2 /* Pods-MatchPointTests.debug.xcconfig */,
-				CE85D33D6F5E6028E6E12303 /* Pods-MatchPointTests.release.xcconfig */,
-				14F0ABCF7046FBBDDB56E2B2 /* Pods-MatchPointUITests.debug.xcconfig */,
-				0474B31C647D9F27A119E40F /* Pods-MatchPointUITests.release.xcconfig */,
-				D811AE2133EFBCE61C5C27F9 /* Pods-MatchPointWidget.debug.xcconfig */,
-				A65CCD79EA1D407D14B36489 /* Pods-MatchPointWidget.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -768,12 +768,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3C47A3EA1FC2210000EA7EF3 /* Build configuration list for PBXNativeTarget "MatchPoint WatchOS Extension" */;
 			buildPhases = (
-				D836A7E5383E81BA1975A0D0 /* [CP] Check Pods Manifest.lock */,
+				7D1471965FA1B12C16E251E4 /* [CP] Check Pods Manifest.lock */,
 				3C47A3D21FC220FF00EA7EF3 /* Sources */,
 				3C47A3D31FC220FF00EA7EF3 /* Frameworks */,
 				3C47A3D41FC220FF00EA7EF3 /* Resources */,
-				C15231E14E1D418262362364 /* [CP] Embed Pods Frameworks */,
-				4FEF1A3EEDD488812C3F8577 /* [CP] Copy Pods Resources */,
+				D3CFF27DC2C0257A189D88DE /* [CP] Embed Pods Frameworks */,
+				C3C7D02F829DB7ACB16743EA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -788,12 +788,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3C693C211FCE29740018DA22 /* Build configuration list for PBXNativeTarget "MatchPointUITests" */;
 			buildPhases = (
-				3E78B1E9B671C75AACB226F7 /* [CP] Check Pods Manifest.lock */,
+				5965FB23A172F81B19477C67 /* [CP] Check Pods Manifest.lock */,
 				3C693C161FCE29740018DA22 /* Sources */,
 				3C693C171FCE29740018DA22 /* Frameworks */,
 				3C693C181FCE29740018DA22 /* Resources */,
-				8C2DB2E5D4CD777761342BA2 /* [CP] Embed Pods Frameworks */,
-				EBD99D0A5413D509F049B326 /* [CP] Copy Pods Resources */,
+				C7DB8D59A7E5F85BAB5ADC9E /* [CP] Embed Pods Frameworks */,
+				72A01562D03620C92F15EFFB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -809,15 +809,15 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A017F3DE1F69B528007BB2FA /* Build configuration list for PBXNativeTarget "MatchPoint" */;
 			buildPhases = (
-				6273C0F29EFEB1BB2DBCAC3F /* [CP] Check Pods Manifest.lock */,
+				0996010619BAED4E80FED4EA /* [CP] Check Pods Manifest.lock */,
 				A017F3BD1F69B528007BB2FA /* Sources */,
 				A017F3BE1F69B528007BB2FA /* Frameworks */,
 				A017F3BF1F69B528007BB2FA /* Resources */,
 				A017F4081F69C7F1007BB2FA /* Embed App Extensions */,
 				3C0A34CD1FBD184800567391 /* SwiftLint */,
 				3C47A3F11FC2210000EA7EF3 /* Embed Watch Content */,
-				AEE07BF1851ACCC9A19217CC /* [CP] Embed Pods Frameworks */,
-				E9C22E944E59B259463E8054 /* [CP] Copy Pods Resources */,
+				32C8E693F8665B3C0EB897C5 /* [CP] Embed Pods Frameworks */,
+				F21EDC2C75495E0FA2353425 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -834,12 +834,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A017F3E11F69B528007BB2FA /* Build configuration list for PBXNativeTarget "MatchPointTests" */;
 			buildPhases = (
-				A6E9407376397B0B335BCEA8 /* [CP] Check Pods Manifest.lock */,
+				070DBE2F7505CC95B5DDDC46 /* [CP] Check Pods Manifest.lock */,
 				A017F3D11F69B528007BB2FA /* Sources */,
 				A017F3D21F69B528007BB2FA /* Frameworks */,
 				A017F3D31F69B528007BB2FA /* Resources */,
-				6AA76980B3D0E8041A3639E1 /* [CP] Embed Pods Frameworks */,
-				4C1689BA2CB9D7B696B43435 /* [CP] Copy Pods Resources */,
+				E8E1B7DB21C2BB5BFB764CDC /* [CP] Embed Pods Frameworks */,
+				D63A55338C8D17BBDE1C561E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -855,11 +855,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A017F4051F69C7F1007BB2FA /* Build configuration list for PBXNativeTarget "MatchPointWidget" */;
 			buildPhases = (
-				D33C436AFB5F622C3A6BD93D /* [CP] Check Pods Manifest.lock */,
+				5CC25D20017C68484C7854E6 /* [CP] Check Pods Manifest.lock */,
 				A017F3F31F69C7F0007BB2FA /* Sources */,
 				A017F3F41F69C7F0007BB2FA /* Frameworks */,
 				A017F3F51F69C7F0007BB2FA /* Resources */,
-				0BDF4C80DF6525E5FCB59DFB /* [CP] Copy Pods Resources */,
+				27AEAE8FDCADD942397D79DC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1026,141 +1026,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0BDF4C80DF6525E5FCB59DFB /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MatchPointWidget/Pods-MatchPointWidget-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		3C0A34CD1FBD184800567391 /* SwiftLint */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = SwiftLint;
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "if which ${PODS_ROOT}/SwiftLint/swiftlint >/dev/null; then\n    ${PODS_ROOT}/SwiftLint/swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
-		};
-		3E78B1E9B671C75AACB226F7 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-MatchPointUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		4C1689BA2CB9D7B696B43435 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MatchPointTests/Pods-MatchPointTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		4FEF1A3EEDD488812C3F8577 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MatchPoint WatchOS Extension/Pods-MatchPoint WatchOS Extension-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		6273C0F29EFEB1BB2DBCAC3F /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-MatchPoint-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		6AA76980B3D0E8041A3639E1 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-MatchPointTests/Pods-MatchPointTests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/FBSnapshotTestCase/FBSnapshotTestCase.framework",
-				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
-				"${BUILT_PRODUCTS_DIR}/Nimble-Snapshots/Nimble_Snapshots.framework",
-				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSnapshotTestCase.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble_Snapshots.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MatchPointTests/Pods-MatchPointTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8C2DB2E5D4CD777761342BA2 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MatchPointUITests/Pods-MatchPointUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A6E9407376397B0B335BCEA8 /* [CP] Check Pods Manifest.lock */ = {
+		070DBE2F7505CC95B5DDDC46 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1178,7 +1044,40 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		AEE07BF1851ACCC9A19217CC /* [CP] Embed Pods Frameworks */ = {
+		0996010619BAED4E80FED4EA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MatchPoint-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		27AEAE8FDCADD942397D79DC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MatchPointWidget/Pods-MatchPointWidget-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		32C8E693F8665B3C0EB897C5 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1212,7 +1111,120 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MatchPoint/Pods-MatchPoint-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C15231E14E1D418262362364 /* [CP] Embed Pods Frameworks */ = {
+		3C0A34CD1FBD184800567391 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which ${PODS_ROOT}/SwiftLint/swiftlint >/dev/null; then\n    ${PODS_ROOT}/SwiftLint/swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+		5965FB23A172F81B19477C67 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MatchPointUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5CC25D20017C68484C7854E6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MatchPointWidget-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		72A01562D03620C92F15EFFB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MatchPointUITests/Pods-MatchPointUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7D1471965FA1B12C16E251E4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MatchPoint WatchOS Extension-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C3C7D02F829DB7ACB16743EA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MatchPoint WatchOS Extension/Pods-MatchPoint WatchOS Extension-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C7DB8D59A7E5F85BAB5ADC9E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MatchPointUITests/Pods-MatchPointUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D3CFF27DC2C0257A189D88DE /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1238,43 +1250,46 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MatchPoint WatchOS Extension/Pods-MatchPoint WatchOS Extension-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D33C436AFB5F622C3A6BD93D /* [CP] Check Pods Manifest.lock */ = {
+		D63A55338C8D17BBDE1C561E /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
 			);
-			name = "[CP] Check Pods Manifest.lock";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-MatchPointWidget-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MatchPointTests/Pods-MatchPointTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D836A7E5383E81BA1975A0D0 /* [CP] Check Pods Manifest.lock */ = {
+		E8E1B7DB21C2BB5BFB764CDC /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
+				"${SRCROOT}/Pods/Target Support Files/Pods-MatchPointTests/Pods-MatchPointTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/FBSnapshotTestCase/FBSnapshotTestCase.framework",
+				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
+				"${BUILT_PRODUCTS_DIR}/Nimble-Snapshots/Nimble_Snapshots.framework",
+				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
 			);
-			name = "[CP] Check Pods Manifest.lock";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-MatchPoint WatchOS Extension-checkManifestLockResult.txt",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSnapshotTestCase.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble_Snapshots.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MatchPointTests/Pods-MatchPointTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E9C22E944E59B259463E8054 /* [CP] Copy Pods Resources */ = {
+		F21EDC2C75495E0FA2353425 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1287,21 +1302,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MatchPoint/Pods-MatchPoint-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		EBD99D0A5413D509F049B326 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MatchPointUITests/Pods-MatchPointUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1530,7 +1530,7 @@
 /* Begin XCBuildConfiguration section */
 		3C47A3EB1FC2210000EA7EF3 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E5CCD0F906670FAA83E82214 /* Pods-MatchPoint WatchOS Extension.debug.xcconfig */;
+			baseConfigurationReference = 23522B39C4E05BDA9FA5B6A4 /* Pods-MatchPoint WatchOS Extension.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -1552,7 +1552,7 @@
 		};
 		3C47A3EC1FC2210000EA7EF3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6EEBB842FC673B061EE2DE94 /* Pods-MatchPoint WatchOS Extension.release.xcconfig */;
+			baseConfigurationReference = 6238616BB325506397110FBE /* Pods-MatchPoint WatchOS Extension.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -1625,7 +1625,7 @@
 		};
 		3C693C221FCE29740018DA22 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 14F0ABCF7046FBBDDB56E2B2 /* Pods-MatchPointUITests.debug.xcconfig */;
+			baseConfigurationReference = 49992F4BFD4B4F97BA4C0C2F /* Pods-MatchPointUITests.debug.xcconfig */;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
@@ -1646,7 +1646,7 @@
 		};
 		3C693C231FCE29740018DA22 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0474B31C647D9F27A119E40F /* Pods-MatchPointUITests.release.xcconfig */;
+			baseConfigurationReference = 5B46CA97D30CB1016D3D53F2 /* Pods-MatchPointUITests.release.xcconfig */;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
@@ -1774,7 +1774,7 @@
 		};
 		A017F3DF1F69B528007BB2FA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1F8F1895BF5B054AEEF120AB /* Pods-MatchPoint.debug.xcconfig */;
+			baseConfigurationReference = FF123C6D8232DD18EDF68FA8 /* Pods-MatchPoint.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = MatchPoint/MatchPoint.entitlements;
@@ -1796,7 +1796,7 @@
 		};
 		A017F3E01F69B528007BB2FA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 95902D5F8EA3C0617C9031A5 /* Pods-MatchPoint.release.xcconfig */;
+			baseConfigurationReference = D9A4941104731AD7E1762640 /* Pods-MatchPoint.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = MatchPoint/MatchPoint.entitlements;
@@ -1818,7 +1818,7 @@
 		};
 		A017F3E21F69B528007BB2FA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4AE0C8AFFA7362BBDACC6BC2 /* Pods-MatchPointTests.debug.xcconfig */;
+			baseConfigurationReference = 78E9CCCA71D27C46F19A76A9 /* Pods-MatchPointTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = 83C3V38WSB;
@@ -1834,7 +1834,7 @@
 		};
 		A017F3E31F69B528007BB2FA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CE85D33D6F5E6028E6E12303 /* Pods-MatchPointTests.release.xcconfig */;
+			baseConfigurationReference = 011A8309596E40C570F1ABBD /* Pods-MatchPointTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = 83C3V38WSB;
@@ -1850,7 +1850,7 @@
 		};
 		A017F4061F69C7F1007BB2FA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D811AE2133EFBCE61C5C27F9 /* Pods-MatchPointWidget.debug.xcconfig */;
+			baseConfigurationReference = FC67E601DED941CB353D084E /* Pods-MatchPointWidget.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = MatchPointWidget/MatchPointWidget.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -1870,7 +1870,7 @@
 		};
 		A017F4071F69C7F1007BB2FA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A65CCD79EA1D407D14B36489 /* Pods-MatchPointWidget.release.xcconfig */;
+			baseConfigurationReference = F44C5B5DF13BBCC164B1C3B0 /* Pods-MatchPointWidget.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = MatchPointWidget/MatchPointWidget.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";

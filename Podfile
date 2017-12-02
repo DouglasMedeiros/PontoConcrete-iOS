@@ -25,10 +25,10 @@ target 'MatchPoint' do
   target 'MatchPointUITests' do
       inherit! :search_paths
   end
-end
-
-target 'MatchPointWidget' do
-    sharedPods
+  target 'MatchPointWidget' do
+      inherit! :search_paths
+      sharedPods
+  end
 end
 
 target 'MatchPoint WatchOS Extension' do
