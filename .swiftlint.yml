@@ -40,7 +40,13 @@ disabled_rules:
   - trailing_whitespace
   - line_length
 
+included:
+  - MatchPoint
+  - MatchPoint WatchOS Extension
+  - MatchPointWidget
+
 excluded:
   - Pods
   - MatchPointTests
+  - MatchPointUITests
   - MatchPoint/SkyFloatingLabelTextField
