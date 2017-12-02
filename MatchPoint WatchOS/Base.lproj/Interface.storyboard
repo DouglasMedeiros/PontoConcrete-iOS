@@ -53,18 +53,10 @@
                     <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
                     <connections>
                         <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
-                        <segue destination="Dgs-7J-WvH" kind="relationship" relationship="dynamicNotificationInterface" id="1zz-fr-nL0"/>
                     </connections>
                 </notificationController>
             </objects>
             <point key="canvasLocation" x="474" y="326"/>
-        </scene>
-        <!--Dynamic Notification Interface Controller-->
-        <scene sceneID="qai-KF-XG8">
-            <objects>
-                <controller id="Dgs-7J-WvH"/>
-            </objects>
-            <point key="canvasLocation" x="774" y="326"/>
         </scene>
     </scenes>
 </document>

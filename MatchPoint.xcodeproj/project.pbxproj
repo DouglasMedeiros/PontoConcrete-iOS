@@ -24,6 +24,8 @@
 		3C13F7311FC66123003E50ED /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C13F7301FC66123003E50ED /* String.swift */; };
 		3C13F7321FC661F8003E50ED /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C13F7301FC66123003E50ED /* String.swift */; };
 		3C13F7331FC661F9003E50ED /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C13F7301FC66123003E50ED /* String.swift */; };
+		3C14ECEE1FD36B830077A33B /* WatchConnectivityManagerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C14ECED1FD36B830077A33B /* WatchConnectivityManagerSpec.swift */; };
+		3C14ECF01FD36BE70077A33B /* WatchConnectivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C14ECEF1FD36BE70077A33B /* WatchConnectivityManager.swift */; };
 		3C1F8A421FC355CC001B9873 /* SessionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50EA7181FB8ECC700F21A88 /* SessionData.swift */; };
 		3C211B3C1FCCEEAE0042300F /* GoogleGeocodeRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C211B3B1FCCEEAE0042300F /* GoogleGeocodeRoute.swift */; };
 		3C211B3E1FCCF1E80042300F /* GoogleGeocodeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C211B3D1FCCF1E80042300F /* GoogleGeocodeService.swift */; };
@@ -258,6 +260,8 @@
 		3C0A34C91FBD15F800567391 /* PontoMaisAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PontoMaisAPI.swift; sourceTree = "<group>"; };
 		3C0A34CF1FBD1B2E00567391 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		3C13F7301FC66123003E50ED /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		3C14ECED1FD36B830077A33B /* WatchConnectivityManagerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchConnectivityManagerSpec.swift; sourceTree = "<group>"; };
+		3C14ECEF1FD36BE70077A33B /* WatchConnectivityManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchConnectivityManager.swift; sourceTree = "<group>"; };
 		3C211B3B1FCCEEAE0042300F /* GoogleGeocodeRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleGeocodeRoute.swift; sourceTree = "<group>"; };
 		3C211B3D1FCCF1E80042300F /* GoogleGeocodeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleGeocodeService.swift; sourceTree = "<group>"; };
 		3C211B3F1FCCF2180042300F /* GoogleGeocodeAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleGeocodeAPI.swift; sourceTree = "<group>"; };
@@ -497,6 +501,7 @@
 				3C5300161FCAF57C0056553E /* LoginViewControllerSpec.swift */,
 				3C770BB51FCB229A0041B231 /* UIAlertActionSpec.swift */,
 				3C770BB91FCB64A80041B231 /* GeocoderManagerSpec.swift */,
+				3C14ECED1FD36B830077A33B /* WatchConnectivityManagerSpec.swift */,
 				3CF474491FCD93ED00B4C984 /* GoogleGeocodeAPISpec.swift */,
 				3CF4744B1FCDB29000B4C984 /* GoogleGeocodeServiceSpec.swift */,
 			);
@@ -583,6 +588,7 @@
 				A017F3C41F69B528007BB2FA /* AppDelegate.swift */,
 				A05AA1CA1F980D3F009FA699 /* MatchPoint.entitlements */,
 				A017F3CB1F69B528007BB2FA /* Assets.xcassets */,
+				3C14ECEF1FD36BE70077A33B /* WatchConnectivityManager.swift */,
 				A017F3D01F69B528007BB2FA /* Info.plist */,
 			);
 			path = MatchPoint;
@@ -1361,6 +1367,7 @@
 				A5398C2C1FB776E20064CD0D /* NotificationPointBH.swift in Sources */,
 				3C9E04CA1FC0CF1F00DC0986 /* SkyFloatingLabelTextField.swift in Sources */,
 				A5398C3D1FB791430064CD0D /* HomeViewController.swift in Sources */,
+				3C14ECF01FD36BE70077A33B /* WatchConnectivityManager.swift in Sources */,
 				3C9968D81FD23B3F0012E22F /* ProcessInfo.swift in Sources */,
 				3C0A34C81FBD15DE00567391 /* PontoMaisService.swift in Sources */,
 				A017F3EE1F69BD12007BB2FA /* LoginResponse.swift in Sources */,
@@ -1420,6 +1427,7 @@
 				3C268C7B1FCA208F000D47C4 /* MappeableSpec.swift in Sources */,
 				3C268C731FCA0B42000D47C4 /* LoginViewSpec.swift in Sources */,
 				3CA95B1C1FC90E8300383EA7 /* SessionDataSpec.swift in Sources */,
+				3C14ECEE1FD36B830077A33B /* WatchConnectivityManagerSpec.swift in Sources */,
 				3C268C711FCA07B1000D47C4 /* HomeViewSpec.swift in Sources */,
 				3C770BB61FCB229A0041B231 /* UIAlertActionSpec.swift in Sources */,
 				3C770BB81FCB23D30041B231 /* CurrentUserSpec.swift in Sources */,
