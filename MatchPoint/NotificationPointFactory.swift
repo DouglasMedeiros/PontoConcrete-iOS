@@ -10,7 +10,6 @@ import Foundation
 
 enum NotificationPointFactory {
     static func notification(for point: Point) -> NotificationPoint {
-        
         switch point {
         case .saoPaulo:
             return NotificationPointSP(content: NotificationDefaultContent())
@@ -19,6 +18,5 @@ enum NotificationPointFactory {
         case .minasGerais:
             return NotificationPointBH(content: NotificationDefaultContent())
         }
-
     }
 }

@@ -46,21 +46,25 @@
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">
             <objects>
-                <notificationController id="YCC-NB-fut">
+                <notificationController animationDuration="1" id="YCC-NB-fut" customClass="NotificationController" customModule="MatchPoint_WatchOS_Extension">
                     <items>
-                        <label width="1" height="24" alignment="center" text="Atenção" textAlignment="center" id="FBT-tb-l01">
-                            <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
-                        </label>
                         <label width="1" alignment="center" text="Está chegando/saindo da Concrete? Não esqueça de bater o ponto!" textAlignment="center" numberOfLines="7" id="IdU-wH-bcW"/>
                     </items>
                     <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
                     <connections>
                         <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
-                        <outlet property="notificationTitleLabel" destination="FBT-tb-l01" id="XxD-QR-eFS"/>
+                        <segue destination="Dgs-7J-WvH" kind="relationship" relationship="dynamicNotificationInterface" id="1zz-fr-nL0"/>
                     </connections>
                 </notificationController>
             </objects>
             <point key="canvasLocation" x="474" y="326"/>
+        </scene>
+        <!--Dynamic Notification Interface Controller-->
+        <scene sceneID="qai-KF-XG8">
+            <objects>
+                <controller id="Dgs-7J-WvH"/>
+            </objects>
+            <point key="canvasLocation" x="774" y="326"/>
         </scene>
     </scenes>
 </document>
