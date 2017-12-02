@@ -8,6 +8,7 @@
 
 import UIKit
 import SwiftWatchConnectivity
+import Moya
 
 fileprivate extension Selector {
     static let loginTapped = #selector(LoginViewController.tappedLogin)
@@ -22,7 +23,7 @@ class LoginViewController: UIViewController {
     weak var delegate: LoginViewControllerDelegate?
     
     let containerView = LoginView()
-    let service: PontoMaisService
+    private(set) var service: PontoMaisService
     
     init(service: PontoMaisService = PontoMaisService()) {
         self.service = service
@@ -40,6 +41,10 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupView()
+        
+        if ProcessInfo.processInfo.isUITesting {
+            self.configureUITests()
+        }
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -127,5 +132,18 @@ extension LoginViewController {
                 self.containerView.updateUI(state: .error(error.localizedDescription))
             }
         }
+    }
+    
+    private func configureUITests() {
+        let endpointClosure = { (target: PontoMaisRoute) -> Endpoint<PontoMaisRoute> in
+            return Endpoint<PontoMaisRoute>(url: URL(target: target).absoluteString,
+                                            sampleResponseClosure: {
+                                                return .networkResponse(200, target.sampleData)
+            }, method: target.method, task: target.task, httpHeaderFields: target.headers)
+        }
+        
+        let provider = MoyaProvider<PontoMaisRoute>(endpointClosure: endpointClosure, stubClosure: MoyaProvider.immediatelyStub)
+        let api = PontoMaisAPI(provider: provider)
+        self.service = PontoMaisService(provider: api)
     }
 }

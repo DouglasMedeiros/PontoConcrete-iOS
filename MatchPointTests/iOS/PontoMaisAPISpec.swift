@@ -9,7 +9,6 @@
 import Moya
 import Quick
 import Nimble
-import OHHTTPStubs
 import CoreLocation
 
 @testable import MatchPoint
@@ -20,12 +19,15 @@ class PontoMaisAPISpec: QuickSpec {
         var sut: PontoMaisAPI!
         
         beforeEach {
-            let provider = MoyaProvider<PontoMaisRoute>()
+            let endpointClosure = { (target: PontoMaisRoute) -> Endpoint<PontoMaisRoute> in
+                return Endpoint<PontoMaisRoute>(url: URL(target: target).absoluteString,
+                                                sampleResponseClosure: {
+                                                    return .networkResponse(200, target.sampleData)
+                }, method: target.method, task: target.task, httpHeaderFields: target.headers)
+            }
+            
+            let provider = MoyaProvider<PontoMaisRoute>(endpointClosure: endpointClosure, stubClosure: MoyaProvider.immediatelyStub)
             sut = PontoMaisAPI(provider: provider)
-        }
-        
-        afterEach {
-            OHHTTPStubs.removeAllStubs()
         }
         
         it("should be able to create a instance of PontoMaisAPI") {
@@ -37,14 +39,11 @@ class PontoMaisAPISpec: QuickSpec {
             context("register") {
                 context("successfull") {
                     it("register sucess") {
-                        let credential = SessionData(token: "abc", clientId: "abc123", email: "email@server.com")
+                        let credential = SessionData(token: "abc", clientId: "123456", email: "email@concrete.com.br")
                         let location = CLLocation(latitude: 10, longitude: 20)
                         let address = "Street 1"
                         let point = PointData(location: location, address: address)
                         let data = PontoMaisRoute.register(data: credential, point: point).sampleData
-                        OHHTTPStubs.stubRequests(passingTest: { $0.url!.path == "/api/time_cards/register" }, withStubResponse: { _ in
-                            return OHHTTPStubsResponse(data: data, statusCode: 200, headers: nil)
-                        })
                         
                         let expectResult = String(data: data, encoding: .utf8)
                         var message: String?
@@ -61,15 +60,23 @@ class PontoMaisAPISpec: QuickSpec {
                     }
                 }
                 context("error") {
+                    beforeEach {
+                        let endpointClosure = { (target: PontoMaisRoute) -> Endpoint<PontoMaisRoute> in
+                            return Endpoint<PontoMaisRoute>(url: URL(target: target).absoluteString,
+                                                            sampleResponseClosure: {
+                                                                return .networkError(NSError())
+                            }, method: target.method, task: target.task, httpHeaderFields: target.headers)
+                        }
+                        
+                        let provider = MoyaProvider<PontoMaisRoute>(endpointClosure: endpointClosure, stubClosure: MoyaProvider.immediatelyStub)
+                        sut = PontoMaisAPI(provider: provider)
+                    }
+                    
                     it("register") {
                         let credential = SessionData(token: "abc", clientId: "abc123", email: "email@server.com")
                         let location = CLLocation(latitude: 10, longitude: 20)
-                        let address = "Street 1"
+                        let address = "Street 2"
                         let point = PointData(location: location, address: address)
-                        
-                        OHHTTPStubs.stubRequests(passingTest: { $0.url!.path == "/api/time_cards/register" }, withStubResponse: { _ in
-                            return OHHTTPStubsResponse(data: Data(), statusCode: 401, headers: nil)
-                        })
                         
                         var message: String?
                         
@@ -96,10 +103,6 @@ class PontoMaisAPISpec: QuickSpec {
                         let password = "123456"
 
                         let data = PontoMaisRoute.login(login: email, password: password).sampleData
-                        OHHTTPStubs.stubRequests(passingTest: { $0.url!.path == "/api/auth/sign_in" }, withStubResponse: { _ in
-                            return OHHTTPStubsResponse(data: data, statusCode: 200, headers: nil)
-                        })
-
                         let expectResult = String(data: data, encoding: .utf8)
                         var message: String?
 
@@ -121,17 +124,8 @@ class PontoMaisAPISpec: QuickSpec {
                         let email = "email@server.com"
                         let password = "123456"
                         
-                        let json = "{\"error\":\"Usuário e/ou senha inválidos\",\"meta\":{\"now\":1511032961,\"ip\":\"179.35.195.159\"}}"
+                        let expectResult = "{\"error\":\"Usuário e/ou senha inválidos\",\"meta\":{\"now\":1511032961,\"ip\":\"179.35.195.159\"}}"
                         
-                        guard let data = json.data(using: .utf8) else {
-                            fatalError("Error sample data JSON")
-                        }
-                        
-                        OHHTTPStubs.stubRequests(passingTest: { $0.url!.path == "/api/auth/sign_in" }, withStubResponse: { _ in
-                            return OHHTTPStubsResponse(data: data, statusCode: 200, headers: nil)
-                        })
-                        
-                        let expectResult = String(data: data, encoding: .utf8)
                         var message: String?
                         
                         waitUntil { done in
@@ -149,31 +143,42 @@ class PontoMaisAPISpec: QuickSpec {
                         expect(message).to(equal(expectResult))
                     }
                     
-                    it("login error request") {
-
-                        let email = "email@server.com"
-                        let password = "123456"
-
-                        OHHTTPStubs.stubRequests(passingTest: { $0.url!.path == "/api/auth/sign_in" }, withStubResponse: { _ in
-                            return OHHTTPStubsResponse(data: Data(), statusCode: 401, headers: nil)
-                        })
-
-                        var message: String?
-
-                        waitUntil { done in
-                            let request = sut.login(email: email, password: password, callback: { (response, result) in
-                                if case .failure = result {
-                                    message = ""
-                                    done()
-                                    return
-                                }
-                                
-                                fail()
-                            })
-                            request.cancel()
+                    context("Request"){
+                        
+                        beforeEach {
+                            let endpointClosure = { (target: PontoMaisRoute) -> Endpoint<PontoMaisRoute> in
+                                return Endpoint<PontoMaisRoute>(url: URL(target: target).absoluteString,
+                                                                sampleResponseClosure: {
+                                                                    return .networkError(NSError())
+                                }, method: target.method, task: target.task, httpHeaderFields: target.headers)
+                            }
+                            
+                            let provider = MoyaProvider<PontoMaisRoute>(endpointClosure: endpointClosure, stubClosure: MoyaProvider.immediatelyStub)
+                            sut = PontoMaisAPI(provider: provider)
                         }
+                        
+                        it("login error request") {
 
-                        expect(message).to(beEmpty())
+                            let email = "email@server.com"
+                            let password = "123456"
+
+                            var message: String?
+
+                            waitUntil { done in
+                                let request = sut.login(email: email, password: password, callback: { (response, result) in
+                                    if case .failure = result {
+                                        message = ""
+                                        done()
+                                        return
+                                    }
+                                    
+                                    fail()
+                                })
+                                request.cancel()
+                            }
+
+                            expect(message).to(beEmpty())
+                        }
                     }
                 }
             }

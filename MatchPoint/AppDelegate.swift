@@ -20,6 +20,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
+        if ProcessInfo.processInfo.isUITesting {
+            UIView.setAnimationsEnabled(false)
+            CurrentUser.shared.remove()
+        }
+        
         self.swiftWatchConnectivity = SwiftWatchConnectivity.shared
         self.swiftWatchConnectivity?.delegate = self
         

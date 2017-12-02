@@ -9,8 +9,8 @@
 import Quick
 import Nimble
 import Nimble_Snapshots
-import OHHTTPStubs
 import CoreLocation
+import Moya
 
 @testable import MatchPoint
 
@@ -23,7 +23,18 @@ class LoginViewControllerSpec: QuickSpec {
             context("when creating") {
                 
                 beforeEach {
-                    sut = LoginViewController()
+                    let endpointClosure = { (target: PontoMaisRoute) -> Endpoint<PontoMaisRoute> in
+                        return Endpoint<PontoMaisRoute>(url: URL(target: target).absoluteString,
+                                                        sampleResponseClosure: {
+                                                            return .networkResponse(200, target.sampleData)
+                        }, method: target.method, task: target.task, httpHeaderFields: target.headers)
+                    }
+                    
+                    let provider = MoyaProvider<PontoMaisRoute>(endpointClosure: endpointClosure, stubClosure: MoyaProvider.delayedStub(3))
+                    let api = PontoMaisAPI(provider: provider)
+                    let service = PontoMaisService(provider: api)
+                    
+                    sut = LoginViewController(service: service)
                     _ = sut.view
                 }
                 
@@ -34,11 +45,6 @@ class LoginViewControllerSpec: QuickSpec {
                 it("press login") {
                     let email = "email@server.com"
                     let password = "123456"
-                    
-                    let data = PontoMaisRoute.login(login: email, password: password).sampleData
-                    OHHTTPStubs.stubRequests(passingTest: { $0.url!.path == "/api/auth/sign_in" }, withStubResponse: { _ in
-                        return OHHTTPStubsResponse(data: data, statusCode: 200, headers: nil)
-                    })
                     
                     sut.containerView.emailTextField.text = email
                     sut.containerView.passwordTextField.text = password

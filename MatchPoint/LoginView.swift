@@ -25,6 +25,8 @@ class LoginView: UIView {
     
     lazy var logoView: LogoView = {
         let logoView = LogoView()
+        logoView.accessibilityLabel = "logotipo"
+        logoView.isAccessibilityElement = true
         return logoView
     }()
     
@@ -45,6 +47,9 @@ class LoginView: UIView {
         tf.selectedTitleColor = .madison
         tf.selectedLineColor = .madison
         
+        tf.isAccessibilityElement = true
+        tf.accessibilityLabel = "email"
+        tf.accessibilityIdentifier = "email"
         tf.tag = 99
         tf.borderStyle = .none
         tf.keyboardType = .emailAddress
@@ -73,6 +78,9 @@ class LoginView: UIView {
         tf.selectedTitleColor = .madison
         tf.selectedLineColor = .madison
         
+        tf.isAccessibilityElement = true
+        tf.accessibilityLabel = "senha"
+        tf.accessibilityIdentifier = "senha"
         tf.borderStyle = .none
         tf.isSecureTextEntry = true
         tf.keyboardType = .default
@@ -89,6 +97,9 @@ class LoginView: UIView {
         lb.numberOfLines = 2
         lb.textColor = .white
         lb.text = "Dados Incorretos"
+        lb.isAccessibilityElement = true
+        lb.accessibilityLabel = "validator"
+        lb.accessibilityIdentifier = "validator"
         return lb
     }()
     
@@ -98,9 +109,14 @@ class LoginView: UIView {
         view.setTitle("Entrar", for: .normal)
         view.setTitleColor(.white, for: .normal)
         view.titleLabel?.font = .systemFont(ofSize: 17)
+        view.accessibilityLabel = "entrar"
+        view.accessibilityIdentifier = "entrar"
+        view.isAccessibilityElement = true
+        view.accessibilityTraits = UIAccessibilityTraitButton
         view.borderColor = .white
         view.borderWidth = 1
         view.cornerRadius = 10
+        
         return view
     }()
     
@@ -108,6 +124,9 @@ class LoginView: UIView {
         let aiv = UIActivityIndicatorView(frame: .zero)
         aiv.hidesWhenStopped = true
         aiv.activityIndicatorViewStyle = .white
+        aiv.accessibilityLabel = "aguarde"
+        aiv.accessibilityIdentifier = "aguarde"
+        aiv.isAccessibilityElement = true
         return aiv
     }()
     

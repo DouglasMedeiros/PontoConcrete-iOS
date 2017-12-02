@@ -76,11 +76,19 @@ extension PontoMaisRoute: TargetType {
         var json = ""
         
         switch self {
-        case .login:
-            //json = "{\"error\":\"Usuário e/ou senha inválidos\",\"meta\":{\"now\":1511032961,\"ip\":\"179.35.195.159\"}}"
-            json = "{\"success\":\"Login efetuado com sucesso!\",\"token\":\"AqT_IHCKzjRJkK6sEXDl_A\",\"client_id\":\"BkBLDY_tHZt859U6100eKA\",\"data\":{\"email\":\"email@concrete.com.br\",\"sign_in_count\":39,\"last_sign_in_ip\":\"189.199.195.159\",\"last_sign_in_at\":1511031962},\"meta\":{\"now\":1511032411,\"ip\":\"189.199.195.159\"}}"
-        case .register:
-            json = "{\"success\":\"Ponto registrado com sucesso\",\"untreated_time_card\":{\"id\":10692079,\"time_clock_id\":null,\"time_clock_sequence_number\":null,\"nis\":null,\"time\":\"2000-01-01T17:25:44.000Z\",\"date\":\"2017-11-18\",\"source\":4,\"processed\":true,\"deleted_at\":null,\"created_at\":\"2017-11-18T17:25:44.151-02:00\",\"updated_at\":\"2017-11-18T17:25:44.151-02:00\",\"latitude\":null,\"longitude\":null,\"user_id\":66417,\"original_latitude\":null,\"original_longitude\":null,\"location_edited\":null,\"accuracy\":null,\"accuracy_method\":null,\"address\":null,\"original_address\":null,\"image_file_name\":null,\"image_content_type\":null,\"image_file_size\":null,\"image_updated_at\":null,\"ip\":\"179.35.195.159\",\"reference_id\":null,\"offline\":false},\"time_card\":{\"id\":15521172,\"employee_id\":89812,\"nis\":null,\"time\":\"2000-01-01T17:25:44.000Z\",\"date\":\"2017-11-18\",\"source\":4,\"time_clock_id\":null,\"time_clock_sequence_number\":null,\"register_type\":1,\"disabled\":false,\"deleted_at\":null,\"created_at\":\"2017-11-18T17:25:44.352-02:00\",\"updated_at\":\"2017-11-18T17:25:44.352-02:00\",\"work_day_id\":17499537,\"latitude\":null,\"longitude\":null,\"updated_by_id\":null,\"user_id\":66417,\"is_in_allowance\":null,\"status_id\":null,\"original_latitude\":null,\"original_longitude\":null,\"location_edited\":null,\"accuracy\":null,\"accuracy_method\":null,\"address\":null,\"original_address\":null,\"untreated_id\":10692079,\"ip\":\"179.35.195.159\",\"reference_id\":null,\"offline\":false,\"local_date_time\":null},\"receipt\":\"00010692079\",\"meta\":{\"now\":1511033144,\"ip\":\"179.35.195.159\"}}"
+        case .login(let login, let password):
+            if login == "email@concrete.com.br" && password == "123456" {
+                json = "{\"success\":\"Login efetuado com sucesso!\",\"token\":\"AqT_IHCKzjRJkK6sEXDl_A\",\"client_id\":\"BkBLDY_tHZt859U6100eKA\",\"data\":{\"email\":\"email@concrete.com.br\",\"sign_in_count\":39,\"last_sign_in_ip\":\"189.199.195.159\",\"last_sign_in_at\":1511031962},\"meta\":{\"now\":1511032411,\"ip\":\"189.199.195.159\"}}"
+            } else {
+                json = "{\"error\":\"Usuário e/ou senha inválidos\",\"meta\":{\"now\":1511032961,\"ip\":\"179.35.195.159\"}}"
+            }
+        case .register(_, let point):
+            
+            if point.address == "Street 1" {
+                json = "{\"success\":\"Ponto registrado com sucesso\",\"untreated_time_card\":{\"id\":10692079,\"time_clock_id\":null,\"time_clock_sequence_number\":null,\"nis\":null,\"time\":\"2000-01-01T17:25:44.000Z\",\"date\":\"2017-11-18\",\"source\":4,\"processed\":true,\"deleted_at\":null,\"created_at\":\"2017-11-18T17:25:44.151-02:00\",\"updated_at\":\"2017-11-18T17:25:44.151-02:00\",\"latitude\":null,\"longitude\":null,\"user_id\":66417,\"original_latitude\":null,\"original_longitude\":null,\"location_edited\":null,\"accuracy\":null,\"accuracy_method\":null,\"address\":null,\"original_address\":null,\"image_file_name\":null,\"image_content_type\":null,\"image_file_size\":null,\"image_updated_at\":null,\"ip\":\"179.35.195.159\",\"reference_id\":null,\"offline\":false},\"time_card\":{\"id\":15521172,\"employee_id\":89812,\"nis\":null,\"time\":\"2000-01-01T17:25:44.000Z\",\"date\":\"2017-11-18\",\"source\":4,\"time_clock_id\":null,\"time_clock_sequence_number\":null,\"register_type\":1,\"disabled\":false,\"deleted_at\":null,\"created_at\":\"2017-11-18T17:25:44.352-02:00\",\"updated_at\":\"2017-11-18T17:25:44.352-02:00\",\"work_day_id\":17499537,\"latitude\":null,\"longitude\":null,\"updated_by_id\":null,\"user_id\":66417,\"is_in_allowance\":null,\"status_id\":null,\"original_latitude\":null,\"original_longitude\":null,\"location_edited\":null,\"accuracy\":null,\"accuracy_method\":null,\"address\":null,\"original_address\":null,\"untreated_id\":10692079,\"ip\":\"179.35.195.159\",\"reference_id\":null,\"offline\":false,\"local_date_time\":null},\"receipt\":\"00010692079\",\"meta\":{\"now\":1511033144,\"ip\":\"179.35.195.159\"}}"
+            } else {
+                json = "{\"error\":\"Erro ao tentar bater o ponto\",\"meta\":{\"now\":1511033144,\"ip\":\"179.35.195.159\"}}"
+            }
         }
         
         guard let data = json.data(using: .utf8) else {
