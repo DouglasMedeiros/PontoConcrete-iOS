@@ -44,6 +44,16 @@
       language = ""
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "3C693C191FCE29740018DA22"
+               BuildableName = "MatchPointUITests.xctest"
+               BlueprintName = "MatchPointUITests"
+               ReferencedContainer = "container:MatchPoint.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

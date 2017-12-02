@@ -9,7 +9,6 @@
 import Moya
 import Quick
 import Nimble
-import OHHTTPStubs
 import CoreLocation
 
 @testable import MatchPoint
@@ -20,12 +19,15 @@ class GoogleGeocodeAPISpec: QuickSpec {
         var sut: GoogleGeocodeAPI!
         
         beforeEach {
-            let provider = MoyaProvider<GoogleGeocodeRoute>()
+            let endpointClosure = { (target: GoogleGeocodeRoute) -> Endpoint<GoogleGeocodeRoute> in
+                return Endpoint<GoogleGeocodeRoute>(url: URL(target: target).absoluteString,
+                                                sampleResponseClosure: {
+                                                    return .networkResponse(200, target.sampleData)
+                }, method: target.method, task: target.task, httpHeaderFields: target.headers)
+            }
+            
+            let provider = MoyaProvider<GoogleGeocodeRoute>(endpointClosure: endpointClosure, stubClosure: MoyaProvider.immediatelyStub)
             sut = GoogleGeocodeAPI(provider: provider)
-        }
-        
-        afterEach {
-            OHHTTPStubs.removeAllStubs()
         }
         
         it("should be able to create a instance of PontoMaisAPI") {
@@ -39,9 +41,6 @@ class GoogleGeocodeAPISpec: QuickSpec {
                         let location = CLLocation(latitude: 10, longitude: 20)
                         
                         let data = GoogleGeocodeRoute.geocode(coordinate: location.coordinate).sampleData
-                        OHHTTPStubs.stubRequests(passingTest: { $0.url!.path == "/maps/api/geocode/json" }, withStubResponse: { _ in
-                            return OHHTTPStubsResponse(data: data, statusCode: 200, headers: nil)
-                        })
                         
                         let expectResult = String(data: data, encoding: .utf8)
                         var message: String?
@@ -58,17 +57,20 @@ class GoogleGeocodeAPISpec: QuickSpec {
                     }
                 }
                 context("error") {
-                    it("location") {
-                        let location = CLLocation(latitude: 10, longitude: 20)
-                        let json = "{\"error_message\":\"Invalid request. Invalid 'latlng' parameter.\",\"results\":[],\"status\":\"INVALID_REQUEST\"}"
-                        
-                        guard let data = json.data(using: .utf8) else {
-                            fatalError("Error sample data JSON")
+                    beforeEach {
+                        let endpointClosure = { (target: GoogleGeocodeRoute) -> Endpoint<GoogleGeocodeRoute> in
+                            return Endpoint<GoogleGeocodeRoute>(url: URL(target: target).absoluteString,
+                                                            sampleResponseClosure: {
+                                                                return .networkError(NSError())
+                            }, method: target.method, task: target.task, httpHeaderFields: target.headers)
                         }
                         
-                        OHHTTPStubs.stubRequests(passingTest: { $0.url!.path == "/api/time_cards/register" }, withStubResponse: { _ in
-                            return OHHTTPStubsResponse(data: data, statusCode: 200, headers: nil)
-                        })
+                        let provider = MoyaProvider<GoogleGeocodeRoute>(endpointClosure: endpointClosure, stubClosure: MoyaProvider.immediatelyStub)
+                        sut = GoogleGeocodeAPI(provider: provider)
+                    }
+                    
+                    it("location") {
+                        let location = CLLocation(latitude: 10, longitude: 20)
                         
                         var message: String?
                         

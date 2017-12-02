@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		04E41EDEB2C42622156FAC8A /* Pods_MatchPointTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3E861EB5A688EA2D9EBF935 /* Pods_MatchPointTests.framework */; };
+		263A4AFD7DA9E212675C681C /* Pods_MatchPointUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 541F3E7B49FCF97E0334BB11 /* Pods_MatchPointUITests.framework */; };
 		3C04A2C41FC9138100811125 /* NotificationPointSPSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C04A2C31FC9138100811125 /* NotificationPointSPSpec.swift */; };
 		3C04A2C61FC915E000811125 /* NotificationPointRJSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C04A2C51FC915E000811125 /* NotificationPointRJSpec.swift */; };
 		3C04A2C81FC9163200811125 /* NotificationPointBHSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C04A2C71FC9163200811125 /* NotificationPointBHSpec.swift */; };
@@ -70,12 +70,16 @@
 		3C5300151FCAEE700056553E /* LabelAttributedSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5300141FCAEE700056553E /* LabelAttributedSpec.swift */; };
 		3C5300171FCAF57C0056553E /* LoginViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5300161FCAF57C0056553E /* LoginViewControllerSpec.swift */; };
 		3C5300191FCB09ED0056553E /* UIAlertAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5300181FCB09ED0056553E /* UIAlertAction.swift */; };
+		3C693C1D1FCE29740018DA22 /* MatchPointUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C693C1C1FCE29740018DA22 /* MatchPointUITests.swift */; };
 		3C74848A1FC380560007E7F0 /* LabelAttributed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7484891FC380560007E7F0 /* LabelAttributed.swift */; };
 		3C74848B1FC3814D0007E7F0 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0A34CF1FBD1B2E00567391 /* Date.swift */; };
 		3C770BB61FCB229A0041B231 /* UIAlertActionSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C770BB51FCB229A0041B231 /* UIAlertActionSpec.swift */; };
 		3C770BB81FCB23D30041B231 /* CurrentUserSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C770BB71FCB23D30041B231 /* CurrentUserSpec.swift */; };
 		3C770BBA1FCB64A80041B231 /* GeocoderManagerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C770BB91FCB64A80041B231 /* GeocoderManagerSpec.swift */; };
 		3C770BBF1FCB95520041B231 /* LabelAttributed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C9E04D31FC0FC0F00DC0986 /* LabelAttributed.swift */; };
+		3C9968D81FD23B3F0012E22F /* ProcessInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C9968D71FD23B3F0012E22F /* ProcessInfo.swift */; };
+		3C9968D91FD23BF60012E22F /* ProcessInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C9968D71FD23B3F0012E22F /* ProcessInfo.swift */; };
+		3C9968DA1FD23BF70012E22F /* ProcessInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C9968D71FD23B3F0012E22F /* ProcessInfo.swift */; };
 		3C9E04BA1FC08DD600DC0986 /* TodayLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C9E04B91FC08DD600DC0986 /* TodayLoadingView.swift */; };
 		3C9E04BB1FC09EEE00DC0986 /* RegisterResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A017F3EB1F69BC64007BB2FA /* RegisterResponse.swift */; };
 		3C9E04BC1FC09EF500DC0986 /* TimeCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A017F3E91F69BA76007BB2FA /* TimeCard.swift */; };
@@ -109,7 +113,9 @@
 		3CFE1E221FC34F690013D72E /* ConcreteSP.gpx in Resources */ = {isa = PBXBuildFile; fileRef = A5398C201FB76E710064CD0D /* ConcreteSP.gpx */; };
 		3CFE1E231FC34F6A0013D72E /* ConcreteSP.gpx in Resources */ = {isa = PBXBuildFile; fileRef = A5398C201FB76E710064CD0D /* ConcreteSP.gpx */; };
 		3CFE1E241FC34F6B0013D72E /* ConcreteSP.gpx in Resources */ = {isa = PBXBuildFile; fileRef = A5398C201FB76E710064CD0D /* ConcreteSP.gpx */; };
-		631986B4109CBC885FFA8084 /* Pods_MatchPoint.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6D27BE9FE8C112CA348254D /* Pods_MatchPoint.framework */; };
+		4BEE0117649DDEF5D47A031C /* Pods_MatchPointTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F68167C68FB9C5B9FCDFD9C /* Pods_MatchPointTests.framework */; };
+		55C059C7C4147F50CD550F5D /* Pods_MatchPoint_WatchOS_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD689E8366751B8BDAAF5270 /* Pods_MatchPoint_WatchOS_Extension.framework */; };
+		7CF9141AAC73391586E24A7B /* Pods_MatchPoint.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 264A8AB4651B4BD5AB9B8461 /* Pods_MatchPoint.framework */; };
 		A017F3C51F69B528007BB2FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A017F3C41F69B528007BB2FA /* AppDelegate.swift */; };
 		A017F3CF1F69B528007BB2FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A017F3CD1F69B528007BB2FA /* LaunchScreen.storyboard */; };
 		A017F3E81F69B919007BB2FA /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = A017F3E71F69B919007BB2FA /* Device.swift */; };
@@ -163,8 +169,7 @@
 		A5A3DCCB1FB8B4740015AB1B /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A3DCC91FB8B4740015AB1B /* TodayView.swift */; };
 		A5BEBB4C1FB8DB110006F02E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BEBB4B1FB8DB110006F02E /* Constants.swift */; };
 		A5DD41051FB283D4005DF529 /* Mappeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DD41041FB283D4005DF529 /* Mappeable.swift */; };
-		BB6BFC98FD51C32AAF03CA05 /* Pods_MatchPointWidget.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B4F249E0CB67D9914182760 /* Pods_MatchPointWidget.framework */; };
-		BD50E058BB1F7AF01F31A769 /* Pods_MatchPoint_WatchOS_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCBBD3093B7E0523C04CBFA /* Pods_MatchPoint_WatchOS_Extension.framework */; };
+		F15FEA2E2E6C805370E2F98D /* Pods_MatchPointWidget.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B99EB32C455D64848BB434D4 /* Pods_MatchPointWidget.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -181,6 +186,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 3C47A3C91FC220FF00EA7EF3;
 			remoteInfo = "MatchPoint WatchOS";
+		};
+		3C693C1F1FCE29740018DA22 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A017F3B91F69B528007BB2FA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A017F3C01F69B528007BB2FA;
+			remoteInfo = MatchPoint;
 		};
 		A017F3D61F69B528007BB2FA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -235,7 +247,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		1887AFB3B921F2AB94688EAB /* Pods-MatchPointWidget.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatchPointWidget.release.xcconfig"; path = "Pods/Target Support Files/Pods-MatchPointWidget/Pods-MatchPointWidget.release.xcconfig"; sourceTree = "<group>"; };
+		0474B31C647D9F27A119E40F /* Pods-MatchPointUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatchPointUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MatchPointUITests/Pods-MatchPointUITests.release.xcconfig"; sourceTree = "<group>"; };
+		14F0ABCF7046FBBDDB56E2B2 /* Pods-MatchPointUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatchPointUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MatchPointUITests/Pods-MatchPointUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		1F8F1895BF5B054AEEF120AB /* Pods-MatchPoint.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatchPoint.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MatchPoint/Pods-MatchPoint.debug.xcconfig"; sourceTree = "<group>"; };
+		264A8AB4651B4BD5AB9B8461 /* Pods_MatchPoint.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MatchPoint.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C04A2C31FC9138100811125 /* NotificationPointSPSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationPointSPSpec.swift; sourceTree = "<group>"; };
 		3C04A2C51FC915E000811125 /* NotificationPointRJSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationPointRJSpec.swift; sourceTree = "<group>"; };
 		3C04A2C71FC9163200811125 /* NotificationPointBHSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationPointBHSpec.swift; sourceTree = "<group>"; };
@@ -275,11 +290,15 @@
 		3C5300141FCAEE700056553E /* LabelAttributedSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelAttributedSpec.swift; sourceTree = "<group>"; };
 		3C5300161FCAF57C0056553E /* LoginViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerSpec.swift; sourceTree = "<group>"; };
 		3C5300181FCB09ED0056553E /* UIAlertAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertAction.swift; sourceTree = "<group>"; };
+		3C693C1A1FCE29740018DA22 /* MatchPointUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MatchPointUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C693C1C1FCE29740018DA22 /* MatchPointUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchPointUITests.swift; sourceTree = "<group>"; };
+		3C693C1E1FCE29740018DA22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C7484891FC380560007E7F0 /* LabelAttributed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelAttributed.swift; sourceTree = "<group>"; };
 		3C74848C1FC38E690007E7F0 /* MatchPoint WatchOS Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "MatchPoint WatchOS Extension.entitlements"; sourceTree = "<group>"; };
 		3C770BB51FCB229A0041B231 /* UIAlertActionSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertActionSpec.swift; sourceTree = "<group>"; };
 		3C770BB71FCB23D30041B231 /* CurrentUserSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUserSpec.swift; sourceTree = "<group>"; };
 		3C770BB91FCB64A80041B231 /* GeocoderManagerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeocoderManagerSpec.swift; sourceTree = "<group>"; };
+		3C9968D71FD23B3F0012E22F /* ProcessInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessInfo.swift; sourceTree = "<group>"; };
 		3C9E04B91FC08DD600DC0986 /* TodayLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayLoadingView.swift; sourceTree = "<group>"; };
 		3C9E04C71FC0CF1E00DC0986 /* SkyFloatingLabelTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkyFloatingLabelTextField.swift; sourceTree = "<group>"; };
 		3C9E04C81FC0CF1E00DC0986 /* UITextField+fixCaretPosition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+fixCaretPosition.swift"; sourceTree = "<group>"; };
@@ -293,12 +312,11 @@
 		3CFBA3461FC917C000D96FD4 /* DateSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSpec.swift; sourceTree = "<group>"; };
 		3CFBA3481FC9C46600D96FD4 /* UIButtonSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonSpec.swift; sourceTree = "<group>"; };
 		3CFBA34A1FC9D95900D96FD4 /* NotificationPointFactorySpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationPointFactorySpec.swift; sourceTree = "<group>"; };
-		5B4F249E0CB67D9914182760 /* Pods_MatchPointWidget.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MatchPointWidget.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5DCBBD3093B7E0523C04CBFA /* Pods_MatchPoint_WatchOS_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MatchPoint_WatchOS_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6EB1CFB5A098234D4D2FCA06 /* Pods-MatchPoint.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatchPoint.release.xcconfig"; path = "Pods/Target Support Files/Pods-MatchPoint/Pods-MatchPoint.release.xcconfig"; sourceTree = "<group>"; };
-		6F7949090E4DEBAC82A5ACC5 /* Pods-MatchPointTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatchPointTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MatchPointTests/Pods-MatchPointTests.release.xcconfig"; sourceTree = "<group>"; };
-		6FFC887141B594163467E943 /* Pods-MatchPoint WatchOS Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatchPoint WatchOS Extension.release.xcconfig"; path = "Pods/Target Support Files/Pods-MatchPoint WatchOS Extension/Pods-MatchPoint WatchOS Extension.release.xcconfig"; sourceTree = "<group>"; };
-		832F9A2A572717935E33631D /* Pods-MatchPointTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatchPointTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MatchPointTests/Pods-MatchPointTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4AE0C8AFFA7362BBDACC6BC2 /* Pods-MatchPointTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatchPointTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MatchPointTests/Pods-MatchPointTests.debug.xcconfig"; sourceTree = "<group>"; };
+		541F3E7B49FCF97E0334BB11 /* Pods_MatchPointUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MatchPointUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6EEBB842FC673B061EE2DE94 /* Pods-MatchPoint WatchOS Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatchPoint WatchOS Extension.release.xcconfig"; path = "Pods/Target Support Files/Pods-MatchPoint WatchOS Extension/Pods-MatchPoint WatchOS Extension.release.xcconfig"; sourceTree = "<group>"; };
+		6F68167C68FB9C5B9FCDFD9C /* Pods_MatchPointTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MatchPointTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		95902D5F8EA3C0617C9031A5 /* Pods-MatchPoint.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatchPoint.release.xcconfig"; path = "Pods/Target Support Files/Pods-MatchPoint/Pods-MatchPoint.release.xcconfig"; sourceTree = "<group>"; };
 		A017F3C11F69B528007BB2FA /* MatchPoint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MatchPoint.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A017F3C41F69B528007BB2FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A017F3CB1F69B528007BB2FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -345,11 +363,12 @@
 		A5A3DCC91FB8B4740015AB1B /* TodayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodayView.swift; sourceTree = "<group>"; };
 		A5BEBB4B1FB8DB110006F02E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		A5DD41041FB283D4005DF529 /* Mappeable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mappeable.swift; sourceTree = "<group>"; };
-		C3E861EB5A688EA2D9EBF935 /* Pods_MatchPointTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MatchPointTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CC5C871BC21C4281790F6B96 /* Pods-MatchPoint.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatchPoint.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MatchPoint/Pods-MatchPoint.debug.xcconfig"; sourceTree = "<group>"; };
-		E6D27BE9FE8C112CA348254D /* Pods_MatchPoint.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MatchPoint.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F5FF42E959CDF88BC026F586 /* Pods-MatchPoint WatchOS Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatchPoint WatchOS Extension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MatchPoint WatchOS Extension/Pods-MatchPoint WatchOS Extension.debug.xcconfig"; sourceTree = "<group>"; };
-		FC3E449977417B53FC5720C9 /* Pods-MatchPointWidget.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatchPointWidget.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MatchPointWidget/Pods-MatchPointWidget.debug.xcconfig"; sourceTree = "<group>"; };
+		A65CCD79EA1D407D14B36489 /* Pods-MatchPointWidget.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatchPointWidget.release.xcconfig"; path = "Pods/Target Support Files/Pods-MatchPointWidget/Pods-MatchPointWidget.release.xcconfig"; sourceTree = "<group>"; };
+		B99EB32C455D64848BB434D4 /* Pods_MatchPointWidget.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MatchPointWidget.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD689E8366751B8BDAAF5270 /* Pods_MatchPoint_WatchOS_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MatchPoint_WatchOS_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE85D33D6F5E6028E6E12303 /* Pods-MatchPointTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatchPointTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MatchPointTests/Pods-MatchPointTests.release.xcconfig"; sourceTree = "<group>"; };
+		D811AE2133EFBCE61C5C27F9 /* Pods-MatchPointWidget.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatchPointWidget.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MatchPointWidget/Pods-MatchPointWidget.debug.xcconfig"; sourceTree = "<group>"; };
+		E5CCD0F906670FAA83E82214 /* Pods-MatchPoint WatchOS Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatchPoint WatchOS Extension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MatchPoint WatchOS Extension/Pods-MatchPoint WatchOS Extension.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -364,7 +383,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD50E058BB1F7AF01F31A769 /* Pods_MatchPoint_WatchOS_Extension.framework in Frameworks */,
+				55C059C7C4147F50CD550F5D /* Pods_MatchPoint_WatchOS_Extension.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3C693C171FCE29740018DA22 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				263A4AFD7DA9E212675C681C /* Pods_MatchPointUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,7 +399,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				631986B4109CBC885FFA8084 /* Pods_MatchPoint.framework in Frameworks */,
+				7CF9141AAC73391586E24A7B /* Pods_MatchPoint.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,7 +407,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04E41EDEB2C42622156FAC8A /* Pods_MatchPointTests.framework in Frameworks */,
+				4BEE0117649DDEF5D47A031C /* Pods_MatchPointTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,28 +416,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				A017F3FA1F69C7F1007BB2FA /* NotificationCenter.framework in Frameworks */,
-				BB6BFC98FD51C32AAF03CA05 /* Pods_MatchPointWidget.framework in Frameworks */,
+				F15FEA2E2E6C805370E2F98D /* Pods_MatchPointWidget.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2C2E6477E3EDBD8920578805 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				CC5C871BC21C4281790F6B96 /* Pods-MatchPoint.debug.xcconfig */,
-				6EB1CFB5A098234D4D2FCA06 /* Pods-MatchPoint.release.xcconfig */,
-				F5FF42E959CDF88BC026F586 /* Pods-MatchPoint WatchOS Extension.debug.xcconfig */,
-				6FFC887141B594163467E943 /* Pods-MatchPoint WatchOS Extension.release.xcconfig */,
-				832F9A2A572717935E33631D /* Pods-MatchPointTests.debug.xcconfig */,
-				6F7949090E4DEBAC82A5ACC5 /* Pods-MatchPointTests.release.xcconfig */,
-				FC3E449977417B53FC5720C9 /* Pods-MatchPointWidget.debug.xcconfig */,
-				1887AFB3B921F2AB94688EAB /* Pods-MatchPointWidget.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		3C25FAD31FBD29BF007A8EC8 /* Network */ = {
 			isa = PBXGroup;
 			children = (
@@ -449,6 +461,15 @@
 				3C47A3E61FC2210000EA7EF3 /* PushNotificationPayload.apns */,
 			);
 			path = "MatchPoint WatchOS Extension";
+			sourceTree = "<group>";
+		};
+		3C693C1B1FCE29740018DA22 /* MatchPointUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3C693C1C1FCE29740018DA22 /* MatchPointUITests.swift */,
+				3C693C1E1FCE29740018DA22 /* Info.plist */,
+			);
+			path = MatchPointUITests;
 			sourceTree = "<group>";
 		};
 		3C770BBB1FCB8A6F0041B231 /* iOS */ = {
@@ -508,9 +529,10 @@
 				A017F3FB1F69C7F1007BB2FA /* MatchPointWidget */,
 				3C47A3CB1FC220FF00EA7EF3 /* MatchPoint WatchOS */,
 				3C47A3DA1FC2210000EA7EF3 /* MatchPoint WatchOS Extension */,
+				3C693C1B1FCE29740018DA22 /* MatchPointUITests */,
 				A017F3F81F69C7F1007BB2FA /* Frameworks */,
 				A017F3C21F69B528007BB2FA /* Products */,
-				2C2E6477E3EDBD8920578805 /* Pods */,
+				F7E2B60D4E699FC767430A00 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -522,6 +544,7 @@
 				A017F3F71F69C7F0007BB2FA /* MatchPointWidget.appex */,
 				3C47A3CA1FC220FF00EA7EF3 /* MatchPoint WatchOS.app */,
 				3C47A3D61FC220FF00EA7EF3 /* MatchPoint WatchOS Extension.appex */,
+				3C693C1A1FCE29740018DA22 /* MatchPointUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -582,10 +605,11 @@
 			isa = PBXGroup;
 			children = (
 				A017F3F91F69C7F1007BB2FA /* NotificationCenter.framework */,
-				E6D27BE9FE8C112CA348254D /* Pods_MatchPoint.framework */,
-				5DCBBD3093B7E0523C04CBFA /* Pods_MatchPoint_WatchOS_Extension.framework */,
-				C3E861EB5A688EA2D9EBF935 /* Pods_MatchPointTests.framework */,
-				5B4F249E0CB67D9914182760 /* Pods_MatchPointWidget.framework */,
+				264A8AB4651B4BD5AB9B8461 /* Pods_MatchPoint.framework */,
+				CD689E8366751B8BDAAF5270 /* Pods_MatchPoint_WatchOS_Extension.framework */,
+				6F68167C68FB9C5B9FCDFD9C /* Pods_MatchPointTests.framework */,
+				541F3E7B49FCF97E0334BB11 /* Pods_MatchPointUITests.framework */,
+				B99EB32C455D64848BB434D4 /* Pods_MatchPointWidget.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -697,8 +721,26 @@
 				3C0A34CF1FBD1B2E00567391 /* Date.swift */,
 				3C13F7301FC66123003E50ED /* String.swift */,
 				3C5300181FCB09ED0056553E /* UIAlertAction.swift */,
+				3C9968D71FD23B3F0012E22F /* ProcessInfo.swift */,
 			);
 			name = Extensions;
+			sourceTree = "<group>";
+		};
+		F7E2B60D4E699FC767430A00 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1F8F1895BF5B054AEEF120AB /* Pods-MatchPoint.debug.xcconfig */,
+				95902D5F8EA3C0617C9031A5 /* Pods-MatchPoint.release.xcconfig */,
+				E5CCD0F906670FAA83E82214 /* Pods-MatchPoint WatchOS Extension.debug.xcconfig */,
+				6EEBB842FC673B061EE2DE94 /* Pods-MatchPoint WatchOS Extension.release.xcconfig */,
+				4AE0C8AFFA7362BBDACC6BC2 /* Pods-MatchPointTests.debug.xcconfig */,
+				CE85D33D6F5E6028E6E12303 /* Pods-MatchPointTests.release.xcconfig */,
+				14F0ABCF7046FBBDDB56E2B2 /* Pods-MatchPointUITests.debug.xcconfig */,
+				0474B31C647D9F27A119E40F /* Pods-MatchPointUITests.release.xcconfig */,
+				D811AE2133EFBCE61C5C27F9 /* Pods-MatchPointWidget.debug.xcconfig */,
+				A65CCD79EA1D407D14B36489 /* Pods-MatchPointWidget.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -726,12 +768,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3C47A3EA1FC2210000EA7EF3 /* Build configuration list for PBXNativeTarget "MatchPoint WatchOS Extension" */;
 			buildPhases = (
-				FCCBE342BC4BC96397293D0F /* [CP] Check Pods Manifest.lock */,
+				D836A7E5383E81BA1975A0D0 /* [CP] Check Pods Manifest.lock */,
 				3C47A3D21FC220FF00EA7EF3 /* Sources */,
 				3C47A3D31FC220FF00EA7EF3 /* Frameworks */,
 				3C47A3D41FC220FF00EA7EF3 /* Resources */,
-				F39021789A86BBE31A9277F7 /* [CP] Embed Pods Frameworks */,
-				93D0345906F32858758111C8 /* [CP] Copy Pods Resources */,
+				C15231E14E1D418262362364 /* [CP] Embed Pods Frameworks */,
+				4FEF1A3EEDD488812C3F8577 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -742,19 +784,40 @@
 			productReference = 3C47A3D61FC220FF00EA7EF3 /* MatchPoint WatchOS Extension.appex */;
 			productType = "com.apple.product-type.watchkit2-extension";
 		};
+		3C693C191FCE29740018DA22 /* MatchPointUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3C693C211FCE29740018DA22 /* Build configuration list for PBXNativeTarget "MatchPointUITests" */;
+			buildPhases = (
+				3E78B1E9B671C75AACB226F7 /* [CP] Check Pods Manifest.lock */,
+				3C693C161FCE29740018DA22 /* Sources */,
+				3C693C171FCE29740018DA22 /* Frameworks */,
+				3C693C181FCE29740018DA22 /* Resources */,
+				8C2DB2E5D4CD777761342BA2 /* [CP] Embed Pods Frameworks */,
+				EBD99D0A5413D509F049B326 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3C693C201FCE29740018DA22 /* PBXTargetDependency */,
+			);
+			name = MatchPointUITests;
+			productName = MatchPointUITests;
+			productReference = 3C693C1A1FCE29740018DA22 /* MatchPointUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		A017F3C01F69B528007BB2FA /* MatchPoint */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A017F3DE1F69B528007BB2FA /* Build configuration list for PBXNativeTarget "MatchPoint" */;
 			buildPhases = (
-				A66DA3F4E83BB74256CA206F /* [CP] Check Pods Manifest.lock */,
+				6273C0F29EFEB1BB2DBCAC3F /* [CP] Check Pods Manifest.lock */,
 				A017F3BD1F69B528007BB2FA /* Sources */,
 				A017F3BE1F69B528007BB2FA /* Frameworks */,
 				A017F3BF1F69B528007BB2FA /* Resources */,
 				A017F4081F69C7F1007BB2FA /* Embed App Extensions */,
 				3C0A34CD1FBD184800567391 /* SwiftLint */,
 				3C47A3F11FC2210000EA7EF3 /* Embed Watch Content */,
-				E746FB5F4472FAF9121A0996 /* [CP] Embed Pods Frameworks */,
-				56CFF088929340D185780D50 /* [CP] Copy Pods Resources */,
+				AEE07BF1851ACCC9A19217CC /* [CP] Embed Pods Frameworks */,
+				E9C22E944E59B259463E8054 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -771,12 +834,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A017F3E11F69B528007BB2FA /* Build configuration list for PBXNativeTarget "MatchPointTests" */;
 			buildPhases = (
-				8C10E5EEC313CFE9A050106A /* [CP] Check Pods Manifest.lock */,
+				A6E9407376397B0B335BCEA8 /* [CP] Check Pods Manifest.lock */,
 				A017F3D11F69B528007BB2FA /* Sources */,
 				A017F3D21F69B528007BB2FA /* Frameworks */,
 				A017F3D31F69B528007BB2FA /* Resources */,
-				EB043505452B0E2462DA0DD7 /* [CP] Embed Pods Frameworks */,
-				E8F9B6602985A397B7168474 /* [CP] Copy Pods Resources */,
+				6AA76980B3D0E8041A3639E1 /* [CP] Embed Pods Frameworks */,
+				4C1689BA2CB9D7B696B43435 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -792,11 +855,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A017F4051F69C7F1007BB2FA /* Build configuration list for PBXNativeTarget "MatchPointWidget" */;
 			buildPhases = (
-				E79A0F2D21D252071CEB1C02 /* [CP] Check Pods Manifest.lock */,
+				D33C436AFB5F622C3A6BD93D /* [CP] Check Pods Manifest.lock */,
 				A017F3F31F69C7F0007BB2FA /* Sources */,
 				A017F3F41F69C7F0007BB2FA /* Frameworks */,
 				A017F3F51F69C7F0007BB2FA /* Resources */,
-				6CD163F73EE0C4B59AE0E111 /* [CP] Copy Pods Resources */,
+				0BDF4C80DF6525E5FCB59DFB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -835,6 +898,12 @@
 								enabled = 0;
 							};
 						};
+					};
+					3C693C191FCE29740018DA22 = {
+						CreatedOnToolsVersion = 9.1;
+						DevelopmentTeam = 83C3V38WSB;
+						ProvisioningStyle = Automatic;
+						TestTargetID = A017F3C01F69B528007BB2FA;
 					};
 					A017F3C01F69B528007BB2FA = {
 						CreatedOnToolsVersion = 8.3.3;
@@ -888,6 +957,7 @@
 				A017F3F61F69C7F0007BB2FA /* MatchPointWidget */,
 				3C47A3C91FC220FF00EA7EF3 /* MatchPoint WatchOS */,
 				3C47A3D51FC220FF00EA7EF3 /* MatchPoint WatchOS Extension */,
+				3C693C191FCE29740018DA22 /* MatchPointUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -913,6 +983,13 @@
 				3CFE1E221FC34F690013D72E /* ConcreteSP.gpx in Resources */,
 				3CFE1E211FC34F600013D72E /* ConcreteRJ.gpx in Resources */,
 				3C47A3E41FC2210000EA7EF3 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3C693C181FCE29740018DA22 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -949,36 +1026,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		3C0A34CD1FBD184800567391 /* SwiftLint */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = SwiftLint;
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "if which ${PODS_ROOT}/SwiftLint/swiftlint >/dev/null; then\n    ${PODS_ROOT}/SwiftLint/swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
-		};
-		56CFF088929340D185780D50 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MatchPoint/Pods-MatchPoint-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		6CD163F73EE0C4B59AE0E111 /* [CP] Copy Pods Resources */ = {
+		0BDF4C80DF6525E5FCB59DFB /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -993,7 +1041,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MatchPointWidget/Pods-MatchPointWidget-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		8C10E5EEC313CFE9A050106A /* [CP] Check Pods Manifest.lock */ = {
+		3C0A34CD1FBD184800567391 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which ${PODS_ROOT}/SwiftLint/swiftlint >/dev/null; then\n    ${PODS_ROOT}/SwiftLint/swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+		3E78B1E9B671C75AACB226F7 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1004,14 +1066,29 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-MatchPointTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-MatchPointUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		93D0345906F32858758111C8 /* [CP] Copy Pods Resources */ = {
+		4C1689BA2CB9D7B696B43435 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MatchPointTests/Pods-MatchPointTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4FEF1A3EEDD488812C3F8577 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1026,7 +1103,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MatchPoint WatchOS Extension/Pods-MatchPoint WatchOS Extension-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A66DA3F4E83BB74256CA206F /* [CP] Check Pods Manifest.lock */ = {
+		6273C0F29EFEB1BB2DBCAC3F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1044,7 +1121,64 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E746FB5F4472FAF9121A0996 /* [CP] Embed Pods Frameworks */ = {
+		6AA76980B3D0E8041A3639E1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MatchPointTests/Pods-MatchPointTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/FBSnapshotTestCase/FBSnapshotTestCase.framework",
+				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
+				"${BUILT_PRODUCTS_DIR}/Nimble-Snapshots/Nimble_Snapshots.framework",
+				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSnapshotTestCase.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble_Snapshots.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MatchPointTests/Pods-MatchPointTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8C2DB2E5D4CD777761342BA2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MatchPointUITests/Pods-MatchPointUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A6E9407376397B0B335BCEA8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MatchPointTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AEE07BF1851ACCC9A19217CC /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1078,66 +1212,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MatchPoint/Pods-MatchPoint-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E79A0F2D21D252071CEB1C02 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-MatchPointWidget-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E8F9B6602985A397B7168474 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MatchPointTests/Pods-MatchPointTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		EB043505452B0E2462DA0DD7 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-MatchPointTests/Pods-MatchPointTests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/FBSnapshotTestCase/FBSnapshotTestCase.framework",
-				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
-				"${BUILT_PRODUCTS_DIR}/Nimble-Snapshots/Nimble_Snapshots.framework",
-				"${BUILT_PRODUCTS_DIR}/OHHTTPStubs/OHHTTPStubs.framework",
-				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSnapshotTestCase.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble_Snapshots.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OHHTTPStubs.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MatchPointTests/Pods-MatchPointTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F39021789A86BBE31A9277F7 /* [CP] Embed Pods Frameworks */ = {
+		C15231E14E1D418262362364 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1163,7 +1238,25 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MatchPoint WatchOS Extension/Pods-MatchPoint WatchOS Extension-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		FCCBE342BC4BC96397293D0F /* [CP] Check Pods Manifest.lock */ = {
+		D33C436AFB5F622C3A6BD93D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MatchPointWidget-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D836A7E5383E81BA1975A0D0 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1181,6 +1274,36 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		E9C22E944E59B259463E8054 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MatchPoint/Pods-MatchPoint-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EBD99D0A5413D509F049B326 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MatchPointUITests/Pods-MatchPointUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -1195,6 +1318,7 @@
 				3C47A3E21FC2210000EA7EF3 /* ComplicationController.swift in Sources */,
 				3C47A3DE1FC2210000EA7EF3 /* ExtensionDelegate.swift in Sources */,
 				3CA1087A1FC3A15A00B8CA4F /* LoginResponse.swift in Sources */,
+				3C9968DA1FD23BF70012E22F /* ProcessInfo.swift in Sources */,
 				3C47A3FD1FC232D700EA7EF3 /* PointData.swift in Sources */,
 				3C47A4151FC3427400EA7EF3 /* GeocoderManager.swift in Sources */,
 				3C211B441FCCFAEC0042300F /* GoogleGeocodeService.swift in Sources */,
@@ -1215,6 +1339,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3C693C161FCE29740018DA22 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C693C1D1FCE29740018DA22 /* MatchPointUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A017F3BD1F69B528007BB2FA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1229,6 +1361,7 @@
 				A5398C2C1FB776E20064CD0D /* NotificationPointBH.swift in Sources */,
 				3C9E04CA1FC0CF1F00DC0986 /* SkyFloatingLabelTextField.swift in Sources */,
 				A5398C3D1FB791430064CD0D /* HomeViewController.swift in Sources */,
+				3C9968D81FD23B3F0012E22F /* ProcessInfo.swift in Sources */,
 				3C0A34C81FBD15DE00567391 /* PontoMaisService.swift in Sources */,
 				A017F3EE1F69BD12007BB2FA /* LoginResponse.swift in Sources */,
 				A5398C471FB79FE20064CD0D /* LogoView.swift in Sources */,
@@ -1336,6 +1469,7 @@
 				3C0A34C51FBD158400567391 /* LoginResponse.swift in Sources */,
 				A50EA7261FB90B9E00F21A88 /* NotificationDefaultContent.swift in Sources */,
 				A5398C721FB8A3390064CD0D /* Colors.swift in Sources */,
+				3C9968D91FD23BF60012E22F /* ProcessInfo.swift in Sources */,
 				3C9E04BA1FC08DD600DC0986 /* TodayLoadingView.swift in Sources */,
 				A5398C711FB8A3370064CD0D /* Fonts.swift in Sources */,
 				3C0A34CC1FBD161600567391 /* PontoMaisService.swift in Sources */,
@@ -1356,6 +1490,11 @@
 			isa = PBXTargetDependency;
 			target = 3C47A3C91FC220FF00EA7EF3 /* MatchPoint WatchOS */;
 			targetProxy = 3C47A3E71FC2210000EA7EF3 /* PBXContainerItemProxy */;
+		};
+		3C693C201FCE29740018DA22 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A017F3C01F69B528007BB2FA /* MatchPoint */;
+			targetProxy = 3C693C1F1FCE29740018DA22 /* PBXContainerItemProxy */;
 		};
 		A017F3D71F69B528007BB2FA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1391,7 +1530,7 @@
 /* Begin XCBuildConfiguration section */
 		3C47A3EB1FC2210000EA7EF3 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F5FF42E959CDF88BC026F586 /* Pods-MatchPoint WatchOS Extension.debug.xcconfig */;
+			baseConfigurationReference = E5CCD0F906670FAA83E82214 /* Pods-MatchPoint WatchOS Extension.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -1413,7 +1552,7 @@
 		};
 		3C47A3EC1FC2210000EA7EF3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6FFC887141B594163467E943 /* Pods-MatchPoint WatchOS Extension.release.xcconfig */;
+			baseConfigurationReference = 6EEBB842FC673B061EE2DE94 /* Pods-MatchPoint WatchOS Extension.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -1481,6 +1620,48 @@
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 4.0;
+			};
+			name = Release;
+		};
+		3C693C221FCE29740018DA22 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14F0ABCF7046FBBDDB56E2B2 /* Pods-MatchPointUITests.debug.xcconfig */;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 83C3V38WSB;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = MatchPointUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.concrete.MatchPointUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MatchPoint;
+			};
+			name = Debug;
+		};
+		3C693C231FCE29740018DA22 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0474B31C647D9F27A119E40F /* Pods-MatchPointUITests.release.xcconfig */;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 83C3V38WSB;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = MatchPointUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.concrete.MatchPointUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MatchPoint;
 			};
 			name = Release;
 		};
@@ -1593,7 +1774,7 @@
 		};
 		A017F3DF1F69B528007BB2FA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CC5C871BC21C4281790F6B96 /* Pods-MatchPoint.debug.xcconfig */;
+			baseConfigurationReference = 1F8F1895BF5B054AEEF120AB /* Pods-MatchPoint.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = MatchPoint/MatchPoint.entitlements;
@@ -1615,7 +1796,7 @@
 		};
 		A017F3E01F69B528007BB2FA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6EB1CFB5A098234D4D2FCA06 /* Pods-MatchPoint.release.xcconfig */;
+			baseConfigurationReference = 95902D5F8EA3C0617C9031A5 /* Pods-MatchPoint.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = MatchPoint/MatchPoint.entitlements;
@@ -1637,7 +1818,7 @@
 		};
 		A017F3E21F69B528007BB2FA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 832F9A2A572717935E33631D /* Pods-MatchPointTests.debug.xcconfig */;
+			baseConfigurationReference = 4AE0C8AFFA7362BBDACC6BC2 /* Pods-MatchPointTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = 83C3V38WSB;
@@ -1653,7 +1834,7 @@
 		};
 		A017F3E31F69B528007BB2FA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6F7949090E4DEBAC82A5ACC5 /* Pods-MatchPointTests.release.xcconfig */;
+			baseConfigurationReference = CE85D33D6F5E6028E6E12303 /* Pods-MatchPointTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = 83C3V38WSB;
@@ -1669,7 +1850,7 @@
 		};
 		A017F4061F69C7F1007BB2FA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FC3E449977417B53FC5720C9 /* Pods-MatchPointWidget.debug.xcconfig */;
+			baseConfigurationReference = D811AE2133EFBCE61C5C27F9 /* Pods-MatchPointWidget.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = MatchPointWidget/MatchPointWidget.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -1689,7 +1870,7 @@
 		};
 		A017F4071F69C7F1007BB2FA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1887AFB3B921F2AB94688EAB /* Pods-MatchPointWidget.release.xcconfig */;
+			baseConfigurationReference = A65CCD79EA1D407D14B36489 /* Pods-MatchPointWidget.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = MatchPointWidget/MatchPointWidget.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -1725,6 +1906,15 @@
 			buildConfigurations = (
 				3C47A3EF1FC2210000EA7EF3 /* Debug */,
 				3C47A3F01FC2210000EA7EF3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3C693C211FCE29740018DA22 /* Build configuration list for PBXNativeTarget "MatchPointUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3C693C221FCE29740018DA22 /* Debug */,
+				3C693C231FCE29740018DA22 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

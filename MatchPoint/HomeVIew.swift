@@ -66,6 +66,10 @@ class HomeView: UIView {
         view.setTitle("Sair", for: .normal)
         view.setTitleColor(.white, for: .normal)
         view.titleLabel?.font = .systemFont(ofSize: 17)
+        view.accessibilityIdentifier = "sair"
+        view.accessibilityLabel = "sair"
+        view.isAccessibilityElement = true
+        view.accessibilityTraits = UIAccessibilityTraitButton
         view.borderColor = .white
         view.borderWidth = 1
         view.cornerRadius = 10
