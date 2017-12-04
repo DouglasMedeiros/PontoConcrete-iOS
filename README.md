@@ -32,5 +32,3 @@ fastlane slather
 - [ ] Migrate from Cocoapods to Carthage
 - [X] Migrate from Storyboards to ViewCode
 - [X] Write unit tests
-- [X] Add support Watch
-- [X] Add basic UITests
