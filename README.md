@@ -6,6 +6,27 @@
   <img width="460" height="300" src="https://github.com/lscardinali/MatchPoint-iOS/blob/master/MatchPoint/Assets.xcassets/tutorial.imageset/tutorial.png">
 </p>
 
+## Xcode Server Bots
+
+Tab `Trigger`
+`Pre-Integration Scripts`
+```
+#!/bin/sh
+export LC_ALL="en_US.UTF-8"
+PATH=$PATH:/usr/local/bin
+cd "${XCS_PRIMARY_REPO_DIR}"
+gem install bundler --user-install executable-hooks
+bundler install
+pod install
+```
+
+## Fastlane
+```
+fastlane scan
+fastlane lint
+fastlane slather
+```
+
 ## What's left? (Feel free to open Pull Requests!)
 - [X] Migrate from ObjectMapper to Swift 4 Codable
 - [ ] Migrate from Cocoapods to Carthage

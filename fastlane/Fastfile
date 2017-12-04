@@ -17,20 +17,28 @@ default_platform :ios
 
 platform :ios do
   before_all do
-    # ENV["SLACK_URL"] = "https://hooks.slack.com/services/..."
-    cocoapods
 
   end
 
-  desc "Install pods"
-  lane :installPods do
-
+  desc "Slather"
+  lane :slather do
+    slather
   end
 
   desc "Runs all the tests"
   lane :test do
+    cocoapods
     scan
   end
+
+  desc "Lint"
+  lane :lint do
+    swiftlint(
+      mode: :lint,
+      config_file: ".swiftlint.yml"
+    )
+  end
+
 
   desc "Submit a new Beta Build to Apple TestFlight"
   desc "This will also make sure the profile is up to date"
