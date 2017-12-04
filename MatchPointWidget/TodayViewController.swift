@@ -12,8 +12,8 @@ import KeychainSwift
 import Moya
 
 class TodayViewController: UIViewController, NCWidgetProviding {
-    @IBOutlet weak var registerButton: UIButton!
-    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak private(set) var registerButton: UIButton?
+    @IBOutlet weak private(set) var activityIndicator: UIActivityIndicatorView?
 
     let keychain = KeychainSwift()
     let provider = MoyaProvider<PontoMaisService>()
@@ -25,28 +25,30 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     let defaultColor = UIColor(red: 0.00, green: 0.16, blue: 0.55, alpha: 1.0)
     let errorColor = UIColor(red: 0.65, green: 0.00, blue: 0.00, alpha: 1.0)
 
-    @IBOutlet weak var tryAgainLabel: UILabel!
-    @IBOutlet weak var loginMessage: UILabel!
+    @IBOutlet weak private(set) var tryAgainLabel: UILabel?
+    @IBOutlet weak private(set) var loginMessage: UILabel?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.activityIndicator.stopAnimating()
+        self.activityIndicator?.stopAnimating()
 
-        if let validToken = self.keychain.get("token"), let validClientId = self.keychain.get("clientId"), let validEmail = self.keychain.get("email") {
+        if let validToken = self.keychain.get("token"),
+            let validClientId = self.keychain.get("clientId"),
+            let validEmail = self.keychain.get("email") {
             self.token = validToken
             self.clientId = validClientId
             self.email = validEmail
         } else {
-            self.registerButton.isHidden = true
-            self.registerButton.isEnabled = false
-            self.loginMessage.isHidden = false
+            self.registerButton?.isHidden = true
+            self.registerButton?.isEnabled = false
+            self.loginMessage?.isHidden = false
         }
     }
 
     @IBAction func didTapRegisterButton(_ sender: Any) {
-        self.activityIndicator.startAnimating()
-        self.registerButton.isEnabled = false
+        self.activityIndicator?.startAnimating()
+        self.registerButton?.isEnabled = false
 
         provider.request(.register(token: token, client: clientId, uid: email)) { result in
             switch result {
@@ -65,12 +67,12 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     }
 
     func setErrorButton() {
-        self.registerButton.setTitle("", for: .disabled)
+        self.registerButton?.setTitle("", for: .disabled)
         UIView.animate(withDuration: 0.5, animations: {
-            self.registerButton.setTitle("Erro ao bater o Ponto", for: .normal)
-            self.registerButton.backgroundColor = self.errorColor
-            self.tryAgainLabel.isHidden = false
-            self.registerButton.isEnabled = true
+            self.registerButton?.setTitle("Erro ao bater o Ponto", for: .normal)
+            self.registerButton?.backgroundColor = self.errorColor
+            self.tryAgainLabel?.isHidden = false
+            self.registerButton?.isEnabled = true
         })
     }
 
@@ -90,22 +92,22 @@ class TodayViewController: UIViewController, NCWidgetProviding {
                 message = "Boa Volta!"
             }
 
-            self.registerButton.setTitle(message, for: .normal)
-            self.registerButton.setTitle(message, for: .disabled)
-            self.tryAgainLabel.isHidden = true
-            self.activityIndicator.stopAnimating()
+            self.registerButton?.setTitle(message, for: .normal)
+            self.registerButton?.setTitle(message, for: .disabled)
+            self.tryAgainLabel?.isHidden = true
+            self.activityIndicator?.stopAnimating()
 
-            self.registerButton.backgroundColor = self.successColor
-            self.tryAgainLabel.isHidden = true
-            self.registerButton.isEnabled = false
+            self.registerButton?.backgroundColor = self.successColor
+            self.tryAgainLabel?.isHidden = true
+            self.registerButton?.isEnabled = false
         })
     }
 
     func setDefaultButton() {
-        self.registerButton.setTitle("", for: .disabled)
-        registerButton.setTitle("Bater o Ponto", for: .normal)
-        registerButton.backgroundColor = defaultColor
-        tryAgainLabel.isHidden = false
-        registerButton.isEnabled = true
+        self.registerButton?.setTitle("", for: .disabled)
+        registerButton?.setTitle("Bater o Ponto", for: .normal)
+        registerButton?.backgroundColor = defaultColor
+        tryAgainLabel?.isHidden = false
+        registerButton?.isEnabled = true
     }
 }
