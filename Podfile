@@ -3,7 +3,7 @@ platform :ios, '10.0'
 
 use_frameworks!
 
-def sharedPods 
+def sharedPods
   pod 'Moya'
   pod 'KeychainSwift'
 end
@@ -11,6 +11,7 @@ end
 target 'MatchPoint' do
   sharedPods
   pod 'SVProgressHUD'
+  pod 'SwiftLint'
 
   target 'MatchPointTests' do
     inherit! :search_paths

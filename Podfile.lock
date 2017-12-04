@@ -8,11 +8,13 @@ PODS:
     - Result (~> 3.0)
   - Result (3.2.4)
   - SVProgressHUD (2.2.2)
+  - SwiftLint (0.24.0)
 
 DEPENDENCIES:
   - KeychainSwift
   - Moya
   - SVProgressHUD
+  - SwiftLint
 
 SPEC CHECKSUMS:
   Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
@@ -20,7 +22,8 @@ SPEC CHECKSUMS:
   Moya: cf5e6ee93af526532f92614004b8ad2ea60fd845
   Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
   SVProgressHUD: 59b2d3dabacbd051576d21d32293ca7228dc18b0
+  SwiftLint: a014c92b4664e8b13f380f8640a51bb1733778ba
 
-PODFILE CHECKSUM: 3f432ec97019eae7be8896dc88ecfe85e8df2f74
+PODFILE CHECKSUM: 82d4dc92a36bc1d5e2e00b1dc350424e1779002f
 
-COCOAPODS: 1.3.0
+COCOAPODS: 1.3.1

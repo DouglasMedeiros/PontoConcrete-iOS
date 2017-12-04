@@ -13,6 +13,7 @@ enum PontoMaisService {
 }
 
 extension PontoMaisService: TargetType {
+    //swiftlint:disable:next force_unwrapping
     var baseURL: URL { return URL(string: "https://api.pontomaisweb.com.br")! }
     var path: String {
         switch self {

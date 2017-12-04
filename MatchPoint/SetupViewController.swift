@@ -13,35 +13,35 @@ import Foundation
 
 class SetupViewController: UIViewController, UITextFieldDelegate {
 
-    @IBOutlet weak var statusLabel: UILabel!
-    @IBOutlet weak var loginTextField: UITextField!
-    @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var loginContainer: UIView!
-    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
-    @IBOutlet weak var loginButton: UIButton!
-    @IBOutlet weak var incorrectLoginLabel: UILabel!
+    @IBOutlet weak private(set) var statusLabel: UILabel?
+    @IBOutlet weak private(set) var loginTextField: UITextField?
+    @IBOutlet weak private(set) var passwordTextField: UITextField?
+    @IBOutlet weak private(set) var loginContainer: UIView?
+    @IBOutlet weak private(set) var activityIndicator: UIActivityIndicatorView?
+    @IBOutlet weak private(set) var loginButton: UIButton?
+    @IBOutlet weak private(set) var incorrectLoginLabel: UILabel?
 
     let provider = MoyaProvider<PontoMaisService>()
     let keychain = KeychainSwift()
 
     func showLoginError() {
-        self.incorrectLoginLabel.alpha = 0
+        self.incorrectLoginLabel?.alpha = 0
         UIView.animate(withDuration: 0.5, animations: {
-            self.incorrectLoginLabel.isHidden = false
-            self.incorrectLoginLabel.alpha = 1
-            self.activityIndicator.stopAnimating()
-            self.loginButton.isEnabled = true
-            self.loginButton.alpha = 1.0
+            self.incorrectLoginLabel?.isHidden = false
+            self.incorrectLoginLabel?.alpha = 1
+            self.activityIndicator?.stopAnimating()
+            self.loginButton?.isEnabled = true
+            self.loginButton?.alpha = 1.0
         })
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.incorrectLoginLabel.alpha = 0
-        loginTextField.delegate = self
-        passwordTextField.delegate = self
+        self.incorrectLoginLabel?.alpha = 0
+        loginTextField?.delegate = self
+        passwordTextField?.delegate = self
 
-        loginButton.setTitle("", for: .disabled)
+        loginButton?.setTitle("", for: .disabled)
     }
 
     @IBAction func didTapLoginButton(_ sender: Any) {
@@ -49,11 +49,16 @@ class SetupViewController: UIViewController, UITextFieldDelegate {
     }
 
     func login() {
-        activityIndicator.startAnimating()
-        loginButton.isEnabled = false
-        loginButton.alpha = 0.5
+        activityIndicator?.startAnimating()
+        loginButton?.isEnabled = false
+        loginButton?.alpha = 0.5
 
-        provider.request(.login(login: self.loginTextField.text!, password: self.passwordTextField.text!)) { result in
+        guard let loginName = self.loginTextField?.text,
+            let password = self.passwordTextField?.text else {
+                return
+        }
+        
+        provider.request(.login(login: loginName, password: password)) { result in
             switch result {
             case let .success(response):
 
@@ -67,7 +72,7 @@ class SetupViewController: UIViewController, UITextFieldDelegate {
 
                         self.keychain.set(token, forKey: "token", withAccess: .accessibleAfterFirstUnlock)
                         self.keychain.set(clientId, forKey: "clientId", withAccess: .accessibleAfterFirstUnlock)
-                        self.keychain.set(self.loginTextField.text!, forKey: "email", withAccess: .accessibleAfterFirstUnlock)
+                        self.keychain.set(loginName, forKey: "email", withAccess: .accessibleAfterFirstUnlock)
 
                         self.performSegue(withIdentifier: "loggedin", sender: self)
                 } catch {
@@ -85,7 +90,7 @@ class SetupViewController: UIViewController, UITextFieldDelegate {
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
-        if loginTextField.text != "" && passwordTextField.text != "" {
+        if loginTextField?.text != "" && passwordTextField?.text != "" {
             login()
         }
         return true

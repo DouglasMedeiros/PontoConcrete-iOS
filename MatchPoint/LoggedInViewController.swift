@@ -13,10 +13,10 @@ import UserNotifications
 
 class LoggedInViewController: UIViewController, CLLocationManagerDelegate {
 
-    @IBOutlet weak var rememberNotificationSwitch: UISwitch!
-    @IBOutlet weak var logoutButton: UIButton!
+    @IBOutlet weak private(set) var rememberNotificationSwitch: UISwitch?
+    @IBOutlet weak private(set) var logoutButton: UIButton?
 
-    @IBOutlet weak var rememberSwitch: UISwitch!
+    @IBOutlet weak private(set) var rememberSwitch: UISwitch?
     let center = UNUserNotificationCenter.current()
     let options: UNAuthorizationOptions = [.alert, .sound]
 
@@ -25,7 +25,7 @@ class LoggedInViewController: UIViewController, CLLocationManagerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        rememberSwitch.addTarget(self, action: #selector(stateChanged(state:)), for: UIControlEvents.valueChanged)
+        rememberSwitch?.addTarget(self, action: #selector(stateChanged(state:)), for: UIControlEvents.valueChanged)
 
         locationManager.delegate = self
         locationManager.distanceFilter = kCLLocationAccuracyNearestTenMeters
@@ -33,7 +33,8 @@ class LoggedInViewController: UIViewController, CLLocationManagerDelegate {
 
     }
 
-    @objc func stateChanged(state: UISwitch) {
+    @objc
+    func stateChanged(state: UISwitch) {
         if state.isOn {
             requestLocation()
         } else {
@@ -50,7 +51,8 @@ class LoggedInViewController: UIViewController, CLLocationManagerDelegate {
         if CLLocationManager.authorizationStatus() == .notDetermined {
             locationManager.requestWhenInUseAuthorization()
         } else if CLLocationManager.authorizationStatus() == .denied {
-            let alert = UIAlertController(title: "Localização", message: "O acesso à localização foi negado, ative-a nas Configurações", preferredStyle: .alert)
+            let message = "O acesso à localização foi negado, ative-a nas Configurações"
+            let alert = UIAlertController(title: "Localização", message: message, preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
 
             self.present(alert, animated: true, completion: nil)
@@ -78,37 +80,32 @@ class LoggedInViewController: UIViewController, CLLocationManagerDelegate {
     }
 
     func setupNotifications() {
+        
+        UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
+        
+        center.add(self.buildNotificationRequest(identifier: "ConcreteSP", latitude: -23.601449, longitude: -46.694799))
+        center.add(self.buildNotificationRequest(identifier: "ConcreteRJ", latitude: -22.910222, longitude: -43.172658))
+        center.add(self.buildNotificationRequest(identifier: "ConcreteSP", latitude: -19.935331, longitude: -43.929717))
+        
+    }
+    
+    private func buildNotificationRequest(identifier: String,
+                                          latitude: Float,
+                                          longitude: Float) -> UNNotificationRequest {
         let content = UNMutableNotificationContent()
         content.title = "Matchpoint"
         content.body = "Está chegando/saindo da Concrete? Não esqueça de bater o ponto!"
-
-        let concreteSPCoordinates = CLLocationCoordinate2D(latitude: -23.601449, longitude: -46.694799)
-        let concreteSPRegion = CLCircularRegion(center: concreteSPCoordinates, radius: 100, identifier: "concreteSP")
-        concreteSPRegion.notifyOnExit = true
-        concreteSPRegion.notifyOnEntry = true
-
-        let concreteRJCoordinates = CLLocationCoordinate2D(latitude: -22.910222, longitude: -43.172658)
-        let concreteRJRegion = CLCircularRegion(center: concreteRJCoordinates, radius: 100, identifier: "concreteRJ")
-        concreteRJRegion.notifyOnExit = true
-        concreteRJRegion.notifyOnEntry = true
-
-        let concreteBHCoordinates = CLLocationCoordinate2D(latitude: -19.935331, longitude: -43.929717)
-        let concreteBHRegion = CLCircularRegion(center: concreteBHCoordinates, radius: 100, identifier: "concreteBH")
-        concreteBHRegion.notifyOnExit = true
-        concreteBHRegion.notifyOnEntry = true
-
-        let triggerSP = UNLocationNotificationTrigger(region: concreteSPRegion, repeats: true)
-        let triggerRJ = UNLocationNotificationTrigger(region: concreteRJRegion, repeats: true)
-        let triggerBH = UNLocationNotificationTrigger(region: concreteBHRegion, repeats: true)
-
-        let notificationSP = UNNotificationRequest(identifier: "ConcreteSP", content: content, trigger: triggerSP)
-        let notificationRJ = UNNotificationRequest(identifier: "ConcreteRJ", content: content, trigger: triggerRJ)
-        let notificationBH = UNNotificationRequest(identifier: "ConcreteBH", content: content, trigger: triggerBH)
-
-        UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
-        center.add(notificationSP)
-        center.add(notificationRJ)
-        center.add(notificationBH)
+        
+        let coordinates = CLLocationCoordinate2D(latitude: -23.601449, longitude: -46.694799)
+        let coordinatesRegion = CLCircularRegion(center: coordinates, radius: 100, identifier: identifier)
+        coordinatesRegion.notifyOnExit = true
+        coordinatesRegion.notifyOnEntry = true
+        
+        let trigger = UNLocationNotificationTrigger(region: coordinatesRegion, repeats: true)
+        
+        let notification = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
+        
+        return notification
     }
 
     @IBAction func didTapLogoutButton(_ sender: Any) {
