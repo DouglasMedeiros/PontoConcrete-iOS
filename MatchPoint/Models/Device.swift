@@ -7,11 +7,11 @@
 //
 import Foundation
 
-struct Device: Codable {
-    var cordova: String?
-    var manafacturer: String?
-    var model: String?
-    var platform: String?
-    var uuid: String?
-    var version: String?
+struct Device: Mappable {
+    let cordova: String?
+    let manafacturer: String?
+    let model: String?
+    let platform: String?
+    let uuid: String?
+    let version: String?
 }

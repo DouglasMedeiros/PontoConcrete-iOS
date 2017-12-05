@@ -7,26 +7,26 @@
 //
 import Foundation
 
-struct TimeCard: Codable {
-    var latitude: Double?
-    var longitude: Double?
-    var address: String?
-    var referenceId: String?
-    var originalLatitude: Double?
-    var originalLongitude: Double?
-    var originalAddress: String?
-    var locationEdited: Bool?
-    var accuracy: Int?
-
-    enum CodingKeys: String, CodingKey {
-        case latitude
-        case longitude
-        case address
+struct TimeCard: Mappable {
+    let latitude: Double?
+    let longitude: Double?
+    let address: String?
+    let referenceId: String?
+    let originalLatitude: Double?
+    let originalLongitude: Double?
+    let originalAddress: String?
+    let locationEdited: Bool?
+    let accuracy: Int?
+    
+    private enum CodingKeys: String, CodingKey {
+        case latitude = "latitude"
+        case longitude = "longitude"
+        case address = "address"
         case referenceId = "reference_id"
-        case originalLatitude
-        case originalLongitude
-        case originalAddress
-        case locationEdited
-        case accuracy
+        case originalLatitude = "originalLatitude"
+        case originalLongitude = "originalLongitude"
+        case originalAddress = "originalAddress"
+        case locationEdited = "locationEdited"
+        case accuracy = "accuracy"
     }
 }

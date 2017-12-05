@@ -7,31 +7,57 @@
 //
 
 import UIKit
-import KeychainSwift
+import SwiftWatchConnectivity
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var appCoordinator: AppCoordinator?
 
+    var swiftWatchConnectivity: SwiftWatchConnectivity?
+    
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-
-        self.window = UIWindow(frame: UIScreen.main.bounds)
-
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-
-        let token = KeychainSwift().get("token")
-        let initialViewController: UIViewController
-
-        if let validToken = token, validToken != "" {
-            initialViewController = storyboard.instantiateViewController(withIdentifier: "LoggedIn")
-        } else {
-            initialViewController = storyboard.instantiateViewController(withIdentifier: "Setup")
+        
+        if ProcessInfo.processInfo.isUITesting {
+            UIView.setAnimationsEnabled(false)
+            CurrentUser.shared.remove()
         }
-
-        self.window?.rootViewController = initialViewController
-        self.window?.makeKeyAndVisible()
-
+        
+        self.swiftWatchConnectivity = SwiftWatchConnectivity.shared
+        self.swiftWatchConnectivity?.delegate = self
+        
+        let window = UIWindow(frame: UIScreen.main.bounds)
+        
+        self.window = window
+        self.appCoordinator = AppCoordinator(window: window)
+        self.appCoordinator?.start()
+        
         return true
+    }
+}
+
+extension AppDelegate: SwiftWatchConnectivityDelegate {
+    func connectivity(_ swiftWatchConnectivity: SwiftWatchConnectivity, updatedWithTask task: SwiftWatchConnectivity.Task) {
+        
+        if case .sendMessage = task {
+            guard let currentUser = CurrentUser.shared.user() else {
+                
+                let data: [String: AnyObject] = [
+                    .command: "logout" as AnyObject
+                ]
+                
+                DispatchQueue.main.async {
+                    self.swiftWatchConnectivity?.sendMesssage(message: data)
+                }
+                return
+            }
+            
+            DispatchQueue.main.async {
+                self.swiftWatchConnectivity?.sendMesssage(message: currentUser.asDict())
+            }
+        }
+        
     }
 }

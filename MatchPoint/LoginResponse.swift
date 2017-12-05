@@ -7,11 +7,11 @@
 //
 import Foundation
 
-struct LoginResponse: Codable {
-    var token: String?
-    var clientId: String?
-
-    enum CodingKeys: String, CodingKey {
+struct LoginResponse: Mappable {
+    let token: String?
+    let clientId: String?
+    
+    private enum CodingKeys: String, CodingKey {
         case token = "token"
         case clientId = "client_id"
     }
