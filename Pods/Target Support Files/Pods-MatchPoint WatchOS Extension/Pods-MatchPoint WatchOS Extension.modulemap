@@ -1,6 +1,0 @@
-framework module Pods_MatchPoint_WatchOS_Extension {
-  umbrella header "Pods-MatchPoint WatchOS Extension-umbrella.h"
-
-  export *
-  module * { export * }
-}
