@@ -328,8 +328,8 @@
 		A017F3D01F69B528007BB2FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A017F3D51F69B528007BB2FA /* MatchPointTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MatchPointTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A017F3DB1F69B528007BB2FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A017F3E71F69B919007BB2FA /* Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Device.swift; path = Models/Device.swift; sourceTree = "<group>"; };
-		A017F3E91F69BA76007BB2FA /* TimeCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TimeCard.swift; path = Models/TimeCard.swift; sourceTree = "<group>"; };
+		A017F3E71F69B919007BB2FA /* Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Device.swift; path = Device.swift; sourceTree = "<group>"; };
+		A017F3E91F69BA76007BB2FA /* TimeCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TimeCard.swift; path = TimeCard.swift; sourceTree = "<group>"; };
 		A017F3EB1F69BC64007BB2FA /* RegisterResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterResponse.swift; sourceTree = "<group>"; };
 		A017F3ED1F69BD12007BB2FA /* LoginResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
 		A017F3F11F69BE4F007BB2FA /* PontoMaisRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PontoMaisRoute.swift; sourceTree = "<group>"; };
@@ -430,24 +430,25 @@
 		3C25FAD31FBD29BF007A8EC8 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				A017F3F11F69BE4F007BB2FA /* PontoMaisRoute.swift */,
-				3C211B3B1FCCEEAE0042300F /* GoogleGeocodeRoute.swift */,
-				A50EA7181FB8ECC700F21A88 /* SessionData.swift */,
 				3C0A34BB1FBCFD8400567391 /* CurrentUser.swift */,
-				3C0A34C71FBD15DE00567391 /* PontoMaisService.swift */,
-				3C0A34C91FBD15F800567391 /* PontoMaisAPI.swift */,
 				3C211B3F1FCCF2180042300F /* GoogleGeocodeAPI.swift */,
+				3C211B3B1FCCEEAE0042300F /* GoogleGeocodeRoute.swift */,
 				3C211B3D1FCCF1E80042300F /* GoogleGeocodeService.swift */,
+				3C0A34C91FBD15F800567391 /* PontoMaisAPI.swift */,
+				A017F3F11F69BE4F007BB2FA /* PontoMaisRoute.swift */,
+				3C0A34C71FBD15DE00567391 /* PontoMaisService.swift */,
+				A50EA7181FB8ECC700F21A88 /* SessionData.swift */,
 			);
 			name = Network;
+			path = Network;
 			sourceTree = "<group>";
 		};
 		3C47A3CB1FC220FF00EA7EF3 /* MatchPoint WatchOS */ = {
 			isa = PBXGroup;
 			children = (
-				3C47A3CC1FC220FF00EA7EF3 /* Interface.storyboard */,
 				3C47A3CF1FC220FF00EA7EF3 /* Assets.xcassets */,
 				3C47A3D11FC220FF00EA7EF3 /* Info.plist */,
+				3C47A3CC1FC220FF00EA7EF3 /* Interface.storyboard */,
 			);
 			path = "MatchPoint WatchOS";
 			sourceTree = "<group>";
@@ -455,13 +456,13 @@
 		3C47A3DA1FC2210000EA7EF3 /* MatchPoint WatchOS Extension */ = {
 			isa = PBXGroup;
 			children = (
-				3C74848C1FC38E690007E7F0 /* MatchPoint WatchOS Extension.entitlements */,
+				3C47A3E31FC2210000EA7EF3 /* Assets.xcassets */,
+				3C47A3E11FC2210000EA7EF3 /* ComplicationController.swift */,
+				3C47A3DD1FC2210000EA7EF3 /* ExtensionDelegate.swift */,
 				3C47A3F21FC2263800EA7EF3 /* HomeInterfaceController.swift */,
 				3C7484891FC380560007E7F0 /* LabelAttributed.swift */,
-				3C47A3DD1FC2210000EA7EF3 /* ExtensionDelegate.swift */,
+				3C74848C1FC38E690007E7F0 /* MatchPoint WatchOS Extension.entitlements */,
 				3C47A3DF1FC2210000EA7EF3 /* NotificationController.swift */,
-				3C47A3E11FC2210000EA7EF3 /* ComplicationController.swift */,
-				3C47A3E31FC2210000EA7EF3 /* Assets.xcassets */,
 				3C47A3E61FC2210000EA7EF3 /* PushNotificationPayload.apns */,
 			);
 			path = "MatchPoint WatchOS Extension";
@@ -470,8 +471,8 @@
 		3C693C1B1FCE29740018DA22 /* MatchPointUITests */ = {
 			isa = PBXGroup;
 			children = (
-				3C693C1C1FCE29740018DA22 /* MatchPointUITests.swift */,
 				3C693C1E1FCE29740018DA22 /* Info.plist */,
+				3C693C1C1FCE29740018DA22 /* MatchPointUITests.swift */,
 			);
 			path = MatchPointUITests;
 			sourceTree = "<group>";
@@ -479,31 +480,31 @@
 		3C770BBB1FCB8A6F0041B231 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				3CA95B191FC8803900383EA7 /* PontoMaisAPISpec.swift */,
-				3C53000A1FCA3EE80056553E /* PontoMaisServiceSpec.swift */,
-				3CA95B1D1FC9119D00383EA7 /* UIViewSpec.swift */,
-				3CFBA3461FC917C000D96FD4 /* DateSpec.swift */,
-				3CA95B1B1FC90E8300383EA7 /* SessionDataSpec.swift */,
-				3C268C701FCA07B1000D47C4 /* HomeViewSpec.swift */,
-				3C268C761FCA0F8F000D47C4 /* FontsSpec.swift */,
-				3C268C741FCA0CE7000D47C4 /* ColorsSpec.swift */,
-				3CFBA34A1FC9D95900D96FD4 /* NotificationPointFactorySpec.swift */,
-				3C04A2C31FC9138100811125 /* NotificationPointSPSpec.swift */,
-				3C04A2C51FC915E000811125 /* NotificationPointRJSpec.swift */,
-				3C04A2C71FC9163200811125 /* NotificationPointBHSpec.swift */,
-				3C268C721FCA0B42000D47C4 /* LoginViewSpec.swift */,
-				3C770BB71FCB23D30041B231 /* CurrentUserSpec.swift */,
-				3CFBA3481FC9C46600D96FD4 /* UIButtonSpec.swift */,
-				3C268C7A1FCA208F000D47C4 /* MappeableSpec.swift */,
 				3C5300081FCA2D770056553E /* AppCoordinatorSpec.swift */,
-				3C5300141FCAEE700056553E /* LabelAttributedSpec.swift */,
-				3C53000C1FCA472E0056553E /* HomeViewControllerSpec.swift */,
-				3C5300161FCAF57C0056553E /* LoginViewControllerSpec.swift */,
-				3C770BB51FCB229A0041B231 /* UIAlertActionSpec.swift */,
+				3C268C741FCA0CE7000D47C4 /* ColorsSpec.swift */,
+				3C770BB71FCB23D30041B231 /* CurrentUserSpec.swift */,
+				3CFBA3461FC917C000D96FD4 /* DateSpec.swift */,
+				3C268C761FCA0F8F000D47C4 /* FontsSpec.swift */,
 				3C770BB91FCB64A80041B231 /* GeocoderManagerSpec.swift */,
-				3C14ECED1FD36B830077A33B /* WatchConnectivityManagerSpec.swift */,
 				3CF474491FCD93ED00B4C984 /* GoogleGeocodeAPISpec.swift */,
 				3CF4744B1FCDB29000B4C984 /* GoogleGeocodeServiceSpec.swift */,
+				3C53000C1FCA472E0056553E /* HomeViewControllerSpec.swift */,
+				3C268C701FCA07B1000D47C4 /* HomeViewSpec.swift */,
+				3C5300141FCAEE700056553E /* LabelAttributedSpec.swift */,
+				3C5300161FCAF57C0056553E /* LoginViewControllerSpec.swift */,
+				3C268C721FCA0B42000D47C4 /* LoginViewSpec.swift */,
+				3C268C7A1FCA208F000D47C4 /* MappeableSpec.swift */,
+				3C04A2C71FC9163200811125 /* NotificationPointBHSpec.swift */,
+				3CFBA34A1FC9D95900D96FD4 /* NotificationPointFactorySpec.swift */,
+				3C04A2C51FC915E000811125 /* NotificationPointRJSpec.swift */,
+				3C04A2C31FC9138100811125 /* NotificationPointSPSpec.swift */,
+				3CA95B191FC8803900383EA7 /* PontoMaisAPISpec.swift */,
+				3C53000A1FCA3EE80056553E /* PontoMaisServiceSpec.swift */,
+				3CA95B1B1FC90E8300383EA7 /* SessionDataSpec.swift */,
+				3C770BB51FCB229A0041B231 /* UIAlertActionSpec.swift */,
+				3CFBA3481FC9C46600D96FD4 /* UIButtonSpec.swift */,
+				3CA95B1D1FC9119D00383EA7 /* UIViewSpec.swift */,
+				3C14ECED1FD36B830077A33B /* WatchConnectivityManagerSpec.swift */,
 			);
 			path = iOS;
 			sourceTree = "<group>";
@@ -514,14 +515,15 @@
 				3C9E04C61FC0CF1E00DC0986 /* SkyFloatingLabelTextField */,
 			);
 			name = External;
+			path = External;
 			sourceTree = "<group>";
 		};
 		3C9E04C61FC0CF1E00DC0986 /* SkyFloatingLabelTextField */ = {
 			isa = PBXGroup;
 			children = (
 				3C9E04C71FC0CF1E00DC0986 /* SkyFloatingLabelTextField.swift */,
-				3C9E04C81FC0CF1E00DC0986 /* UITextField+fixCaretPosition.swift */,
 				3C9E04C91FC0CF1E00DC0986 /* SkyFloatingLabelTextFieldWithIcon.swift */,
+				3C9E04C81FC0CF1E00DC0986 /* UITextField+fixCaretPosition.swift */,
 			);
 			path = SkyFloatingLabelTextField;
 			sourceTree = "<group>";
@@ -529,15 +531,15 @@
 		A017F3B81F69B528007BB2FA = {
 			isa = PBXGroup;
 			children = (
+				A017F3F81F69C7F1007BB2FA /* Frameworks */,
 				A017F3C31F69B528007BB2FA /* MatchPoint */,
-				A017F3D81F69B528007BB2FA /* MatchPointTests */,
-				A017F3FB1F69C7F1007BB2FA /* MatchPointWidget */,
 				3C47A3CB1FC220FF00EA7EF3 /* MatchPoint WatchOS */,
 				3C47A3DA1FC2210000EA7EF3 /* MatchPoint WatchOS Extension */,
+				A017F3D81F69B528007BB2FA /* MatchPointTests */,
 				3C693C1B1FCE29740018DA22 /* MatchPointUITests */,
-				A017F3F81F69C7F1007BB2FA /* Frameworks */,
-				A017F3C21F69B528007BB2FA /* Products */,
+				A017F3FB1F69C7F1007BB2FA /* MatchPointWidget */,
 				B2E98C4F9042AD35132471D2 /* Pods */,
+				A017F3C21F69B528007BB2FA /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -557,22 +559,22 @@
 		A017F3C31F69B528007BB2FA /* MatchPoint */ = {
 			isa = PBXGroup;
 			children = (
+				A5398C351FB77D3B0064CD0D /* Coordinator */,
 				3C9E04C51FC0CF1200DC0986 /* External */,
+				A5398C1D1FB76E610064CD0D /* GPX */,
+				A5398C551FB7B3750064CD0D /* Home */,
+				A5398C241FB776890064CD0D /* LocalNotification */,
+				A5398C361FB77D420064CD0D /* Location */,
+				A5398C561FB7B37B0064CD0D /* Login */,
+				A017F3E41F69B746007BB2FA /* Models */,
 				3C25FAD31FBD29BF007A8EC8 /* Network */,
 				A5398C641FB7E8590064CD0D /* Shared */,
-				A5398C561FB7B37B0064CD0D /* Login */,
-				A5398C551FB7B3750064CD0D /* Home */,
-				A5398C351FB77D3B0064CD0D /* Coordinator */,
-				A5398C361FB77D420064CD0D /* Location */,
-				A5398C241FB776890064CD0D /* LocalNotification */,
-				A5398C1D1FB76E610064CD0D /* GPX */,
 				A017F3E61F69B75F007BB2FA /* Views */,
-				A017F3E41F69B746007BB2FA /* Models */,
 				A017F3C41F69B528007BB2FA /* AppDelegate.swift */,
-				A05AA1CA1F980D3F009FA699 /* MatchPoint.entitlements */,
 				A017F3CB1F69B528007BB2FA /* Assets.xcassets */,
-				3C14ECEF1FD36BE70077A33B /* WatchConnectivityManager.swift */,
 				A017F3D01F69B528007BB2FA /* Info.plist */,
+				A05AA1CA1F980D3F009FA699 /* MatchPoint.entitlements */,
+				3C14ECEF1FD36BE70077A33B /* WatchConnectivityManager.swift */,
 			);
 			path = MatchPoint;
 			sourceTree = "<group>";
@@ -580,8 +582,8 @@
 		A017F3D81F69B528007BB2FA /* MatchPointTests */ = {
 			isa = PBXGroup;
 			children = (
-				A017F3DB1F69B528007BB2FA /* Info.plist */,
 				3C770BBB1FCB8A6F0041B231 /* iOS */,
+				A017F3DB1F69B528007BB2FA /* Info.plist */,
 			);
 			path = MatchPointTests;
 			sourceTree = "<group>";
@@ -589,14 +591,15 @@
 		A017F3E41F69B746007BB2FA /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				3C211B411FCCF3660042300F /* GeocodeResponse.swift */,
 				A017F3E71F69B919007BB2FA /* Device.swift */,
-				A017F3E91F69BA76007BB2FA /* TimeCard.swift */,
-				A017F3EB1F69BC64007BB2FA /* RegisterResponse.swift */,
+				3C211B411FCCF3660042300F /* GeocodeResponse.swift */,
 				A017F3ED1F69BD12007BB2FA /* LoginResponse.swift */,
 				A5DD41041FB283D4005DF529 /* Mappeable.swift */,
+				A017F3EB1F69BC64007BB2FA /* RegisterResponse.swift */,
+				A017F3E91F69BA76007BB2FA /* TimeCard.swift */,
 			);
 			name = Models;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		A017F3E61F69B75F007BB2FA /* Views */ = {
@@ -605,6 +608,7 @@
 				A017F3CD1F69B528007BB2FA /* LaunchScreen.storyboard */,
 			);
 			name = Views;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		A017F3F81F69C7F1007BB2FA /* Frameworks */ = {
@@ -623,14 +627,14 @@
 		A017F3FB1F69C7F1007BB2FA /* MatchPointWidget */ = {
 			isa = PBXGroup;
 			children = (
-				A5A3DCC91FB8B4740015AB1B /* TodayView.swift */,
-				3C25FAD41FBD392D007A8EC8 /* TodayReadyView.swift */,
+				A017F4011F69C7F1007BB2FA /* Info.plist */,
+				A05AA1CB1F980D44009FA699 /* MatchPointWidget.entitlements */,
 				3C25FAD61FBD3A48007A8EC8 /* TodayErrorView.swift */,
 				3C9E04B91FC08DD600DC0986 /* TodayLoadingView.swift */,
+				3C25FAD41FBD392D007A8EC8 /* TodayReadyView.swift */,
 				3C47A3C61FC21A4500EA7EF3 /* TodaySuccessView.swift */,
+				A5A3DCC91FB8B4740015AB1B /* TodayView.swift */,
 				A5A3DCC81FB8B4740015AB1B /* TodayViewController.swift */,
-				A05AA1CB1F980D44009FA699 /* MatchPointWidget.entitlements */,
-				A017F4011F69C7F1007BB2FA /* Info.plist */,
 			);
 			path = MatchPointWidget;
 			sourceTree = "<group>";
@@ -643,20 +647,22 @@
 				A5398C201FB76E710064CD0D /* ConcreteSP.gpx */,
 			);
 			name = GPX;
+			path = GPX;
 			sourceTree = "<group>";
 		};
 		A5398C241FB776890064CD0D /* LocalNotification */ = {
 			isa = PBXGroup;
 			children = (
-				A5398C251FB7769F0064CD0D /* NotificationPoint.swift */,
-				A5398C271FB776BF0064CD0D /* NotificationPointSP.swift */,
-				A5398C291FB776DC0064CD0D /* NotificationPointRJ.swift */,
-				A5398C2B1FB776E20064CD0D /* NotificationPointBH.swift */,
-				A5398C2D1FB7770C0064CD0D /* Point.swift */,
 				A5398C2F1FB7771A0064CD0D /* NotificationDefaultContent.swift */,
+				A5398C251FB7769F0064CD0D /* NotificationPoint.swift */,
+				A5398C2B1FB776E20064CD0D /* NotificationPointBH.swift */,
 				A5398C311FB777280064CD0D /* NotificationPointFactory.swift */,
+				A5398C291FB776DC0064CD0D /* NotificationPointRJ.swift */,
+				A5398C271FB776BF0064CD0D /* NotificationPointSP.swift */,
+				A5398C2D1FB7770C0064CD0D /* Point.swift */,
 			);
 			name = LocalNotification;
+			path = LocalNotification;
 			sourceTree = "<group>";
 		};
 		A5398C351FB77D3B0064CD0D /* Coordinator */ = {
@@ -666,16 +672,18 @@
 				A5398C5B1FB7BE5D0064CD0D /* RootViewControllerProvider.swift */,
 			);
 			name = Coordinator;
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 		A5398C361FB77D420064CD0D /* Location */ = {
 			isa = PBXGroup;
 			children = (
+				3C47A4121FC33ED300EA7EF3 /* GeocoderManager.swift */,
 				A5398C331FB777E00064CD0D /* LocationManager.swift */,
 				3C47A4101FC336BA00EA7EF3 /* UserNotificationCenter.swift */,
-				3C47A4121FC33ED300EA7EF3 /* GeocoderManager.swift */,
 			);
 			name = Location;
+			path = Location;
 			sourceTree = "<group>";
 		};
 		A5398C551FB7B3750064CD0D /* Home */ = {
@@ -685,6 +693,7 @@
 				A5398C3C1FB791430064CD0D /* HomeViewController.swift */,
 			);
 			name = Home;
+			path = Home;
 			sourceTree = "<group>";
 		};
 		A5398C561FB7B37B0064CD0D /* Login */ = {
@@ -694,6 +703,7 @@
 				A5398C3A1FB78B920064CD0D /* LoginViewController.swift */,
 			);
 			name = Login;
+			path = Login;
 			sourceTree = "<group>";
 		};
 		A5398C641FB7E8590064CD0D /* Shared */ = {
@@ -702,11 +712,12 @@
 				A5398C661FB7E8690064CD0D /* Extensions */,
 				A5398C651FB7E85D0064CD0D /* View */,
 				A5BEBB4B1FB8DB110006F02E /* Constants.swift */,
-				A5398C441FB79AD40064CD0D /* ViewConfiguration.swift */,
-				A50EA71B1FB8EE3E00F21A88 /* PointData.swift */,
 				3C9E04D31FC0FC0F00DC0986 /* LabelAttributed.swift */,
+				A50EA71B1FB8EE3E00F21A88 /* PointData.swift */,
+				A5398C441FB79AD40064CD0D /* ViewConfiguration.swift */,
 			);
 			name = Shared;
+			path = Shared;
 			sourceTree = "<group>";
 		};
 		A5398C651FB7E85D0064CD0D /* View */ = {
@@ -715,21 +726,23 @@
 				A5398C461FB79FE20064CD0D /* LogoView.swift */,
 			);
 			name = View;
+			path = View;
 			sourceTree = "<group>";
 		};
 		A5398C661FB7E8690064CD0D /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				A084C7071F96825500F286C5 /* UIButton+Designable.swift */,
 				A5398C491FB7A06C0064CD0D /* Colors.swift */,
-				A5398C671FB7E8920064CD0D /* Fonts.swift */,
-				A5398C6A1FB80A860064CD0D /* UIView.swift */,
 				3C0A34CF1FBD1B2E00567391 /* Date.swift */,
+				A5398C671FB7E8920064CD0D /* Fonts.swift */,
+				3C9968D71FD23B3F0012E22F /* ProcessInfo.swift */,
 				3C13F7301FC66123003E50ED /* String.swift */,
 				3C5300181FCB09ED0056553E /* UIAlertAction.swift */,
-				3C9968D71FD23B3F0012E22F /* ProcessInfo.swift */,
+				A084C7071F96825500F286C5 /* UIButton+Designable.swift */,
+				A5398C6A1FB80A860064CD0D /* UIView.swift */,
 			);
 			name = Extensions;
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		B2E98C4F9042AD35132471D2 /* Pods */ = {
@@ -1469,6 +1482,7 @@
 				3C47A3CD1FC220FF00EA7EF3 /* Base */,
 			);
 			name = Interface.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 		A017F3CD1F69B528007BB2FA /* LaunchScreen.storyboard */ = {
@@ -1477,6 +1491,7 @@
 				A017F3CE1F69B528007BB2FA /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
