@@ -49,4 +49,4 @@ excluded:
   - Pods
   - MatchPointTests
   - MatchPointUITests
-  - MatchPoint/SkyFloatingLabelTextField
+  - MatchPoint/External/SkyFloatingLabelTextField
