@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="13529" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="13507"/>
+    </dependencies>
+    <scenes>
+        <!--PontoConcrete ⏱-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller title="PontoConcrete ⏱" id="AgC-eL-Hgc" customClass="HomeInterfaceController" customModule="PontoConcrete_WatchOS_Extension">
+                    <items>
+                        <label alignment="center" text="Av. das Nações Unidas, 11541 - Cidade Monções, São Paulo - SP, Brasil" textAlignment="left" numberOfLines="6" id="4z3-mh-C2w"/>
+                        <button width="1" alignment="left" title="Atualizar endereço" id="14s-lW-cuG">
+                            <fontDescription key="font" type="system" pointSize="13"/>
+                            <connections>
+                                <action selector="updateAddress" destination="AgC-eL-Hgc" id="GKv-E7-GsF"/>
+                            </connections>
+                        </button>
+                        <separator alignment="left" id="EDu-CZ-H6h">
+                            <color key="color" red="0.095720001298528867" green="0.095720001298528867" blue="0.095720001298528867" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </separator>
+                        <button width="1" height="50" alignment="left" title="Bater ponto" id="maX-dZ-uyp">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="backgroundColor" red="0.05779223889" green="0.12845462560000001" blue="0.50271260740000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="font" type="system" weight="semibold" pointSize="21"/>
+                            <connections>
+                                <action selector="registerPoint" destination="AgC-eL-Hgc" id="edY-jo-Ey8"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="addressLabel" destination="4z3-mh-C2w" id="Key-eQ-jKV"/>
+                        <outlet property="registerButton" destination="maX-dZ-uyp" id="P9J-m3-Di7"/>
+                        <outlet property="reloadButton" destination="14s-lW-cuG" id="7B4-L5-E7S"/>
+                        <outlet property="separator" destination="EDu-CZ-H6h" id="G0z-zW-qca"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="220" y="350.5"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController animationDuration="1" id="YCC-NB-fut" customClass="NotificationController" customModule="PontoConcrete_WatchOS_Extension">
+                    <items>
+                        <label width="1" alignment="center" text="Está chegando/saindo da Concrete? Não esqueça de bater o ponto!" textAlignment="center" numberOfLines="7" id="IdU-wH-bcW"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="474" y="326"/>
+        </scene>
+    </scenes>
+</document>

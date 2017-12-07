@@ -41,12 +41,12 @@ disabled_rules:
   - line_length
 
 included:
-  - MatchPoint
-  - MatchPoint WatchOS Extension
-  - MatchPointWidget
+  - PontoConcrete
+  - PontoConcrete WatchOS Extension
+  - PontoConcreteWidget
 
 excluded:
   - Pods
-  - MatchPointTests
-  - MatchPointUITests
-  - MatchPoint/External/SkyFloatingLabelTextField
+  - PontoConcreteTests
+  - PontoConcreteUITests
+  - PontoConcrete/External/SkyFloatingLabelTextField

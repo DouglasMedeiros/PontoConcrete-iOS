@@ -1,9 +1,9 @@
-xcodeproj: MatchPoint.xcodeproj
-workspace: MatchPoint.xcworkspace
-source_directory: MatchPoint
+xcodeproj: PontoConcrete.xcodeproj
+workspace: PontoConcrete.xcworkspace
+source_directory: PontoConcrete
 output_directory: html
-scheme: MatchPoint
+scheme: PontoConcrete
 coverage_service: html
 ignore:
     - Pods/*
-    - MatchPoint/SkyFloatingLabelTextField/*
+    - PontoConcrete/SkyFloatingLabelTextField/*
