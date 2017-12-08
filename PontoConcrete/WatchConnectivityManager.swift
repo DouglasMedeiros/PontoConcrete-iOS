@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import SwiftWatchConnectivity
 
 class WatchConnectivityManager: NSObject {
     let watchConnectivity: SwiftWatchConnectivity
