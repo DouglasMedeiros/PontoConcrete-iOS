@@ -10,7 +10,16 @@ import Foundation
 
 extension Date {
     func salutation() -> String {
-        let hour = Calendar.current.component(.hour, from: self)
+        var calendar = Calendar.current
+        calendar.locale = Locale(identifier: "pt_BR")
+        
+        guard let timeZone = TimeZone(identifier: "America/Sao_Paulo") else {
+            return ""
+        }
+        
+        calendar.timeZone = timeZone
+        
+        let hour = calendar.component(.hour, from: self)
         var message = ""
         
         if hour >= 0 && hour <= 11 {
