@@ -7,7 +7,6 @@
 //
 
 import WatchKit
-import SwiftWatchConnectivity
 
 class ExtensionDelegate: NSObject, WKExtensionDelegate {
     func handle(_ backgroundTasks: Set<WKRefreshBackgroundTask>) {

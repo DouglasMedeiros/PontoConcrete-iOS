@@ -7,8 +7,8 @@
 //
 
 import SnapKit
-import JVFloatLabeledTextField
-import FontAwesome_swift
+import JVFloatLabeledText
+import FontAwesome
 
 class LoginView: UIView {
     lazy var backgroundImage: UIImageView = {

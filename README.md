@@ -7,6 +7,10 @@
   <img width="460" height="300" src="https://github.com/lscardinali/PontoConcrete-iOS/blob/master/PontoConcrete/Assets.xcassets/tutorial.imageset/tutorial.png">
 </p>
 
+## Start
+
+After cloning this repo, you should run ```carthage bootstrap``` to begin working on the project
+
 ## Xcode Server Bots
 
 Tab `Trigger`
@@ -27,10 +31,3 @@ fastlane scan
 fastlane lint
 fastlane slather
 ```
-
-## What's left? (Feel free to open Pull Requests!)
-- [ ] Migrate from Cocoapods to Carthage
-- [X] Migrate from Storyboards to ViewCode
-- [X] Write unit tests
-
-Thanks to github.com/dogo for contributing

@@ -9,7 +9,6 @@
 	<key>keychain-access-groups</key>
 	<array>
 		<string>$(AppIdentifierPrefix)br.lscardinali.PontoConcrete</string>
-		<string>$(AppIdentifierPrefix)br.lscardinali.PontoConcrete</string>
 	</array>
 </dict>
 </plist>

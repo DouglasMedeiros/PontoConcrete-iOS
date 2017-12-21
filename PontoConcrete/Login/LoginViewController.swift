@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import SwiftWatchConnectivity
 import Moya
 
 fileprivate extension Selector {

@@ -8,7 +8,6 @@
 
 import UIKit
 import CoreLocation
-import SwiftWatchConnectivity
 
 protocol HomeViewControllerDelegate: class {
     func homeViewControllerDidLogout(viewController: HomeViewController)

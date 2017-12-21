@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import SwiftWatchConnectivity
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

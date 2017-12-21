@@ -7,7 +7,7 @@
 //
 
 import SwiftyAttributes
-import FontAwesome_swift
+import FontAwesome
 
 public enum LabelAttributed {
     case custom(String)

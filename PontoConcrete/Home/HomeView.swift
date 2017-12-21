@@ -6,6 +6,7 @@
 //  Copyright © 2017 Lucas Salton Cardinali. All rights reserved.
 //
 
+import UIKit
 import SnapKit
 
 class HomeView: UIView {

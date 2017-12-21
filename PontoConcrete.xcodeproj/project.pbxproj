@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		306AEFAC81295D3C385731D1 /* Pods_PontoConcreteTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD78F40797B71A5E09AC78D7 /* Pods_PontoConcreteTests.framework */; };
+		1DC12C661FDB4CC700D3D3CE /* FBSnapshotTestCase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0BE40851FDB372000A4267F /* FBSnapshotTestCase.framework */; };
+		1DC12C671FDB4CD000D3D3CE /* Nimble_Snapshots.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0667D7D1FD9BE670083A46C /* Nimble_Snapshots.framework */; };
+		1DC12C681FDB518E00D3D3CE /* FBSnapshotTestCase.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = A0BE40851FDB372000A4267F /* FBSnapshotTestCase.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1DC12C691FDB518E00D3D3CE /* Nimble_Snapshots.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = A0667D7D1FD9BE670083A46C /* Nimble_Snapshots.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3C04A2C41FC9138100811125 /* NotificationPointSPSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C04A2C31FC9138100811125 /* NotificationPointSPSpec.swift */; };
 		3C04A2C61FC915E000811125 /* NotificationPointRJSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C04A2C51FC915E000811125 /* NotificationPointRJSpec.swift */; };
 		3C04A2C81FC9163200811125 /* NotificationPointBHSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C04A2C71FC9163200811125 /* NotificationPointBHSpec.swift */; };
@@ -63,9 +66,6 @@
 		3C47A3FD1FC232D700EA7EF3 /* PointData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50EA71B1FB8EE3E00F21A88 /* PointData.swift */; };
 		3C47A4051FC2828500EA7EF3 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5398C331FB777E00064CD0D /* LocationManager.swift */; };
 		3C47A4111FC336BA00EA7EF3 /* UserNotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C47A4101FC336BA00EA7EF3 /* UserNotificationCenter.swift */; };
-		3C47A4131FC33ED300EA7EF3 /* GeocoderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C47A4121FC33ED300EA7EF3 /* GeocoderManager.swift */; };
-		3C47A4151FC3427400EA7EF3 /* GeocoderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C47A4121FC33ED300EA7EF3 /* GeocoderManager.swift */; };
-		3C47A4161FC3427700EA7EF3 /* GeocoderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C47A4121FC33ED300EA7EF3 /* GeocoderManager.swift */; };
 		3C5300091FCA2D770056553E /* AppCoordinatorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5300081FCA2D770056553E /* AppCoordinatorSpec.swift */; };
 		3C53000B1FCA3EE80056553E /* PontoMaisServiceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C53000A1FCA3EE80056553E /* PontoMaisServiceSpec.swift */; };
 		3C53000D1FCA472E0056553E /* HomeViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C53000C1FCA472E0056553E /* HomeViewControllerSpec.swift */; };
@@ -115,8 +115,6 @@
 		3CFE1E221FC34F690013D72E /* ConcreteSP.gpx in Resources */ = {isa = PBXBuildFile; fileRef = A5398C201FB76E710064CD0D /* ConcreteSP.gpx */; };
 		3CFE1E231FC34F6A0013D72E /* ConcreteSP.gpx in Resources */ = {isa = PBXBuildFile; fileRef = A5398C201FB76E710064CD0D /* ConcreteSP.gpx */; };
 		3CFE1E241FC34F6B0013D72E /* ConcreteSP.gpx in Resources */ = {isa = PBXBuildFile; fileRef = A5398C201FB76E710064CD0D /* ConcreteSP.gpx */; };
-		61A40FFBD9555C4694E3CED7 /* Pods_PontoConcrete.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8E88E87AA651EA331A42FD3 /* Pods_PontoConcrete.framework */; };
-		87C836C7CF75BC70A8359469 /* Pods_PontoConcreteUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D20786DBA72C1688996CBDC0 /* Pods_PontoConcreteUITests.framework */; };
 		A017F3C51F69B528007BB2FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A017F3C41F69B528007BB2FA /* AppDelegate.swift */; };
 		A017F3CF1F69B528007BB2FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A017F3CD1F69B528007BB2FA /* LaunchScreen.storyboard */; };
 		A017F3E81F69B919007BB2FA /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = A017F3E71F69B919007BB2FA /* Device.swift */; };
@@ -126,7 +124,43 @@
 		A017F3F21F69BE4F007BB2FA /* PontoMaisRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = A017F3F11F69BE4F007BB2FA /* PontoMaisRoute.swift */; };
 		A017F3FA1F69C7F1007BB2FA /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A017F3F91F69C7F1007BB2FA /* NotificationCenter.framework */; };
 		A017F4041F69C7F1007BB2FA /* PontoConcreteWidget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A017F3F71F69C7F0007BB2FA /* PontoConcreteWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		A05531961FDB31C000E0C948 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A05531941FDB31BF00E0C948 /* Result.framework */; };
+		A05531971FDB31C000E0C948 /* Result.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A05531941FDB31BF00E0C948 /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A05531981FDB31C000E0C948 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A05531951FDB31C000E0C948 /* Alamofire.framework */; };
+		A05531991FDB31C000E0C948 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A05531951FDB31C000E0C948 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A055319A1FDB323C00E0C948 /* Moya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A09637791FDB2DC100CE3BA6 /* Moya.framework */; };
+		A055319B1FDB323C00E0C948 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0667D9F1FDAFEA70083A46C /* Result.framework */; };
+		A055319C1FDB323C00E0C948 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0667D9D1FDAFE8B0083A46C /* Alamofire.framework */; };
+		A0667D6C1FD9AD1D0083A46C /* SwiftWatchConnectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0667D6B1FD9AD1D0083A46C /* SwiftWatchConnectivity.swift */; };
+		A0667D6D1FD9AD1D0083A46C /* SwiftWatchConnectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0667D6B1FD9AD1D0083A46C /* SwiftWatchConnectivity.swift */; };
+		A0667D861FD9C09B0083A46C /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0667D6E1FD9AD920083A46C /* SnapKit.framework */; };
+		A0667D871FD9C0AF0083A46C /* FontAwesome.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0667D7A1FD9BE1C0083A46C /* FontAwesome.framework */; };
+		A0667DAD1FDB10370083A46C /* GeocoderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C47A4121FC33ED300EA7EF3 /* GeocoderManager.swift */; };
+		A0667DAE1FDB10380083A46C /* GeocoderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C47A4121FC33ED300EA7EF3 /* GeocoderManager.swift */; };
+		A0667DAF1FDB10510083A46C /* GeocoderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C47A4121FC33ED300EA7EF3 /* GeocoderManager.swift */; };
 		A084C7081F96825500F286C5 /* UIButton+Designable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A084C7071F96825500F286C5 /* UIButton+Designable.swift */; };
+		A09637721FDB2DC100CE3BA6 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0667D9D1FDAFE8B0083A46C /* Alamofire.framework */; };
+		A09637731FDB2DC100CE3BA6 /* FontAwesome.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0667D7A1FD9BE1C0083A46C /* FontAwesome.framework */; };
+		A09637741FDB2DC100CE3BA6 /* JVFloatLabeledText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0667D711FD9AD930083A46C /* JVFloatLabeledText.framework */; };
+		A09637751FDB2DC100CE3BA6 /* KeychainSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0667D701FD9AD930083A46C /* KeychainSwift.framework */; };
+		A09637761FDB2DC100CE3BA6 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0667D9F1FDAFEA70083A46C /* Result.framework */; };
+		A09637771FDB2DC100CE3BA6 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0667D6E1FD9AD920083A46C /* SnapKit.framework */; };
+		A09637781FDB2DC100CE3BA6 /* SwiftyAttributes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0667D781FD9BE0A0083A46C /* SwiftyAttributes.framework */; };
+		A096377A1FDB2DC200CE3BA6 /* Moya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A09637791FDB2DC100CE3BA6 /* Moya.framework */; };
+		A0BE407F1FDB361F00A4267F /* Moya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0BE407E1FDB361F00A4267F /* Moya.framework */; };
+		A0BE40801FDB361F00A4267F /* Moya.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A0BE407E1FDB361F00A4267F /* Moya.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A0BE40821FDB36C200A4267F /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0667D7C1FD9BE660083A46C /* Nimble.framework */; };
+		A0BE40831FDB36C200A4267F /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0667D7E1FD9BE670083A46C /* Quick.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		A0BE40841FDB36CA00A4267F /* Nimble_Snapshots.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0667D7D1FD9BE670083A46C /* Nimble_Snapshots.framework */; };
+		A0BE40881FDB375F00A4267F /* FBSnapshotTestCase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0BE40851FDB372000A4267F /* FBSnapshotTestCase.framework */; };
+		A0BE40901FDB381D00A4267F /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = A0667D7C1FD9BE660083A46C /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A0BE40911FDB381D00A4267F /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = A0667D7E1FD9BE670083A46C /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A0BE40931FDB382300A4267F /* FBSnapshotTestCase.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = A0BE40851FDB372000A4267F /* FBSnapshotTestCase.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A0BE40941FDB382300A4267F /* Nimble_Snapshots.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = A0667D7D1FD9BE670083A46C /* Nimble_Snapshots.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A0BE40951FDB382300A4267F /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = A0667D7C1FD9BE660083A46C /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A0BE40961FDB382300A4267F /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = A0667D7E1FD9BE670083A46C /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A0BE40971FDB3AA800A4267F /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0667D7C1FD9BE660083A46C /* Nimble.framework */; };
+		A0BE40981FDB3AA800A4267F /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0667D7E1FD9BE670083A46C /* Quick.framework */; };
 		A0CE0BA11F69F4980076152D /* PontoMaisRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = A017F3F11F69BE4F007BB2FA /* PontoMaisRoute.swift */; };
 		A50EA7191FB8ECC700F21A88 /* SessionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50EA7181FB8ECC700F21A88 /* SessionData.swift */; };
 		A50EA71A1FB8ECCB00F21A88 /* SessionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50EA7181FB8ECC700F21A88 /* SessionData.swift */; };
@@ -170,8 +204,6 @@
 		A5A3DCCB1FB8B4740015AB1B /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A3DCC91FB8B4740015AB1B /* TodayView.swift */; };
 		A5BEBB4C1FB8DB110006F02E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BEBB4B1FB8DB110006F02E /* Constants.swift */; };
 		A5DD41051FB283D4005DF529 /* Mappeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DD41041FB283D4005DF529 /* Mappeable.swift */; };
-		B90D66897E3F18345EDFAD30 /* Pods_PontoConcrete_WatchOS_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F9754F04AB8C976B7F15408 /* Pods_PontoConcrete_WatchOS_Extension.framework */; };
-		CB4A6CBBACF6A70595B5E97B /* Pods_PontoConcreteWidget.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C5AF19900B5BCE89B95F42F /* Pods_PontoConcreteWidget.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -246,12 +278,48 @@
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A096377E1FDB2DD700CE3BA6 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A05531991FDB31C000E0C948 /* Alamofire.framework in Embed Frameworks */,
+				A0BE40801FDB361F00A4267F /* Moya.framework in Embed Frameworks */,
+				A05531971FDB31C000E0C948 /* Result.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A0BE408D1FDB381100A4267F /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				1DC12C681FDB518E00D3D3CE /* FBSnapshotTestCase.framework in CopyFiles */,
+				1DC12C691FDB518E00D3D3CE /* Nimble_Snapshots.framework in CopyFiles */,
+				A0BE40901FDB381D00A4267F /* Nimble.framework in CopyFiles */,
+				A0BE40911FDB381D00A4267F /* Quick.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A0BE40921FDB382100A4267F /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A0BE40931FDB382300A4267F /* FBSnapshotTestCase.framework in CopyFiles */,
+				A0BE40941FDB382300A4267F /* Nimble_Snapshots.framework in CopyFiles */,
+				A0BE40951FDB382300A4267F /* Nimble.framework in CopyFiles */,
+				A0BE40961FDB382300A4267F /* Quick.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		07359EC25472890EB1DB6365 /* Pods-PontoConcrete.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PontoConcrete.release.xcconfig"; path = "Pods/Target Support Files/Pods-PontoConcrete/Pods-PontoConcrete.release.xcconfig"; sourceTree = "<group>"; };
-		107FECA2AED5EF41406B033B /* Pods-PontoConcreteWidget.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PontoConcreteWidget.release.xcconfig"; path = "Pods/Target Support Files/Pods-PontoConcreteWidget/Pods-PontoConcreteWidget.release.xcconfig"; sourceTree = "<group>"; };
-		1884A9D541835549C3246075 /* Pods-PontoConcrete WatchOS Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PontoConcrete WatchOS Extension.release.xcconfig"; path = "Pods/Target Support Files/Pods-PontoConcrete WatchOS Extension/Pods-PontoConcrete WatchOS Extension.release.xcconfig"; sourceTree = "<group>"; };
 		3C04A2C31FC9138100811125 /* NotificationPointSPSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationPointSPSpec.swift; sourceTree = "<group>"; };
 		3C04A2C51FC915E000811125 /* NotificationPointRJSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationPointRJSpec.swift; sourceTree = "<group>"; };
 		3C04A2C71FC9163200811125 /* NotificationPointBHSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationPointBHSpec.swift; sourceTree = "<group>"; };
@@ -293,7 +361,6 @@
 		3C5300141FCAEE700056553E /* LabelAttributedSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelAttributedSpec.swift; sourceTree = "<group>"; };
 		3C5300161FCAF57C0056553E /* LoginViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerSpec.swift; sourceTree = "<group>"; };
 		3C5300181FCB09ED0056553E /* UIAlertAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertAction.swift; sourceTree = "<group>"; };
-		3C5AF19900B5BCE89B95F42F /* Pods_PontoConcreteWidget.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PontoConcreteWidget.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C693C1A1FCE29740018DA22 /* PontoConcreteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PontoConcreteUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C693C1C1FCE29740018DA22 /* PontoConcreteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PontoConcreteUITests.swift; sourceTree = "<group>"; };
 		3C693C1E1FCE29740018DA22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -316,11 +383,6 @@
 		3CFBA3461FC917C000D96FD4 /* DateSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSpec.swift; sourceTree = "<group>"; };
 		3CFBA3481FC9C46600D96FD4 /* UIButtonSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonSpec.swift; sourceTree = "<group>"; };
 		3CFBA34A1FC9D95900D96FD4 /* NotificationPointFactorySpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationPointFactorySpec.swift; sourceTree = "<group>"; };
-		41C8B194770B1C383BDF88D7 /* Pods-PontoConcreteUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PontoConcreteUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PontoConcreteUITests/Pods-PontoConcreteUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		5F9754F04AB8C976B7F15408 /* Pods_PontoConcrete_WatchOS_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PontoConcrete_WatchOS_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6D6C79EB3A1B82DE65FDFBC1 /* Pods-PontoConcreteUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PontoConcreteUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PontoConcreteUITests/Pods-PontoConcreteUITests.release.xcconfig"; sourceTree = "<group>"; };
-		7C79E2BB3A9060CB9DDF6F67 /* Pods-PontoConcreteWidget.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PontoConcreteWidget.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PontoConcreteWidget/Pods-PontoConcreteWidget.debug.xcconfig"; sourceTree = "<group>"; };
-		97C920DF46519A4F2A4E6B53 /* Pods-PontoConcrete WatchOS Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PontoConcrete WatchOS Extension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PontoConcrete WatchOS Extension/Pods-PontoConcrete WatchOS Extension.debug.xcconfig"; sourceTree = "<group>"; };
 		A017F3C11F69B528007BB2FA /* PontoConcrete.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PontoConcrete.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A017F3C41F69B528007BB2FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A017F3CB1F69B528007BB2FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -336,9 +398,25 @@
 		A017F3F71F69C7F0007BB2FA /* PontoConcreteWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = PontoConcreteWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		A017F3F91F69C7F1007BB2FA /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		A017F4011F69C7F1007BB2FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A05531941FDB31BF00E0C948 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/watchOS/Result.framework; sourceTree = "<group>"; };
+		A05531951FDB31C000E0C948 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/watchOS/Alamofire.framework; sourceTree = "<group>"; };
 		A05AA1CA1F980D3F009FA699 /* PontoConcrete.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PontoConcrete.entitlements; sourceTree = "<group>"; };
 		A05AA1CB1F980D44009FA699 /* PontoConcreteWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PontoConcreteWidget.entitlements; sourceTree = "<group>"; };
+		A0667D6B1FD9AD1D0083A46C /* SwiftWatchConnectivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftWatchConnectivity.swift; sourceTree = "<group>"; };
+		A0667D6E1FD9AD920083A46C /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
+		A0667D701FD9AD930083A46C /* KeychainSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KeychainSwift.framework; path = Carthage/Build/iOS/KeychainSwift.framework; sourceTree = "<group>"; };
+		A0667D711FD9AD930083A46C /* JVFloatLabeledText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JVFloatLabeledText.framework; path = Carthage/Build/iOS/JVFloatLabeledText.framework; sourceTree = "<group>"; };
+		A0667D781FD9BE0A0083A46C /* SwiftyAttributes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyAttributes.framework; path = Carthage/Build/iOS/SwiftyAttributes.framework; sourceTree = "<group>"; };
+		A0667D7A1FD9BE1C0083A46C /* FontAwesome.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FontAwesome.framework; path = Carthage/Build/iOS/FontAwesome.framework; sourceTree = "<group>"; };
+		A0667D7C1FD9BE660083A46C /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
+		A0667D7D1FD9BE670083A46C /* Nimble_Snapshots.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble_Snapshots.framework; path = Carthage/Build/iOS/Nimble_Snapshots.framework; sourceTree = "<group>"; };
+		A0667D7E1FD9BE670083A46C /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
+		A0667D9D1FDAFE8B0083A46C /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		A0667D9F1FDAFEA70083A46C /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
 		A084C7071F96825500F286C5 /* UIButton+Designable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Designable.swift"; sourceTree = "<group>"; };
+		A09637791FDB2DC100CE3BA6 /* Moya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Moya.framework; path = Carthage/Build/iOS/Moya.framework; sourceTree = "<group>"; };
+		A0BE407E1FDB361F00A4267F /* Moya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Moya.framework; path = Carthage/Build/watchOS/Moya.framework; sourceTree = "<group>"; };
+		A0BE40851FDB372000A4267F /* FBSnapshotTestCase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSnapshotTestCase.framework; path = Carthage/Build/iOS/FBSnapshotTestCase.framework; sourceTree = "<group>"; };
 		A50EA7181FB8ECC700F21A88 /* SessionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionData.swift; sourceTree = "<group>"; };
 		A50EA71B1FB8EE3E00F21A88 /* PointData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointData.swift; sourceTree = "<group>"; };
 		A5398C1E1FB76E710064CD0D /* ConcreteBH.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = ConcreteBH.gpx; sourceTree = "<group>"; };
@@ -367,12 +445,6 @@
 		A5A3DCC91FB8B4740015AB1B /* TodayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodayView.swift; sourceTree = "<group>"; };
 		A5BEBB4B1FB8DB110006F02E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		A5DD41041FB283D4005DF529 /* Mappeable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mappeable.swift; sourceTree = "<group>"; };
-		B8E88E87AA651EA331A42FD3 /* Pods_PontoConcrete.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PontoConcrete.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D20786DBA72C1688996CBDC0 /* Pods_PontoConcreteUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PontoConcreteUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DC53A7FB2A74FC6993DF0D58 /* Pods-PontoConcreteTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PontoConcreteTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PontoConcreteTests/Pods-PontoConcreteTests.release.xcconfig"; sourceTree = "<group>"; };
-		DD78F40797B71A5E09AC78D7 /* Pods_PontoConcreteTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PontoConcreteTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EB4D592DA76A76C9D1BAAEB9 /* Pods-PontoConcreteTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PontoConcreteTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PontoConcreteTests/Pods-PontoConcreteTests.debug.xcconfig"; sourceTree = "<group>"; };
-		F18099B6919167CD7FF607AC /* Pods-PontoConcrete.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PontoConcrete.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PontoConcrete/Pods-PontoConcrete.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -387,7 +459,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B90D66897E3F18345EDFAD30 /* Pods_PontoConcrete_WatchOS_Extension.framework in Frameworks */,
+				A05531981FDB31C000E0C948 /* Alamofire.framework in Frameworks */,
+				A0BE407F1FDB361F00A4267F /* Moya.framework in Frameworks */,
+				A05531961FDB31C000E0C948 /* Result.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,7 +469,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				87C836C7CF75BC70A8359469 /* Pods_PontoConcreteUITests.framework in Frameworks */,
+				A0BE40971FDB3AA800A4267F /* Nimble.framework in Frameworks */,
+				A0BE40981FDB3AA800A4267F /* Quick.framework in Frameworks */,
+				A0BE40881FDB375F00A4267F /* FBSnapshotTestCase.framework in Frameworks */,
+				A0BE40841FDB36CA00A4267F /* Nimble_Snapshots.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -403,7 +480,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				61A40FFBD9555C4694E3CED7 /* Pods_PontoConcrete.framework in Frameworks */,
+				A09637721FDB2DC100CE3BA6 /* Alamofire.framework in Frameworks */,
+				A096377A1FDB2DC200CE3BA6 /* Moya.framework in Frameworks */,
+				A09637731FDB2DC100CE3BA6 /* FontAwesome.framework in Frameworks */,
+				A09637741FDB2DC100CE3BA6 /* JVFloatLabeledText.framework in Frameworks */,
+				A09637751FDB2DC100CE3BA6 /* KeychainSwift.framework in Frameworks */,
+				A09637761FDB2DC100CE3BA6 /* Result.framework in Frameworks */,
+				A09637771FDB2DC100CE3BA6 /* SnapKit.framework in Frameworks */,
+				A09637781FDB2DC100CE3BA6 /* SwiftyAttributes.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,7 +495,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				306AEFAC81295D3C385731D1 /* Pods_PontoConcreteTests.framework in Frameworks */,
+				A0BE40821FDB36C200A4267F /* Nimble.framework in Frameworks */,
+				1DC12C661FDB4CC700D3D3CE /* FBSnapshotTestCase.framework in Frameworks */,
+				A0BE40831FDB36C200A4267F /* Quick.framework in Frameworks */,
+				1DC12C671FDB4CD000D3D3CE /* Nimble_Snapshots.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,8 +506,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A055319A1FDB323C00E0C948 /* Moya.framework in Frameworks */,
+				A055319B1FDB323C00E0C948 /* Result.framework in Frameworks */,
+				A055319C1FDB323C00E0C948 /* Alamofire.framework in Frameworks */,
+				A0667D871FD9C0AF0083A46C /* FontAwesome.framework in Frameworks */,
+				A0667D861FD9C09B0083A46C /* SnapKit.framework in Frameworks */,
 				A017F3FA1F69C7F1007BB2FA /* NotificationCenter.framework in Frameworks */,
-				CB4A6CBBACF6A70595B5E97B /* Pods_PontoConcreteWidget.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -511,6 +602,7 @@
 		3C9E04C51FC0CF1200DC0986 /* External */ = {
 			isa = PBXGroup;
 			children = (
+				A0667D6B1FD9AD1D0083A46C /* SwiftWatchConnectivity.swift */,
 				3C9E04C61FC0CF1E00DC0986 /* SkyFloatingLabelTextField */,
 			);
 			path = External;
@@ -529,6 +621,9 @@
 		A017F3B81F69B528007BB2FA = {
 			isa = PBXGroup;
 			children = (
+				A0BE407E1FDB361F00A4267F /* Moya.framework */,
+				A05531951FDB31C000E0C948 /* Alamofire.framework */,
+				A05531941FDB31BF00E0C948 /* Result.framework */,
 				A017F3F81F69C7F1007BB2FA /* Frameworks */,
 				A017F3C31F69B528007BB2FA /* PontoConcrete */,
 				3C47A3CB1FC220FF00EA7EF3 /* PontoConcrete WatchOS */,
@@ -536,7 +631,6 @@
 				A017F3D81F69B528007BB2FA /* PontoConcreteTests */,
 				3C693C1B1FCE29740018DA22 /* PontoConcreteUITests */,
 				A017F3FB1F69C7F1007BB2FA /* PontoConcreteWidget */,
-				B2E98C4F9042AD35132471D2 /* Pods */,
 				A017F3C21F69B528007BB2FA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -610,12 +704,19 @@
 		A017F3F81F69C7F1007BB2FA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A0BE40851FDB372000A4267F /* FBSnapshotTestCase.framework */,
+				A09637791FDB2DC100CE3BA6 /* Moya.framework */,
+				A0667D9F1FDAFEA70083A46C /* Result.framework */,
+				A0667D9D1FDAFE8B0083A46C /* Alamofire.framework */,
+				A0667D7D1FD9BE670083A46C /* Nimble_Snapshots.framework */,
+				A0667D7C1FD9BE660083A46C /* Nimble.framework */,
+				A0667D7E1FD9BE670083A46C /* Quick.framework */,
+				A0667D7A1FD9BE1C0083A46C /* FontAwesome.framework */,
+				A0667D781FD9BE0A0083A46C /* SwiftyAttributes.framework */,
+				A0667D711FD9AD930083A46C /* JVFloatLabeledText.framework */,
+				A0667D701FD9AD930083A46C /* KeychainSwift.framework */,
+				A0667D6E1FD9AD920083A46C /* SnapKit.framework */,
 				A017F3F91F69C7F1007BB2FA /* NotificationCenter.framework */,
-				B8E88E87AA651EA331A42FD3 /* Pods_PontoConcrete.framework */,
-				5F9754F04AB8C976B7F15408 /* Pods_PontoConcrete_WatchOS_Extension.framework */,
-				DD78F40797B71A5E09AC78D7 /* Pods_PontoConcreteTests.framework */,
-				D20786DBA72C1688996CBDC0 /* Pods_PontoConcreteUITests.framework */,
-				3C5AF19900B5BCE89B95F42F /* Pods_PontoConcreteWidget.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -732,23 +833,6 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		B2E98C4F9042AD35132471D2 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				F18099B6919167CD7FF607AC /* Pods-PontoConcrete.debug.xcconfig */,
-				07359EC25472890EB1DB6365 /* Pods-PontoConcrete.release.xcconfig */,
-				97C920DF46519A4F2A4E6B53 /* Pods-PontoConcrete WatchOS Extension.debug.xcconfig */,
-				1884A9D541835549C3246075 /* Pods-PontoConcrete WatchOS Extension.release.xcconfig */,
-				EB4D592DA76A76C9D1BAAEB9 /* Pods-PontoConcreteTests.debug.xcconfig */,
-				DC53A7FB2A74FC6993DF0D58 /* Pods-PontoConcreteTests.release.xcconfig */,
-				41C8B194770B1C383BDF88D7 /* Pods-PontoConcreteUITests.debug.xcconfig */,
-				6D6C79EB3A1B82DE65FDFBC1 /* Pods-PontoConcreteUITests.release.xcconfig */,
-				7C79E2BB3A9060CB9DDF6F67 /* Pods-PontoConcreteWidget.debug.xcconfig */,
-				107FECA2AED5EF41406B033B /* Pods-PontoConcreteWidget.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -774,12 +858,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3C47A3EA1FC2210000EA7EF3 /* Build configuration list for PBXNativeTarget "PontoConcrete WatchOS Extension" */;
 			buildPhases = (
-				537D46239B7FF9CE9E3D9E39 /* [CP] Check Pods Manifest.lock */,
-				3C47A3D21FC220FF00EA7EF3 /* Sources */,
 				3C47A3D31FC220FF00EA7EF3 /* Frameworks */,
+				3C47A3D21FC220FF00EA7EF3 /* Sources */,
 				3C47A3D41FC220FF00EA7EF3 /* Resources */,
-				371792790B343A863708558D /* [CP] Embed Pods Frameworks */,
-				E042BA5DEEFB8F569FE6112F /* [CP] Copy Pods Resources */,
+				A096377E1FDB2DD700CE3BA6 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -794,12 +876,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3C693C211FCE29740018DA22 /* Build configuration list for PBXNativeTarget "PontoConcreteUITests" */;
 			buildPhases = (
-				0BE7A3862DF8CB18356DC82F /* [CP] Check Pods Manifest.lock */,
 				3C693C161FCE29740018DA22 /* Sources */,
-				3C693C171FCE29740018DA22 /* Frameworks */,
 				3C693C181FCE29740018DA22 /* Resources */,
-				368EDA014F8FDE4AAD4A01AB /* [CP] Embed Pods Frameworks */,
-				FE2C388463CAC9BFDBBCD817 /* [CP] Copy Pods Resources */,
+				3C693C171FCE29740018DA22 /* Frameworks */,
+				A0BE40921FDB382100A4267F /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -815,15 +895,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A017F3DE1F69B528007BB2FA /* Build configuration list for PBXNativeTarget "PontoConcrete" */;
 			buildPhases = (
-				6BCF002099197FD45C91262D /* [CP] Check Pods Manifest.lock */,
 				A017F3BD1F69B528007BB2FA /* Sources */,
 				A017F3BE1F69B528007BB2FA /* Frameworks */,
 				A017F3BF1F69B528007BB2FA /* Resources */,
 				A017F4081F69C7F1007BB2FA /* Embed App Extensions */,
 				3C0A34CD1FBD184800567391 /* SwiftLint */,
 				3C47A3F11FC2210000EA7EF3 /* Embed Watch Content */,
-				47D3FDD0A892B60D7B12436E /* [CP] Embed Pods Frameworks */,
-				EDC8AFC234CC4435E93E2265 /* [CP] Copy Pods Resources */,
+				A096377F1FDB2E0000CE3BA6 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -840,12 +918,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A017F3E11F69B528007BB2FA /* Build configuration list for PBXNativeTarget "PontoConcreteTests" */;
 			buildPhases = (
-				E8CB8777169E217EC5ADF034 /* [CP] Check Pods Manifest.lock */,
 				A017F3D11F69B528007BB2FA /* Sources */,
 				A017F3D21F69B528007BB2FA /* Frameworks */,
 				A017F3D31F69B528007BB2FA /* Resources */,
-				702A1BE2E00140CBE8DBD280 /* [CP] Embed Pods Frameworks */,
-				FB7B79408DFF60E44CC80FF4 /* [CP] Copy Pods Resources */,
+				A0BE408D1FDB381100A4267F /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -861,11 +937,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A017F4051F69C7F1007BB2FA /* Build configuration list for PBXNativeTarget "PontoConcreteWidget" */;
 			buildPhases = (
-				F7BFECFE682CBE7E3965B45C /* [CP] Check Pods Manifest.lock */,
 				A017F3F31F69C7F0007BB2FA /* Sources */,
 				A017F3F41F69C7F0007BB2FA /* Frameworks */,
 				A017F3F51F69C7F0007BB2FA /* Resources */,
-				3F1F9EC2E29403523CB4C343 /* [CP] Copy Pods Resources */,
+				A09637801FDB2F2700CE3BA6 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -1032,65 +1107,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0BE7A3862DF8CB18356DC82F /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-PontoConcreteUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		368EDA014F8FDE4AAD4A01AB /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PontoConcreteUITests/Pods-PontoConcreteUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		371792790B343A863708558D /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-PontoConcrete WatchOS Extension/Pods-PontoConcrete WatchOS Extension-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire-watchOS/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/Moya-watchOS/Moya.framework",
-				"${BUILT_PRODUCTS_DIR}/Result-watchOS/Result.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftWatchConnectivity-watchOS/SwiftWatchConnectivity.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyAttributes-watchOS/SwiftyAttributes.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftWatchConnectivity.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyAttributes.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PontoConcrete WatchOS Extension/Pods-PontoConcrete WatchOS Extension-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		3C0A34CD1FBD184800567391 /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1105,210 +1121,49 @@
 			shellPath = /bin/sh;
 			shellScript = "if which ${PODS_ROOT}/SwiftLint/swiftlint >/dev/null; then\n    ${PODS_ROOT}/SwiftLint/swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
 		};
-		3F1F9EC2E29403523CB4C343 /* [CP] Copy Pods Resources */ = {
+		A096377F1FDB2E0000CE3BA6 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Moya.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/FontAwesome.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/JVFloatLabeledText.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/KeychainSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SnapKit.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftyAttributes.framework",
 			);
-			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Moya.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Alamofire.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/FontAwesome.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/JVFloatLabeledText.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/KeychainSwift.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Result.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/SnapKit.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/SwiftyAttributes.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PontoConcreteWidget/Pods-PontoConcreteWidget-resources.sh\"\n";
-			showEnvVarsInLog = 0;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
 		};
-		47D3FDD0A892B60D7B12436E /* [CP] Embed Pods Frameworks */ = {
+		A09637801FDB2F2700CE3BA6 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-PontoConcrete/Pods-PontoConcrete-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire-iOS/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/FontAwesome.swift/FontAwesome_swift.framework",
-				"${BUILT_PRODUCTS_DIR}/JVFloatLabeledTextField/JVFloatLabeledTextField.framework",
-				"${BUILT_PRODUCTS_DIR}/KeychainSwift/KeychainSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/Moya-iOS/Moya.framework",
-				"${BUILT_PRODUCTS_DIR}/Result-iOS/Result.framework",
-				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftWatchConnectivity-iOS/SwiftWatchConnectivity.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyAttributes-iOS/SwiftyAttributes.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SnapKit.framework",
 			);
-			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FontAwesome_swift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JVFloatLabeledTextField.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftWatchConnectivity.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyAttributes.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/SnapKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PontoConcrete/Pods-PontoConcrete-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		537D46239B7FF9CE9E3D9E39 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-PontoConcrete WatchOS Extension-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		6BCF002099197FD45C91262D /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-PontoConcrete-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		702A1BE2E00140CBE8DBD280 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-PontoConcreteTests/Pods-PontoConcreteTests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/FBSnapshotTestCase/FBSnapshotTestCase.framework",
-				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
-				"${BUILT_PRODUCTS_DIR}/Nimble-Snapshots/Nimble_Snapshots.framework",
-				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSnapshotTestCase.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble_Snapshots.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PontoConcreteTests/Pods-PontoConcreteTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E042BA5DEEFB8F569FE6112F /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PontoConcrete WatchOS Extension/Pods-PontoConcrete WatchOS Extension-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E8CB8777169E217EC5ADF034 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-PontoConcreteTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		EDC8AFC234CC4435E93E2265 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PontoConcrete/Pods-PontoConcrete-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F7BFECFE682CBE7E3965B45C /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-PontoConcreteWidget-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		FB7B79408DFF60E44CC80FF4 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PontoConcreteTests/Pods-PontoConcreteTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		FE2C388463CAC9BFDBBCD817 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PontoConcreteUITests/Pods-PontoConcreteUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1326,13 +1181,13 @@
 				3CA1087A1FC3A15A00B8CA4F /* LoginResponse.swift in Sources */,
 				3C9968DA1FD23BF70012E22F /* ProcessInfo.swift in Sources */,
 				3C47A3FD1FC232D700EA7EF3 /* PointData.swift in Sources */,
-				3C47A4151FC3427400EA7EF3 /* GeocoderManager.swift in Sources */,
 				3C211B441FCCFAEC0042300F /* GoogleGeocodeService.swift in Sources */,
 				3C13F7321FC661F8003E50ED /* String.swift in Sources */,
 				3CA108781FC3A12700B8CA4F /* PontoMaisAPI.swift in Sources */,
 				3C211B431FCCFAEC0042300F /* GoogleGeocodeAPI.swift in Sources */,
 				3C211B4A1FCCFB030042300F /* GeocodeResponse.swift in Sources */,
 				3C211B471FCCFAFD0042300F /* GoogleGeocodeRoute.swift in Sources */,
+				A0667D6D1FD9AD1D0083A46C /* SwiftWatchConnectivity.swift in Sources */,
 				3C1F8A421FC355CC001B9873 /* SessionData.swift in Sources */,
 				3CA108771FC3A08900B8CA4F /* PontoMaisService.swift in Sources */,
 				3C74848A1FC380560007E7F0 /* LabelAttributed.swift in Sources */,
@@ -1340,6 +1195,7 @@
 				3CA1087C1FC3A16C00B8CA4F /* RegisterResponse.swift in Sources */,
 				3CA108791FC3A13800B8CA4F /* PontoMaisRoute.swift in Sources */,
 				3CA1087D1FC3A17300B8CA4F /* TimeCard.swift in Sources */,
+				A0667DAF1FDB10510083A46C /* GeocoderManager.swift in Sources */,
 				3CA1087E1FC3A17800B8CA4F /* Device.swift in Sources */,
 				3C47A4051FC2828500EA7EF3 /* LocationManager.swift in Sources */,
 			);
@@ -1396,14 +1252,15 @@
 				3C211B421FCCF3660042300F /* GeocodeResponse.swift in Sources */,
 				A50EA7191FB8ECC700F21A88 /* SessionData.swift in Sources */,
 				A5398C321FB777280064CD0D /* NotificationPointFactory.swift in Sources */,
-				3C47A4131FC33ED300EA7EF3 /* GeocoderManager.swift in Sources */,
 				A5398C5C1FB7BE5D0064CD0D /* RootViewControllerProvider.swift in Sources */,
 				A5398C621FB7D8590064CD0D /* LoginView.swift in Sources */,
 				A5398C381FB77D560064CD0D /* AppCoordinator.swift in Sources */,
 				3C9E04CC1FC0CF1F00DC0986 /* SkyFloatingLabelTextFieldWithIcon.swift in Sources */,
+				A0667D6C1FD9AD1D0083A46C /* SwiftWatchConnectivity.swift in Sources */,
 				A017F3EC1F69BC64007BB2FA /* RegisterResponse.swift in Sources */,
 				A084C7081F96825500F286C5 /* UIButton+Designable.swift in Sources */,
 				A5398C531FB7AC8E0064CD0D /* HomeView.swift in Sources */,
+				A0667DAE1FDB10380083A46C /* GeocoderManager.swift in Sources */,
 				A5398C261FB7769F0064CD0D /* NotificationPoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1446,7 +1303,6 @@
 			files = (
 				3C25FAD51FBD392D007A8EC8 /* TodayReadyView.swift in Sources */,
 				3C13F7331FC661F9003E50ED /* String.swift in Sources */,
-				3C47A4161FC3427700EA7EF3 /* GeocoderManager.swift in Sources */,
 				3C211B491FCCFB030042300F /* GeocodeResponse.swift in Sources */,
 				3C0A34D11FBD1C1100567391 /* Date.swift in Sources */,
 				A50EA7251FB90B9B00F21A88 /* Point.swift in Sources */,
@@ -1468,6 +1324,7 @@
 				A5A3DCCA1FB8B4740015AB1B /* TodayViewController.swift in Sources */,
 				A50EA71A1FB8ECCB00F21A88 /* SessionData.swift in Sources */,
 				3C211B461FCCFAED0042300F /* GoogleGeocodeService.swift in Sources */,
+				A0667DAD1FDB10370083A46C /* GeocoderManager.swift in Sources */,
 				3C9E04BC1FC09EF500DC0986 /* TimeCard.swift in Sources */,
 				A5A3DCCB1FB8B4740015AB1B /* TodayView.swift in Sources */,
 				A50EA7241FB90B9800F21A88 /* NotificationPointBH.swift in Sources */,
@@ -1540,17 +1397,20 @@
 /* Begin XCBuildConfiguration section */
 		3C47A3EB1FC2210000EA7EF3 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 97C920DF46519A4F2A4E6B53 /* Pods-PontoConcrete WatchOS Extension.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SY87M4P7NJ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/watchOS",
+				);
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = "PontoConcrete WatchOS Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = br.lscardinali.PontoConcrete.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = br.lscardinali.PontoConcrete.watchkitappp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1562,17 +1422,20 @@
 		};
 		3C47A3EC1FC2210000EA7EF3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1884A9D541835549C3246075 /* Pods-PontoConcrete WatchOS Extension.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SY87M4P7NJ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/watchOS",
+				);
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = "PontoConcrete WatchOS Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = br.lscardinali.PontoConcrete.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = br.lscardinali.PontoConcrete.watchkitappp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1593,11 +1456,12 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SY87M4P7NJ;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				IBSC_MODULE = PontoConcrete_WatchOS_Extension;
 				INFOPLIST_FILE = "PontoConcrete WatchOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = br.lscardinali.PontoConcrete.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = br.lscardinali.PontoConcrete.watchkitappp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1619,11 +1483,12 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SY87M4P7NJ;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				IBSC_MODULE = PontoConcrete_WatchOS_Extension;
 				INFOPLIST_FILE = "PontoConcrete WatchOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = br.lscardinali.PontoConcrete.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = br.lscardinali.PontoConcrete.watchkitappp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1635,13 +1500,16 @@
 		};
 		3C693C221FCE29740018DA22 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 41C8B194770B1C383BDF88D7 /* Pods-PontoConcreteUITests.debug.xcconfig */;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 83C3V38WSB;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = PontoConcreteUITests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
@@ -1656,13 +1524,16 @@
 		};
 		3C693C231FCE29740018DA22 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6D6C79EB3A1B82DE65FDFBC1 /* Pods-PontoConcreteUITests.release.xcconfig */;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 83C3V38WSB;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = PontoConcreteUITests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
@@ -1784,7 +1655,6 @@
 		};
 		A017F3DF1F69B528007BB2FA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F18099B6919167CD7FF607AC /* Pods-PontoConcrete.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = PontoConcrete/PontoConcrete.entitlements;
@@ -1792,6 +1662,10 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SY87M4P7NJ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = PontoConcrete/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1806,7 +1680,6 @@
 		};
 		A017F3E01F69B528007BB2FA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 07359EC25472890EB1DB6365 /* Pods-PontoConcrete.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = PontoConcrete/PontoConcrete.entitlements;
@@ -1814,6 +1687,10 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SY87M4P7NJ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = PontoConcrete/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1828,10 +1705,13 @@
 		};
 		A017F3E21F69B528007BB2FA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EB4D592DA76A76C9D1BAAEB9 /* Pods-PontoConcreteTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = 83C3V38WSB;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = PontoConcreteTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.lucascardinali.PontoConcreteTests;
@@ -1844,10 +1724,13 @@
 		};
 		A017F3E31F69B528007BB2FA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DC53A7FB2A74FC6993DF0D58 /* Pods-PontoConcreteTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = 83C3V38WSB;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = PontoConcreteTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.lucascardinali.PontoConcreteTests;
@@ -1860,12 +1743,15 @@
 		};
 		A017F4061F69C7F1007BB2FA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7C79E2BB3A9060CB9DDF6F67 /* Pods-PontoConcreteWidget.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = PontoConcreteWidget/PontoConcreteWidget.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SY87M4P7NJ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = PontoConcreteWidget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
@@ -1880,12 +1766,15 @@
 		};
 		A017F4071F69C7F1007BB2FA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 107FECA2AED5EF41406B033B /* Pods-PontoConcreteWidget.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = PontoConcreteWidget/PontoConcreteWidget.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SY87M4P7NJ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = PontoConcreteWidget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";

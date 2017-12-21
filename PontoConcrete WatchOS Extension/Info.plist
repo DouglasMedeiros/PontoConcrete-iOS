@@ -37,7 +37,7 @@
 		<key>NSExtensionAttributes</key>
 		<dict>
 			<key>WKAppBundleIdentifier</key>
-			<string>br.lscardinali.PontoConcrete.watchkitapp</string>
+			<string>br.lscardinali.PontoConcrete.watchkitappp</string>
 		</dict>
 		<key>NSExtensionPointIdentifier</key>
 		<string>com.apple.watchkit</string>
