@@ -28,7 +28,7 @@ class HomeViewSpec: QuickSpec {
         context("layout", {
             it("should have expected layout home") {
                 sut.frame = CGRect(x: 0, y: 0, width: 375, height: 667)
-                expect(sut) == snapshot("HomeView")
+                expect(sut).to(haveValidSnapshot())
             }
         })
     }
