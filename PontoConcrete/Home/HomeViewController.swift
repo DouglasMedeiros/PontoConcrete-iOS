@@ -14,7 +14,7 @@ protocol HomeViewControllerDelegate: class {
 }
 
 fileprivate extension Selector {
-    static let rememberTapped = #selector(HomeViewController.stateChanged(state:))
+    static let changeLocationTapped = #selector(HomeViewController.changeLocationDefault)
     static let logoutTapped = #selector(HomeViewController.didTapLogoutButton)
 }
 
@@ -26,6 +26,10 @@ class HomeViewController: UIViewController {
     let userNotificationCenter: UserNotificationCenter
     let currentUser: CurrentUser
     let watchConnectivity: SwiftWatchConnectivity
+    let firstLaunch: FirstLaunch
+    
+    let notificationCenter = NotificationCenter.default
+    
     
     var uiAlertAction = UIAlertAction.self
     
@@ -34,6 +38,15 @@ class HomeViewController: UIViewController {
         self.userNotificationCenter = userNotificationCenter
         self.currentUser = currentUser
         self.watchConnectivity = watchConnectivity
+        
+        #if DEBUG
+            let source = AlwaysFirstLaunchDataSource()
+        #else
+            let source = UserDefaultsFirstLaunchDataSource(defaults: .standard, key: .firstLaunch)
+        #endif
+        
+        self.firstLaunch = FirstLaunch(source: source)
+        
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -58,10 +71,8 @@ class HomeViewController: UIViewController {
 
 extension HomeViewController {
     func requestLocationManager() {
-        
         location.authorizationStatusCallback = { authorizationStatus in
             if authorizationStatus == .denied {
-                
                 let alert = UIAlertController(title: "Localização", message: "O acesso à localização foi negado, ative-a nas Configurações", preferredStyle: .alert)
                 let actionOk = self.uiAlertAction.createUIAlertAction(title: "Ok", style: .default, handler: nil)
                 alert.addAction(actionOk)
@@ -74,40 +85,83 @@ extension HomeViewController {
         }
         
         location.locationCallback = { (location, error) in
-            
             guard location != nil else {
                 return
             }
-            
             self.userNotificationCenter.requestNotifications()
         }
         
         location.requestAuthorization()
     }
     
+    @objc
+    func changeLocation(notification: Notification) {
+        guard let userInfo = notification.userInfo as? [String: Any] else {
+            return
+        }
+        
+        guard let location = userInfo["location"] as? String, let point = Point(rawValue: location) else {
+            return
+        }
+        
+        self.containerView.updateUI(state: .location(point))
+        self.currentUser.saveLocation(point: point)
+    }
+    
     func setupView() {
+        
+        notificationCenter.addObserver(self, selector: #selector(HomeViewController.changeLocation), name: .locationChanged, object: nil)
+        
+        containerView.changeLocationButton.addTarget(self, action: .changeLocationTapped, for: .touchUpInside)
         containerView.logoutButton.addTarget(self, action: .logoutTapped, for: .touchUpInside)
-        containerView.switchControl.addTarget(self, action: .rememberTapped, for: UIControlEvents.valueChanged)
-        containerView.switchControl.isOn = CurrentUser.shared.configNotification()
+        
+        if self.firstLaunch.isFirstLaunch {
+            self.containerView.updateUI(state: .startup)
+            self.changeLocationDefault()
+        } else {
+            let point = self.currentUser.configLocation()
+            self.containerView.updateUI(state: .location(point))
+        }
     }
     
     @objc
-    fileprivate func stateChanged(state: UISwitch) {        
-        if state.isOn {
-            self.requestLocationManager()
-        } else {
-            self.userNotificationCenter.removeAll()
+    fileprivate func changeLocationDefault() {
+        
+        let alert = UIAlertController(title: nil, message: "Selecione a sua sede", preferredStyle: .alert)
+        
+        for point in Point.cases() {
+            let action = self.uiAlertAction.createUIAlertAction(title: point.name(), style: .default, handler: {(_ ) in
+                self.containerView.updateUI(state: .location(point))
+                self.currentUser.saveLocation(point: point)
+                
+                let data: [String: String] = [
+                    .command: .location,
+                    .location: point.rawValue
+                ]
+                
+                self.watchConnectivity.sendMesssage(message: data)
+            })
+            alert.addAction(action)
         }
-        self.currentUser.saveConfigNotification(isEnabled: state.isOn)
+        
+        if !self.firstLaunch.isFirstLaunch {
+            let actionCancel = self.uiAlertAction.createUIAlertAction(title: "Cancelar", style: .cancel, handler: {(_ ) in
+                
+            })
+            alert.addAction(actionCancel)
+        }
+        
+        self.present(alert, animated: true, completion: nil)
     }
     
     @objc
     func didTapLogoutButton() {
         let alert = UIAlertController(title: "Sair", message: "Tem certeza que deseja sair?", preferredStyle: .alert)
+        
         let actionOK = self.uiAlertAction.createUIAlertAction(title: "Sim", style: .destructive, handler: {(_ ) in
             
-            let data: [String: AnyObject] = [
-                "command": "logout" as AnyObject
+            let data: [String: String] = [
+                .command: .logout
             ]
             
             self.watchConnectivity.sendMesssage(message: data)
@@ -117,10 +171,12 @@ extension HomeViewController {
             self.delegate?.homeViewControllerDidLogout(viewController: self)
         })
         alert.addAction(actionOK)
+        
         let actionCancel = self.uiAlertAction.createUIAlertAction(title: "Não", style: .default, handler: {(_ ) in
             
         })
         alert.addAction(actionCancel)
         self.present(alert, animated: true, completion: nil)
     }
+    
 }

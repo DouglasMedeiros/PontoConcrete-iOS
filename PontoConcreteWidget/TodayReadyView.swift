@@ -22,13 +22,6 @@ class TodayReadyView: UIView {
         return lb
     }()
 
-    lazy var reloadAddressButton: UIButton = { () -> UIButton in
-        let view = UIButton(frame: .zero)
-        let title = LabelAttributed.reloadButton.attributed()
-        view.setAttributedTitle(title, for: .normal)
-        return view
-    }()
-
     lazy var registerButton: UIButton = { () -> UIButton in
         let view = UIButton(frame: .zero)
         view.cornerRadius = 12
@@ -52,12 +45,6 @@ extension TodayReadyView: ViewConfiguration {
             make.edges.equalTo(self)
         }
         
-        reloadAddressButton.snp.makeConstraints { make in
-            make.width.height.equalTo(50)
-            make.right.equalTo(-10)
-            make.centerY.equalTo(registerButton.snp.centerY)
-        }
-        
         addressLabel.snp.makeConstraints { make in
             make.left.right.equalTo(10)
             make.height.equalTo(40)
@@ -65,16 +52,14 @@ extension TodayReadyView: ViewConfiguration {
         }
         
         registerButton.snp.makeConstraints { make in
-            make.left.bottom.equalTo(self).inset(5)
+            make.left.right.bottom.equalTo(self).inset(5)
             make.top.equalTo(self).inset(45)
-            make.right.equalTo(reloadAddressButton.snp.left).inset(-10)
         }
     }
     
     func buildViewHierarchy() {
         addSubview(containerView)
         containerView.addSubview(addressLabel)
-        containerView.addSubview(reloadAddressButton)
         containerView.addSubview(registerButton)
     }
 }

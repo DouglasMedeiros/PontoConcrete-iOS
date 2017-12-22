@@ -30,20 +30,6 @@
 		3C14ECEE1FD36B830077A33B /* WatchConnectivityManagerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C14ECED1FD36B830077A33B /* WatchConnectivityManagerSpec.swift */; };
 		3C14ECF01FD36BE70077A33B /* WatchConnectivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C14ECEF1FD36BE70077A33B /* WatchConnectivityManager.swift */; };
 		3C1F8A421FC355CC001B9873 /* SessionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50EA7181FB8ECC700F21A88 /* SessionData.swift */; };
-		3C211B3C1FCCEEAE0042300F /* GoogleGeocodeRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C211B3B1FCCEEAE0042300F /* GoogleGeocodeRoute.swift */; };
-		3C211B3E1FCCF1E80042300F /* GoogleGeocodeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C211B3D1FCCF1E80042300F /* GoogleGeocodeService.swift */; };
-		3C211B401FCCF2180042300F /* GoogleGeocodeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C211B3F1FCCF2180042300F /* GoogleGeocodeAPI.swift */; };
-		3C211B421FCCF3660042300F /* GeocodeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C211B411FCCF3660042300F /* GeocodeResponse.swift */; };
-		3C211B431FCCFAEC0042300F /* GoogleGeocodeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C211B3F1FCCF2180042300F /* GoogleGeocodeAPI.swift */; };
-		3C211B441FCCFAEC0042300F /* GoogleGeocodeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C211B3D1FCCF1E80042300F /* GoogleGeocodeService.swift */; };
-		3C211B451FCCFAED0042300F /* GoogleGeocodeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C211B3F1FCCF2180042300F /* GoogleGeocodeAPI.swift */; };
-		3C211B461FCCFAED0042300F /* GoogleGeocodeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C211B3D1FCCF1E80042300F /* GoogleGeocodeService.swift */; };
-		3C211B471FCCFAFD0042300F /* GoogleGeocodeRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C211B3B1FCCEEAE0042300F /* GoogleGeocodeRoute.swift */; };
-		3C211B481FCCFAFE0042300F /* GoogleGeocodeRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C211B3B1FCCEEAE0042300F /* GoogleGeocodeRoute.swift */; };
-		3C211B491FCCFB030042300F /* GeocodeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C211B411FCCF3660042300F /* GeocodeResponse.swift */; };
-		3C211B4A1FCCFB030042300F /* GeocodeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C211B411FCCF3660042300F /* GeocodeResponse.swift */; };
-		3C211B4B1FCCFB1A0042300F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BEBB4B1FB8DB110006F02E /* Constants.swift */; };
-		3C211B4C1FCCFB1B0042300F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BEBB4B1FB8DB110006F02E /* Constants.swift */; };
 		3C25FAD51FBD392D007A8EC8 /* TodayReadyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C25FAD41FBD392D007A8EC8 /* TodayReadyView.swift */; };
 		3C25FAD71FBD3A48007A8EC8 /* TodayErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C25FAD61FBD3A48007A8EC8 /* TodayErrorView.swift */; };
 		3C268C711FCA07B1000D47C4 /* HomeViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C268C701FCA07B1000D47C4 /* HomeViewSpec.swift */; };
@@ -60,11 +46,9 @@
 		3C47A3DE1FC2210000EA7EF3 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C47A3DD1FC2210000EA7EF3 /* ExtensionDelegate.swift */; };
 		3C47A3E01FC2210000EA7EF3 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C47A3DF1FC2210000EA7EF3 /* NotificationController.swift */; };
 		3C47A3E21FC2210000EA7EF3 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C47A3E11FC2210000EA7EF3 /* ComplicationController.swift */; };
-		3C47A3E41FC2210000EA7EF3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C47A3E31FC2210000EA7EF3 /* Assets.xcassets */; };
 		3C47A3E91FC2210000EA7EF3 /* PontoConcrete WatchOS.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 3C47A3CA1FC220FF00EA7EF3 /* PontoConcrete WatchOS.app */; };
 		3C47A3F31FC228DE00EA7EF3 /* HomeInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C47A3F21FC2263800EA7EF3 /* HomeInterfaceController.swift */; };
 		3C47A3FD1FC232D700EA7EF3 /* PointData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50EA71B1FB8EE3E00F21A88 /* PointData.swift */; };
-		3C47A4051FC2828500EA7EF3 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5398C331FB777E00064CD0D /* LocationManager.swift */; };
 		3C47A4111FC336BA00EA7EF3 /* UserNotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C47A4101FC336BA00EA7EF3 /* UserNotificationCenter.swift */; };
 		3C5300091FCA2D770056553E /* AppCoordinatorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5300081FCA2D770056553E /* AppCoordinatorSpec.swift */; };
 		3C53000B1FCA3EE80056553E /* PontoMaisServiceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C53000A1FCA3EE80056553E /* PontoMaisServiceSpec.swift */; };
@@ -73,11 +57,17 @@
 		3C5300171FCAF57C0056553E /* LoginViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5300161FCAF57C0056553E /* LoginViewControllerSpec.swift */; };
 		3C5300191FCB09ED0056553E /* UIAlertAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5300181FCB09ED0056553E /* UIAlertAction.swift */; };
 		3C693C1D1FCE29740018DA22 /* PontoConcreteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C693C1C1FCE29740018DA22 /* PontoConcreteUITests.swift */; };
+		3C6E2D9F1FE7433200B2FBAE /* EnumCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6E2D9E1FE7433200B2FBAE /* EnumCollection.swift */; };
+		3C6E2DA01FE743B200B2FBAE /* EnumCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6E2D9E1FE7433200B2FBAE /* EnumCollection.swift */; };
+		3C6E2DA11FE743B400B2FBAE /* EnumCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6E2D9E1FE7433200B2FBAE /* EnumCollection.swift */; };
+		3C6E2DA31FE75D8300B2FBAE /* FirstLaunch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6E2DA21FE75D8300B2FBAE /* FirstLaunch.swift */; };
 		3C74848A1FC380560007E7F0 /* LabelAttributed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7484891FC380560007E7F0 /* LabelAttributed.swift */; };
 		3C74848B1FC3814D0007E7F0 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0A34CF1FBD1B2E00567391 /* Date.swift */; };
+		3C7668721FE81797007F5C7A /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7668711FE81796007F5C7A /* LocationManager.swift */; };
+		3C7668731FE8179E007F5C7A /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7668711FE81796007F5C7A /* LocationManager.swift */; };
+		3C7668741FE8179F007F5C7A /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7668711FE81796007F5C7A /* LocationManager.swift */; };
 		3C770BB61FCB229A0041B231 /* UIAlertActionSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C770BB51FCB229A0041B231 /* UIAlertActionSpec.swift */; };
 		3C770BB81FCB23D30041B231 /* CurrentUserSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C770BB71FCB23D30041B231 /* CurrentUserSpec.swift */; };
-		3C770BBA1FCB64A80041B231 /* GeocoderManagerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C770BB91FCB64A80041B231 /* GeocoderManagerSpec.swift */; };
 		3C770BBF1FCB95520041B231 /* LabelAttributed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C9E04D31FC0FC0F00DC0986 /* LabelAttributed.swift */; };
 		3C9968D81FD23B3F0012E22F /* ProcessInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C9968D71FD23B3F0012E22F /* ProcessInfo.swift */; };
 		3C9968D91FD23BF60012E22F /* ProcessInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C9968D71FD23B3F0012E22F /* ProcessInfo.swift */; };
@@ -98,11 +88,14 @@
 		3CA1087C1FC3A16C00B8CA4F /* RegisterResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A017F3EB1F69BC64007BB2FA /* RegisterResponse.swift */; };
 		3CA1087D1FC3A17300B8CA4F /* TimeCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A017F3E91F69BA76007BB2FA /* TimeCard.swift */; };
 		3CA1087E1FC3A17800B8CA4F /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = A017F3E71F69B919007BB2FA /* Device.swift */; };
+		3CA237B41FE94AD700E27B1A /* SwiftyAttributes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CA237B31FE94AD700E27B1A /* SwiftyAttributes.framework */; };
+		3CA237B51FE94AD700E27B1A /* SwiftyAttributes.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3CA237B31FE94AD700E27B1A /* SwiftyAttributes.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3CA7378A1FE9F8810049F66A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CA737891FE9F8800049F66A /* Assets.xcassets */; };
+		3CA737901FEC7DEE0049F66A /* NotificationName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA7378F1FEC7DEE0049F66A /* NotificationName.swift */; };
 		3CA95B1A1FC8803900383EA7 /* PontoMaisAPISpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA95B191FC8803900383EA7 /* PontoMaisAPISpec.swift */; };
 		3CA95B1C1FC90E8300383EA7 /* SessionDataSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA95B1B1FC90E8300383EA7 /* SessionDataSpec.swift */; };
 		3CA95B1E1FC9119D00383EA7 /* UIViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA95B1D1FC9119D00383EA7 /* UIViewSpec.swift */; };
-		3CF4744A1FCD93ED00B4C984 /* GoogleGeocodeAPISpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF474491FCD93ED00B4C984 /* GoogleGeocodeAPISpec.swift */; };
-		3CF4744C1FCDB29000B4C984 /* GoogleGeocodeServiceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF4744B1FCDB29000B4C984 /* GoogleGeocodeServiceSpec.swift */; };
+		3CF321A91FE8433400BCBD8F /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5398C2D1FB7770C0064CD0D /* Point.swift */; };
 		3CFBA3471FC917C000D96FD4 /* DateSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFBA3461FC917C000D96FD4 /* DateSpec.swift */; };
 		3CFBA3491FC9C46600D96FD4 /* UIButtonSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFBA3481FC9C46600D96FD4 /* UIButtonSpec.swift */; };
 		3CFBA34B1FC9D95900D96FD4 /* NotificationPointFactorySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFBA34A1FC9D95900D96FD4 /* NotificationPointFactorySpec.swift */; };
@@ -135,9 +128,6 @@
 		A0667D6D1FD9AD1D0083A46C /* SwiftWatchConnectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0667D6B1FD9AD1D0083A46C /* SwiftWatchConnectivity.swift */; };
 		A0667D861FD9C09B0083A46C /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0667D6E1FD9AD920083A46C /* SnapKit.framework */; };
 		A0667D871FD9C0AF0083A46C /* FontAwesome.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0667D7A1FD9BE1C0083A46C /* FontAwesome.framework */; };
-		A0667DAD1FDB10370083A46C /* GeocoderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C47A4121FC33ED300EA7EF3 /* GeocoderManager.swift */; };
-		A0667DAE1FDB10380083A46C /* GeocoderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C47A4121FC33ED300EA7EF3 /* GeocoderManager.swift */; };
-		A0667DAF1FDB10510083A46C /* GeocoderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C47A4121FC33ED300EA7EF3 /* GeocoderManager.swift */; };
 		A084C7081F96825500F286C5 /* UIButton+Designable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A084C7071F96825500F286C5 /* UIButton+Designable.swift */; };
 		A09637721FDB2DC100CE3BA6 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0667D9D1FDAFE8B0083A46C /* Alamofire.framework */; };
 		A09637731FDB2DC100CE3BA6 /* FontAwesome.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0667D7A1FD9BE1C0083A46C /* FontAwesome.framework */; };
@@ -166,7 +156,6 @@
 		A50EA71A1FB8ECCB00F21A88 /* SessionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50EA7181FB8ECC700F21A88 /* SessionData.swift */; };
 		A50EA71C1FB8EE3E00F21A88 /* PointData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50EA71B1FB8EE3E00F21A88 /* PointData.swift */; };
 		A50EA71D1FB8EE3E00F21A88 /* PointData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50EA71B1FB8EE3E00F21A88 /* PointData.swift */; };
-		A50EA71F1FB907DE00F21A88 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5398C331FB777E00064CD0D /* LocationManager.swift */; };
 		A50EA7201FB90B8700F21A88 /* NotificationPointFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5398C311FB777280064CD0D /* NotificationPointFactory.swift */; };
 		A50EA7211FB90B9000F21A88 /* NotificationPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5398C251FB7769F0064CD0D /* NotificationPoint.swift */; };
 		A50EA7221FB90B9400F21A88 /* NotificationPointSP.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5398C271FB776BF0064CD0D /* NotificationPointSP.swift */; };
@@ -184,7 +173,6 @@
 		A5398C2E1FB7770C0064CD0D /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5398C2D1FB7770C0064CD0D /* Point.swift */; };
 		A5398C301FB7771A0064CD0D /* NotificationDefaultContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5398C2F1FB7771A0064CD0D /* NotificationDefaultContent.swift */; };
 		A5398C321FB777280064CD0D /* NotificationPointFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5398C311FB777280064CD0D /* NotificationPointFactory.swift */; };
-		A5398C341FB777E00064CD0D /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5398C331FB777E00064CD0D /* LocationManager.swift */; };
 		A5398C381FB77D560064CD0D /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5398C371FB77D560064CD0D /* AppCoordinator.swift */; };
 		A5398C3B1FB78B930064CD0D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5398C3A1FB78B920064CD0D /* LoginViewController.swift */; };
 		A5398C3D1FB791430064CD0D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5398C3C1FB791430064CD0D /* HomeViewController.swift */; };
@@ -202,7 +190,6 @@
 		A5398C721FB8A3390064CD0D /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5398C491FB7A06C0064CD0D /* Colors.swift */; };
 		A5A3DCCA1FB8B4740015AB1B /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A3DCC81FB8B4740015AB1B /* TodayViewController.swift */; };
 		A5A3DCCB1FB8B4740015AB1B /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A3DCC91FB8B4740015AB1B /* TodayView.swift */; };
-		A5BEBB4C1FB8DB110006F02E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BEBB4B1FB8DB110006F02E /* Constants.swift */; };
 		A5DD41051FB283D4005DF529 /* Mappeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DD41041FB283D4005DF529 /* Mappeable.swift */; };
 /* End PBXBuildFile section */
 
@@ -287,6 +274,7 @@
 				A05531991FDB31C000E0C948 /* Alamofire.framework in Embed Frameworks */,
 				A0BE40801FDB361F00A4267F /* Moya.framework in Embed Frameworks */,
 				A05531971FDB31C000E0C948 /* Result.framework in Embed Frameworks */,
+				3CA237B51FE94AD700E27B1A /* SwiftyAttributes.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -330,10 +318,6 @@
 		3C13F7301FC66123003E50ED /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		3C14ECED1FD36B830077A33B /* WatchConnectivityManagerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchConnectivityManagerSpec.swift; sourceTree = "<group>"; };
 		3C14ECEF1FD36BE70077A33B /* WatchConnectivityManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchConnectivityManager.swift; sourceTree = "<group>"; };
-		3C211B3B1FCCEEAE0042300F /* GoogleGeocodeRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleGeocodeRoute.swift; sourceTree = "<group>"; };
-		3C211B3D1FCCF1E80042300F /* GoogleGeocodeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleGeocodeService.swift; sourceTree = "<group>"; };
-		3C211B3F1FCCF2180042300F /* GoogleGeocodeAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleGeocodeAPI.swift; sourceTree = "<group>"; };
-		3C211B411FCCF3660042300F /* GeocodeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeocodeResponse.swift; sourceTree = "<group>"; };
 		3C25FAD41FBD392D007A8EC8 /* TodayReadyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayReadyView.swift; sourceTree = "<group>"; };
 		3C25FAD61FBD3A48007A8EC8 /* TodayErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayErrorView.swift; sourceTree = "<group>"; };
 		3C268C701FCA07B1000D47C4 /* HomeViewSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewSpec.swift; sourceTree = "<group>"; };
@@ -350,11 +334,9 @@
 		3C47A3DD1FC2210000EA7EF3 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		3C47A3DF1FC2210000EA7EF3 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		3C47A3E11FC2210000EA7EF3 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
-		3C47A3E31FC2210000EA7EF3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3C47A3E61FC2210000EA7EF3 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		3C47A3F21FC2263800EA7EF3 /* HomeInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInterfaceController.swift; sourceTree = "<group>"; };
 		3C47A4101FC336BA00EA7EF3 /* UserNotificationCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNotificationCenter.swift; sourceTree = "<group>"; };
-		3C47A4121FC33ED300EA7EF3 /* GeocoderManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeocoderManager.swift; sourceTree = "<group>"; };
 		3C5300081FCA2D770056553E /* AppCoordinatorSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinatorSpec.swift; sourceTree = "<group>"; };
 		3C53000A1FCA3EE80056553E /* PontoMaisServiceSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PontoMaisServiceSpec.swift; sourceTree = "<group>"; };
 		3C53000C1FCA472E0056553E /* HomeViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerSpec.swift; sourceTree = "<group>"; };
@@ -364,22 +346,25 @@
 		3C693C1A1FCE29740018DA22 /* PontoConcreteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PontoConcreteUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C693C1C1FCE29740018DA22 /* PontoConcreteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PontoConcreteUITests.swift; sourceTree = "<group>"; };
 		3C693C1E1FCE29740018DA22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3C6E2D9E1FE7433200B2FBAE /* EnumCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumCollection.swift; sourceTree = "<group>"; };
+		3C6E2DA21FE75D8300B2FBAE /* FirstLaunch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstLaunch.swift; sourceTree = "<group>"; };
 		3C7484891FC380560007E7F0 /* LabelAttributed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelAttributed.swift; sourceTree = "<group>"; };
 		3C74848C1FC38E690007E7F0 /* PontoConcrete WatchOS Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "PontoConcrete WatchOS Extension.entitlements"; sourceTree = "<group>"; };
+		3C7668711FE81796007F5C7A /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		3C770BB51FCB229A0041B231 /* UIAlertActionSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertActionSpec.swift; sourceTree = "<group>"; };
 		3C770BB71FCB23D30041B231 /* CurrentUserSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUserSpec.swift; sourceTree = "<group>"; };
-		3C770BB91FCB64A80041B231 /* GeocoderManagerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeocoderManagerSpec.swift; sourceTree = "<group>"; };
 		3C9968D71FD23B3F0012E22F /* ProcessInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessInfo.swift; sourceTree = "<group>"; };
 		3C9E04B91FC08DD600DC0986 /* TodayLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayLoadingView.swift; sourceTree = "<group>"; };
 		3C9E04C71FC0CF1E00DC0986 /* SkyFloatingLabelTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkyFloatingLabelTextField.swift; sourceTree = "<group>"; };
 		3C9E04C81FC0CF1E00DC0986 /* UITextField+fixCaretPosition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+fixCaretPosition.swift"; sourceTree = "<group>"; };
 		3C9E04C91FC0CF1E00DC0986 /* SkyFloatingLabelTextFieldWithIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkyFloatingLabelTextFieldWithIcon.swift; sourceTree = "<group>"; };
 		3C9E04D31FC0FC0F00DC0986 /* LabelAttributed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelAttributed.swift; sourceTree = "<group>"; };
+		3CA237B31FE94AD700E27B1A /* SwiftyAttributes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyAttributes.framework; path = Carthage/Build/watchOS/SwiftyAttributes.framework; sourceTree = "<group>"; };
+		3CA737891FE9F8800049F66A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3CA7378F1FEC7DEE0049F66A /* NotificationName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationName.swift; sourceTree = "<group>"; };
 		3CA95B191FC8803900383EA7 /* PontoMaisAPISpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PontoMaisAPISpec.swift; sourceTree = "<group>"; };
 		3CA95B1B1FC90E8300383EA7 /* SessionDataSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionDataSpec.swift; sourceTree = "<group>"; };
 		3CA95B1D1FC9119D00383EA7 /* UIViewSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewSpec.swift; sourceTree = "<group>"; };
-		3CF474491FCD93ED00B4C984 /* GoogleGeocodeAPISpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleGeocodeAPISpec.swift; sourceTree = "<group>"; };
-		3CF4744B1FCDB29000B4C984 /* GoogleGeocodeServiceSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleGeocodeServiceSpec.swift; sourceTree = "<group>"; };
 		3CFBA3461FC917C000D96FD4 /* DateSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSpec.swift; sourceTree = "<group>"; };
 		3CFBA3481FC9C46600D96FD4 /* UIButtonSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonSpec.swift; sourceTree = "<group>"; };
 		3CFBA34A1FC9D95900D96FD4 /* NotificationPointFactorySpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationPointFactorySpec.swift; sourceTree = "<group>"; };
@@ -429,7 +414,6 @@
 		A5398C2D1FB7770C0064CD0D /* Point.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Point.swift; sourceTree = "<group>"; };
 		A5398C2F1FB7771A0064CD0D /* NotificationDefaultContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationDefaultContent.swift; sourceTree = "<group>"; };
 		A5398C311FB777280064CD0D /* NotificationPointFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationPointFactory.swift; sourceTree = "<group>"; };
-		A5398C331FB777E00064CD0D /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		A5398C371FB77D560064CD0D /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		A5398C3A1FB78B920064CD0D /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		A5398C3C1FB791430064CD0D /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -443,7 +427,6 @@
 		A5398C6A1FB80A860064CD0D /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		A5A3DCC81FB8B4740015AB1B /* TodayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		A5A3DCC91FB8B4740015AB1B /* TodayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodayView.swift; sourceTree = "<group>"; };
-		A5BEBB4B1FB8DB110006F02E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		A5DD41041FB283D4005DF529 /* Mappeable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mappeable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -462,6 +445,7 @@
 				A05531981FDB31C000E0C948 /* Alamofire.framework in Frameworks */,
 				A0BE407F1FDB361F00A4267F /* Moya.framework in Frameworks */,
 				A05531961FDB31C000E0C948 /* Result.framework in Frameworks */,
+				3CA237B41FE94AD700E27B1A /* SwiftyAttributes.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -522,9 +506,6 @@
 			isa = PBXGroup;
 			children = (
 				3C0A34BB1FBCFD8400567391 /* CurrentUser.swift */,
-				3C211B3F1FCCF2180042300F /* GoogleGeocodeAPI.swift */,
-				3C211B3B1FCCEEAE0042300F /* GoogleGeocodeRoute.swift */,
-				3C211B3D1FCCF1E80042300F /* GoogleGeocodeService.swift */,
 				3C0A34C91FBD15F800567391 /* PontoMaisAPI.swift */,
 				A017F3F11F69BE4F007BB2FA /* PontoMaisRoute.swift */,
 				3C0A34C71FBD15DE00567391 /* PontoMaisService.swift */,
@@ -546,7 +527,7 @@
 		3C47A3DA1FC2210000EA7EF3 /* PontoConcrete WatchOS Extension */ = {
 			isa = PBXGroup;
 			children = (
-				3C47A3E31FC2210000EA7EF3 /* Assets.xcassets */,
+				3CA737891FE9F8800049F66A /* Assets.xcassets */,
 				3C47A3E11FC2210000EA7EF3 /* ComplicationController.swift */,
 				3C47A3DD1FC2210000EA7EF3 /* ExtensionDelegate.swift */,
 				3C47A3F21FC2263800EA7EF3 /* HomeInterfaceController.swift */,
@@ -575,9 +556,6 @@
 				3C770BB71FCB23D30041B231 /* CurrentUserSpec.swift */,
 				3CFBA3461FC917C000D96FD4 /* DateSpec.swift */,
 				3C268C761FCA0F8F000D47C4 /* FontsSpec.swift */,
-				3C770BB91FCB64A80041B231 /* GeocoderManagerSpec.swift */,
-				3CF474491FCD93ED00B4C984 /* GoogleGeocodeAPISpec.swift */,
-				3CF4744B1FCDB29000B4C984 /* GoogleGeocodeServiceSpec.swift */,
 				3C53000C1FCA472E0056553E /* HomeViewControllerSpec.swift */,
 				3C268C701FCA07B1000D47C4 /* HomeViewSpec.swift */,
 				3C5300141FCAEE700056553E /* LabelAttributedSpec.swift */,
@@ -621,6 +599,7 @@
 		A017F3B81F69B528007BB2FA = {
 			isa = PBXGroup;
 			children = (
+				3CA237B31FE94AD700E27B1A /* SwiftyAttributes.framework */,
 				A0BE407E1FDB361F00A4267F /* Moya.framework */,
 				A05531951FDB31C000E0C948 /* Alamofire.framework */,
 				A05531941FDB31BF00E0C948 /* Result.framework */,
@@ -684,7 +663,6 @@
 			isa = PBXGroup;
 			children = (
 				A017F3E71F69B919007BB2FA /* Device.swift */,
-				3C211B411FCCF3660042300F /* GeocodeResponse.swift */,
 				A017F3ED1F69BD12007BB2FA /* LoginResponse.swift */,
 				A5DD41041FB283D4005DF529 /* Mappeable.swift */,
 				A017F3EB1F69BC64007BB2FA /* RegisterResponse.swift */,
@@ -772,8 +750,7 @@
 		A5398C361FB77D420064CD0D /* Location */ = {
 			isa = PBXGroup;
 			children = (
-				3C47A4121FC33ED300EA7EF3 /* GeocoderManager.swift */,
-				A5398C331FB777E00064CD0D /* LocationManager.swift */,
+				3C7668711FE81796007F5C7A /* LocationManager.swift */,
 				3C47A4101FC336BA00EA7EF3 /* UserNotificationCenter.swift */,
 			);
 			path = Location;
@@ -802,10 +779,11 @@
 			children = (
 				A5398C661FB7E8690064CD0D /* Extensions */,
 				A5398C651FB7E85D0064CD0D /* View */,
-				A5BEBB4B1FB8DB110006F02E /* Constants.swift */,
 				3C9E04D31FC0FC0F00DC0986 /* LabelAttributed.swift */,
 				A50EA71B1FB8EE3E00F21A88 /* PointData.swift */,
 				A5398C441FB79AD40064CD0D /* ViewConfiguration.swift */,
+				3C6E2D9E1FE7433200B2FBAE /* EnumCollection.swift */,
+				3C6E2DA21FE75D8300B2FBAE /* FirstLaunch.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -829,6 +807,7 @@
 				3C5300181FCB09ED0056553E /* UIAlertAction.swift */,
 				A084C7071F96825500F286C5 /* UIButton+Designable.swift */,
 				A5398C6A1FB80A860064CD0D /* UIView.swift */,
+				3CA7378F1FEC7DEE0049F66A /* NotificationName.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1062,8 +1041,8 @@
 			files = (
 				3CFE1E1C1FC34F5A0013D72E /* ConcreteBH.gpx in Resources */,
 				3CFE1E221FC34F690013D72E /* ConcreteSP.gpx in Resources */,
+				3CA7378A1FE9F8810049F66A /* Assets.xcassets in Resources */,
 				3CFE1E211FC34F600013D72E /* ConcreteRJ.gpx in Resources */,
-				3C47A3E41FC2210000EA7EF3 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1172,7 +1151,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C211B4C1FCCFB1B0042300F /* Constants.swift in Sources */,
 				3C74848B1FC3814D0007E7F0 /* Date.swift in Sources */,
 				3C47A3F31FC228DE00EA7EF3 /* HomeInterfaceController.swift in Sources */,
 				3C47A3E01FC2210000EA7EF3 /* NotificationController.swift in Sources */,
@@ -1181,12 +1159,8 @@
 				3CA1087A1FC3A15A00B8CA4F /* LoginResponse.swift in Sources */,
 				3C9968DA1FD23BF70012E22F /* ProcessInfo.swift in Sources */,
 				3C47A3FD1FC232D700EA7EF3 /* PointData.swift in Sources */,
-				3C211B441FCCFAEC0042300F /* GoogleGeocodeService.swift in Sources */,
 				3C13F7321FC661F8003E50ED /* String.swift in Sources */,
 				3CA108781FC3A12700B8CA4F /* PontoMaisAPI.swift in Sources */,
-				3C211B431FCCFAEC0042300F /* GoogleGeocodeAPI.swift in Sources */,
-				3C211B4A1FCCFB030042300F /* GeocodeResponse.swift in Sources */,
-				3C211B471FCCFAFD0042300F /* GoogleGeocodeRoute.swift in Sources */,
 				A0667D6D1FD9AD1D0083A46C /* SwiftWatchConnectivity.swift in Sources */,
 				3C1F8A421FC355CC001B9873 /* SessionData.swift in Sources */,
 				3CA108771FC3A08900B8CA4F /* PontoMaisService.swift in Sources */,
@@ -1194,10 +1168,11 @@
 				3CA1087B1FC3A16200B8CA4F /* Mappeable.swift in Sources */,
 				3CA1087C1FC3A16C00B8CA4F /* RegisterResponse.swift in Sources */,
 				3CA108791FC3A13800B8CA4F /* PontoMaisRoute.swift in Sources */,
+				3C7668731FE8179E007F5C7A /* LocationManager.swift in Sources */,
+				3CF321A91FE8433400BCBD8F /* Point.swift in Sources */,
 				3CA1087D1FC3A17300B8CA4F /* TimeCard.swift in Sources */,
-				A0667DAF1FDB10510083A46C /* GeocoderManager.swift in Sources */,
 				3CA1087E1FC3A17800B8CA4F /* Device.swift in Sources */,
-				3C47A4051FC2828500EA7EF3 /* LocationManager.swift in Sources */,
+				3C6E2DA11FE743B400B2FBAE /* EnumCollection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1214,12 +1189,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C0A34CA1FBD15F800567391 /* PontoMaisAPI.swift in Sources */,
-				A5BEBB4C1FB8DB110006F02E /* Constants.swift in Sources */,
 				A017F3E81F69B919007BB2FA /* Device.swift in Sources */,
-				3C211B3E1FCCF1E80042300F /* GoogleGeocodeService.swift in Sources */,
 				A50EA71C1FB8EE3E00F21A88 /* PointData.swift in Sources */,
 				A5398C4A1FB7A06C0064CD0D /* Colors.swift in Sources */,
-				3C211B3C1FCCEEAE0042300F /* GoogleGeocodeRoute.swift in Sources */,
 				A5398C2C1FB776E20064CD0D /* NotificationPointBH.swift in Sources */,
 				3C9E04CA1FC0CF1F00DC0986 /* SkyFloatingLabelTextField.swift in Sources */,
 				A5398C3D1FB791430064CD0D /* HomeViewController.swift in Sources */,
@@ -1228,28 +1200,29 @@
 				3C0A34C81FBD15DE00567391 /* PontoMaisService.swift in Sources */,
 				A017F3EE1F69BD12007BB2FA /* LoginResponse.swift in Sources */,
 				A5398C471FB79FE20064CD0D /* LogoView.swift in Sources */,
+				3C6E2DA31FE75D8300B2FBAE /* FirstLaunch.swift in Sources */,
 				3C13F7311FC66123003E50ED /* String.swift in Sources */,
 				A5398C301FB7771A0064CD0D /* NotificationDefaultContent.swift in Sources */,
 				A5398C3B1FB78B930064CD0D /* LoginViewController.swift in Sources */,
 				A5398C681FB7E8920064CD0D /* Fonts.swift in Sources */,
+				3C7668721FE81797007F5C7A /* LocationManager.swift in Sources */,
 				A5398C6B1FB80A860064CD0D /* UIView.swift in Sources */,
 				A017F3F21F69BE4F007BB2FA /* PontoMaisRoute.swift in Sources */,
 				3C0A34D01FBD1B2E00567391 /* Date.swift in Sources */,
 				3C0A34BC1FBCFD8400567391 /* CurrentUser.swift in Sources */,
+				3C6E2D9F1FE7433200B2FBAE /* EnumCollection.swift in Sources */,
 				A5398C281FB776BF0064CD0D /* NotificationPointSP.swift in Sources */,
 				3C9E04CB1FC0CF1F00DC0986 /* UITextField+fixCaretPosition.swift in Sources */,
 				3C9E04D41FC0FC0F00DC0986 /* LabelAttributed.swift in Sources */,
 				A017F3EA1F69BA76007BB2FA /* TimeCard.swift in Sources */,
-				A5398C341FB777E00064CD0D /* LocationManager.swift in Sources */,
 				3C47A4111FC336BA00EA7EF3 /* UserNotificationCenter.swift in Sources */,
-				3C211B401FCCF2180042300F /* GoogleGeocodeAPI.swift in Sources */,
 				A017F3C51F69B528007BB2FA /* AppDelegate.swift in Sources */,
 				A5DD41051FB283D4005DF529 /* Mappeable.swift in Sources */,
 				A5398C2A1FB776DC0064CD0D /* NotificationPointRJ.swift in Sources */,
 				A5398C451FB79AD40064CD0D /* ViewConfiguration.swift in Sources */,
 				A5398C2E1FB7770C0064CD0D /* Point.swift in Sources */,
+				3CA737901FEC7DEE0049F66A /* NotificationName.swift in Sources */,
 				3C5300191FCB09ED0056553E /* UIAlertAction.swift in Sources */,
-				3C211B421FCCF3660042300F /* GeocodeResponse.swift in Sources */,
 				A50EA7191FB8ECC700F21A88 /* SessionData.swift in Sources */,
 				A5398C321FB777280064CD0D /* NotificationPointFactory.swift in Sources */,
 				A5398C5C1FB7BE5D0064CD0D /* RootViewControllerProvider.swift in Sources */,
@@ -1260,7 +1233,6 @@
 				A017F3EC1F69BC64007BB2FA /* RegisterResponse.swift in Sources */,
 				A084C7081F96825500F286C5 /* UIButton+Designable.swift in Sources */,
 				A5398C531FB7AC8E0064CD0D /* HomeView.swift in Sources */,
-				A0667DAE1FDB10380083A46C /* GeocoderManager.swift in Sources */,
 				A5398C261FB7769F0064CD0D /* NotificationPoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1277,7 +1249,6 @@
 				3C53000D1FCA472E0056553E /* HomeViewControllerSpec.swift in Sources */,
 				3C04A2C81FC9163200811125 /* NotificationPointBHSpec.swift in Sources */,
 				3C53000B1FCA3EE80056553E /* PontoMaisServiceSpec.swift in Sources */,
-				3C770BBA1FCB64A80041B231 /* GeocoderManagerSpec.swift in Sources */,
 				3C04A2C61FC915E000811125 /* NotificationPointRJSpec.swift in Sources */,
 				3C5300151FCAEE700056553E /* LabelAttributedSpec.swift in Sources */,
 				3C268C771FCA0F8F000D47C4 /* FontsSpec.swift in Sources */,
@@ -1290,8 +1261,6 @@
 				3C770BB81FCB23D30041B231 /* CurrentUserSpec.swift in Sources */,
 				3C5300171FCAF57C0056553E /* LoginViewControllerSpec.swift in Sources */,
 				3CFBA34B1FC9D95900D96FD4 /* NotificationPointFactorySpec.swift in Sources */,
-				3CF4744C1FCDB29000B4C984 /* GoogleGeocodeServiceSpec.swift in Sources */,
-				3CF4744A1FCD93ED00B4C984 /* GoogleGeocodeAPISpec.swift in Sources */,
 				3CFBA3471FC917C000D96FD4 /* DateSpec.swift in Sources */,
 				3C04A2C41FC9138100811125 /* NotificationPointSPSpec.swift in Sources */,
 			);
@@ -1303,28 +1272,23 @@
 			files = (
 				3C25FAD51FBD392D007A8EC8 /* TodayReadyView.swift in Sources */,
 				3C13F7331FC661F9003E50ED /* String.swift in Sources */,
-				3C211B491FCCFB030042300F /* GeocodeResponse.swift in Sources */,
 				3C0A34D11FBD1C1100567391 /* Date.swift in Sources */,
 				A50EA7251FB90B9B00F21A88 /* Point.swift in Sources */,
 				3C25FAD71FBD3A48007A8EC8 /* TodayErrorView.swift in Sources */,
 				3C770BBF1FCB95520041B231 /* LabelAttributed.swift in Sources */,
 				A50EA71D1FB8EE3E00F21A88 /* PointData.swift in Sources */,
-				3C211B481FCCFAFE0042300F /* GoogleGeocodeRoute.swift in Sources */,
+				3C6E2DA01FE743B200B2FBAE /* EnumCollection.swift in Sources */,
 				A50EA7231FB90B9600F21A88 /* NotificationPointRJ.swift in Sources */,
 				3C47A3C71FC21A4500EA7EF3 /* TodaySuccessView.swift in Sources */,
 				A50EA7221FB90B9400F21A88 /* NotificationPointSP.swift in Sources */,
-				3C211B451FCCFAED0042300F /* GoogleGeocodeAPI.swift in Sources */,
 				A5398C701FB8A3300064CD0D /* UIButton+Designable.swift in Sources */,
-				A50EA71F1FB907DE00F21A88 /* LocationManager.swift in Sources */,
 				3C9E04BB1FC09EEE00DC0986 /* RegisterResponse.swift in Sources */,
 				3C9E04BD1FC09EF800DC0986 /* Device.swift in Sources */,
 				3C0A34CB1FBD161300567391 /* PontoMaisAPI.swift in Sources */,
 				A0CE0BA11F69F4980076152D /* PontoMaisRoute.swift in Sources */,
-				3C211B4B1FCCFB1A0042300F /* Constants.swift in Sources */,
 				A5A3DCCA1FB8B4740015AB1B /* TodayViewController.swift in Sources */,
 				A50EA71A1FB8ECCB00F21A88 /* SessionData.swift in Sources */,
-				3C211B461FCCFAED0042300F /* GoogleGeocodeService.swift in Sources */,
-				A0667DAD1FDB10370083A46C /* GeocoderManager.swift in Sources */,
+				3C7668741FE8179F007F5C7A /* LocationManager.swift in Sources */,
 				3C9E04BC1FC09EF500DC0986 /* TimeCard.swift in Sources */,
 				A5A3DCCB1FB8B4740015AB1B /* TodayView.swift in Sources */,
 				A50EA7241FB90B9800F21A88 /* NotificationPointBH.swift in Sources */,
@@ -1398,6 +1362,7 @@
 		3C47A3EB1FC2210000EA7EF3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
@@ -1406,6 +1371,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/watchOS",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = "PontoConcrete WatchOS Extension/Info.plist";
@@ -1423,6 +1389,7 @@
 		3C47A3EC1FC2210000EA7EF3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
@@ -1431,6 +1398,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/watchOS",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = "PontoConcrete WatchOS Extension/Info.plist";
@@ -1448,6 +1416,7 @@
 		3C47A3EF1FC2210000EA7EF3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_ENABLE_MODULES = YES;
@@ -1475,6 +1444,7 @@
 		3C47A3F01FC2210000EA7EF3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_ENABLE_MODULES = YES;

@@ -13,8 +13,8 @@ class NotificationPointRJ: NotificationPoint {
     
     let content: UNMutableNotificationContent
     
-    var point: CLLocationCoordinate2D {
-        return CLLocationCoordinate2D(latitude: -22.910222, longitude: -43.172658)
+    var point: Point {
+        return .rioDeJaneiro
     }
     
     var name: String {
@@ -26,7 +26,7 @@ class NotificationPointRJ: NotificationPoint {
     }
     
     func request() -> UNNotificationRequest {
-        let region = CLCircularRegion(center: self.point, radius: 100, identifier: self.name)
+        let region = CLCircularRegion(center: self.point.point().location.coordinate, radius: 100, identifier: self.name)
         region.notifyOnExit = true
         region.notifyOnEntry = true
         

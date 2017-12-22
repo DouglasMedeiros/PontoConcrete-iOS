@@ -17,4 +17,11 @@ extension String {
     static let logout = "logout"
     static let location = "location"
     static let command = "command"
+    static let headquarter = "headquarter"
+    
+    static let firstLaunch = "firstLaunch"
+}
+
+extension AnyHashable {
+    static let location = "location"
 }

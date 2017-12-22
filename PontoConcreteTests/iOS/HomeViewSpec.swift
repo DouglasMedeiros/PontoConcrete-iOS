@@ -28,13 +28,7 @@ class HomeViewSpec: QuickSpec {
         context("layout", {
             it("should have expected layout home") {
                 sut.frame = CGRect(x: 0, y: 0, width: 375, height: 667)
-                expect(sut) == snapshot("HomeView-Off")
-            }
-            
-            it("should have expected layout home - notification enabled") {
-                sut.frame = CGRect(x: 0, y: 0, width: 375, height: 667)
-                sut.switchControl.isOn = true
-                expect(sut) == snapshot("HomeView-On")
+                expect(sut) == snapshot("HomeView")
             }
         })
     }

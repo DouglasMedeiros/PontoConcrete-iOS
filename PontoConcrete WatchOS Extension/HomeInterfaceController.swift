@@ -24,12 +24,6 @@ class HomeInterfaceController: WKInterfaceController {
         case loading
     }
     
-    lazy var geocoder: IGeocoderManager = {
-        let manager = GGeocoderManager()
-        return manager
-    }()
-    
-    let location: LocationManager
     let service: PontoMaisService
     let watchConnectivity: SwiftWatchConnectivity
     
@@ -40,22 +34,39 @@ class HomeInterfaceController: WKInterfaceController {
     
     @IBOutlet private(set) var separator: WKInterfaceSeparator?
     @IBOutlet private(set) var addressLabel: WKInterfaceLabel?
-    @IBOutlet private(set) var reloadButton: WKInterfaceButton?
     @IBOutlet private(set) var registerButton: WKInterfaceButton?
     
     override init() {
         self.watchConnectivity = SwiftWatchConnectivity.shared
         self.service = PontoMaisService()
-        self.location = LocationManager()
         super.init()
 
         awakeApp()
         
-        addMenuItem(with: WKMenuItemIcon.resume, title: "Atualizar endereço", action: #selector(HomeInterfaceController.updateAddress))
+        for point in Point.cases() {
+            var selector: Selector
+            var imageName: String
+            
+            switch point {
+                case .saoPaulo:
+                    imageName = "brasao-sp"
+                    selector = #selector(HomeInterfaceController.updateHeadquarterSP)
+                case .rioDeJaneiro:
+                    imageName = "brasao-rj"
+                    selector = #selector(HomeInterfaceController.updateHeadquarterRJ)
+                case .minasGerais:
+                    imageName = "brasao-bh"
+                    selector = #selector(HomeInterfaceController.updateHeadquarterMG)
+            }
+            guard let image = UIImage(named: imageName) else {
+                return
+            }
+            
+            self.addMenuItem(with: image, title: point.name(), action: selector)
+        }
     }
     
     private func sleepApp() {
-        self.location.locationManager.stopUpdatingLocation()
         self.watchConnectivity.delegate = nil
     }
     private func awakeApp() {
@@ -73,9 +84,39 @@ class HomeInterfaceController: WKInterfaceController {
     }
     
     @objc
+    func updateHeadquarterSP() {
+        let point = Point.saoPaulo
+        self.updateHeadquarter(point: point)
+    }
+    
+    @objc
+    func updateHeadquarterRJ() {
+        let point = Point.rioDeJaneiro
+        self.updateHeadquarter(point: point)
+    }
+    
+    @objc
+    func updateHeadquarterMG() {
+        let point = Point.minasGerais
+        self.updateHeadquarter(point: point)
+    }
+    
+    private func updateHeadquarter(point: Point) {
+        DispatchQueue.main.async {
+            let data: [String: String] = [
+                .command: .headquarter,
+                .headquarter: point.rawValue
+            ]
+            self.watchConnectivity.sendMesssage(message: data)
+            
+            let address = LabelAttributed.custom(point.point().address)
+            self.updateUI(state: .ready(.custom(address.attributed().string)))
+        }
+    }
+    
+    @objc
     func timerDone() {
         self.doneTimer?.invalidate()
-        self.requestLocationManager()
     }
     
     override func willActivate() {
@@ -84,8 +125,8 @@ class HomeInterfaceController: WKInterfaceController {
         if self.credentials == nil {
             self.updateUI(state: .loading)
             DispatchQueue.main.async {
-                let data: [String: AnyObject] = [
-                    .command: "login" as AnyObject
+                let data: [String: String] = [
+                    .command: .login
                 ]
                 self.watchConnectivity.sendMesssage(message: data)
             }
@@ -95,9 +136,6 @@ class HomeInterfaceController: WKInterfaceController {
 }
 
 extension HomeInterfaceController {
-    @IBAction func updateAddress() {
-        self.requestLocationManager()
-    }
     
     @IBAction func registerPoint() {
         guard let credentials = self.credentials, let pointData = self.pointData else {
@@ -125,16 +163,31 @@ extension HomeInterfaceController: SwiftWatchConnectivityDelegate {
                     let email = message[.email] as? String else {
                         return
                 }
-                self.credentials = SessionData(token: token, clientId: clientId, email: email)
-                self.requestLocationManager()
                 
+                self.credentials = SessionData(token: token, clientId: clientId, email: email)
+                
+                DispatchQueue.main.async {
+                    let data: [String: String] = [
+                        .command: .location
+                    ]
+                    self.watchConnectivity.sendMesssage(message: data)
+                }
+
             case .location:
-                guard let location = message[.location] as? String else {
+                guard let location = message[.location] as? String, let point = Point(rawValue: location) else {
                     return
                 }
                 
-                let address = LabelAttributed.custom(location)
-                self.addressLabel?.setAttributedText(address.attributed())
+                let address = LabelAttributed.custom(point.point().address)
+                self.updateUI(state: .ready(.custom(address.attributed().string)))
+                
+            case .headquarter:
+                guard let location = message[.location] as? String, let point = Point(rawValue: location) else {
+                    return
+                }
+                
+                let address = LabelAttributed.custom(point.point().address)
+                self.updateUI(state: .ready(.custom(address.attributed().string)))
             default:
                 break
             }
@@ -152,59 +205,7 @@ extension HomeInterfaceController {
         }
         return status
     }
-    
-    private func setupLocationCallback() {
-        self.location.locationCallback = { (location, error) in
-            
-            guard let location = location else {
-                let message = LabelAttributed.custom(error?.localizedDescription ?? "Erro!")
-                self.updateUI(state: .error(.custom(message)))
-                return
-            }
-            
-            self.location.locationManager.stopUpdatingLocation()
-            
-            self.updateUI(state: .loading)
-            
-            self.geocoder.reverse(location: location, completeHandler: { (pointData, error) in
-                
-                if error != nil {
-                    guard let localizedDescription = error?.localizedDescription else {
-                        return
-                    }
-                    self.updateUI(state: .error(.custom(.custom(localizedDescription))))
-                }
-                guard let address = pointData?.address, let pointData = pointData else {
-                    return
-                }
-                
-                self.pointData = pointData
-                
-                self.updateUI(state: .ready(.custom(address)))
-            })
-        }
-    }
-    
-    private func setupAuthorizationStatusCallback() {
-        self.location.authorizationStatusCallback = { authorizationStatus in
-            if authorizationStatus == .denied {
-                self.updateUI(state: .error(.custom(.permission)))
-            } else if CLLocationManager.authorizationStatus() == .notDetermined {
-                self.location.locationManager.requestWhenInUseAuthorization()
-            } else if CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
-                self.location.locationManager.requestLocation()
-                self.registerButton?.setEnabled(true)
-            }
-        }
-    }
-    
-    private func requestLocationManager() {
-        self.updateUI(state: .loading)
-        self.setupAuthorizationStatusCallback()
-        self.setupLocationCallback()
-        self.location.requestAuthorization()
-    }
-    
+
     private func register(credentials: SessionData, point: PointData) {
         self.service.register(credentials: credentials, point: point) { (response, result) in
             switch result {
@@ -236,7 +237,6 @@ extension HomeInterfaceController {
         self.addressLabel?.sizeToFitHeight()
         self.separator?.setHidden(true)
         self.registerButton?.setHidden(true)
-        self.reloadButton?.setHidden(true)
         
         switch state {
         case .success:
@@ -268,7 +268,6 @@ extension HomeInterfaceController {
         self.addressLabel?.setAttributedText(message.attributed())
         self.separator?.setHidden(false)
         self.registerButton?.setHidden(false)
-        self.reloadButton?.setHidden(false)
     }
     
     private func displayError(type: HomeInterfaceUIStateErrorType) {
