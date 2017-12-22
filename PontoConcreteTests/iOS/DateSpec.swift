@@ -14,7 +14,9 @@ import Nimble
 class DateSpec: QuickSpec {
     
     private func createDateTime(hour: Int) -> Date {
-        let userCalendar = Calendar.current
+        var userCalendar = Calendar.current
+        userCalendar.locale = Locale(identifier: "pt_BR")
+        userCalendar.timeZone = TimeZone(identifier: "America/Sao_Paulo")!
         
         var components = DateComponents()
         components.year = 2017
@@ -23,6 +25,7 @@ class DateSpec: QuickSpec {
         components.minute = 10
         components.hour = hour
         components.timeZone = TimeZone(identifier: "America/Sao_Paulo")!
+        
         
         return userCalendar.date(from: components)!
     }
