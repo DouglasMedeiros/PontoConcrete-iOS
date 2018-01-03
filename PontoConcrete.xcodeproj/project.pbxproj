@@ -630,6 +630,7 @@
 		A017F3C31F69B528007BB2FA /* PontoConcrete */ = {
 			isa = PBXGroup;
 			children = (
+				A57301681FFD966500C45D5B /* Managers */,
 				A5398C351FB77D3B0064CD0D /* Coordinator */,
 				3C9E04C51FC0CF1200DC0986 /* External */,
 				A5398C1D1FB76E610064CD0D /* GPX */,
@@ -645,7 +646,6 @@
 				A017F3CB1F69B528007BB2FA /* Assets.xcassets */,
 				A017F3D01F69B528007BB2FA /* Info.plist */,
 				A05AA1CA1F980D3F009FA699 /* PontoConcrete.entitlements */,
-				3C14ECEF1FD36BE70077A33B /* WatchConnectivityManager.swift */,
 			);
 			path = PontoConcrete;
 			sourceTree = "<group>";
@@ -810,6 +810,14 @@
 				3CA7378F1FEC7DEE0049F66A /* NotificationName.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A57301681FFD966500C45D5B /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				3C14ECEF1FD36BE70077A33B /* WatchConnectivityManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
