@@ -10,6 +10,8 @@ import Foundation
 import UserNotifications
 
 class UserNotificationCenter {
+    var authorizationStatusCallback: ((_ granted: Bool) -> Void)?
+    
     let center: UNUserNotificationCenter
     let options: UNAuthorizationOptions
     
@@ -23,9 +25,9 @@ class UserNotificationCenter {
         center.requestAuthorization(options: options) { (granted, error) in
             if !granted {
                 print("Something went wrong: \(error?.localizedDescription ?? "error")")
-            } else {
-                self.setupNotifications()
+                return
             }
+            self.setupNotifications()
         }
     }
     

@@ -13,12 +13,12 @@ public struct SessionData {
     let clientId: String
     let email: String
     
-    func asDict() -> [String: AnyObject] {
+    func asDict() -> [String: String] {
         return [
-            .command: "login" as AnyObject,
-            .token: token as AnyObject,
-            .email: email as AnyObject,
-            .clientId: clientId as AnyObject
+            .command: .login,
+            .token: token,
+            .email: email,
+            .clientId: clientId
         ]
     }
 }

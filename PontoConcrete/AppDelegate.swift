@@ -14,7 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     var appCoordinator: AppCoordinator?
 
-    var swiftWatchConnectivity: SwiftWatchConnectivity?
+    var swiftWatchConnectivity: WatchConnectivityManager?
     
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
@@ -24,8 +24,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             CurrentUser.shared.remove()
         }
         
-        self.swiftWatchConnectivity = SwiftWatchConnectivity.shared
-        self.swiftWatchConnectivity?.delegate = self
+        self.swiftWatchConnectivity = WatchConnectivityManager()
+        self.swiftWatchConnectivity?.start()
         
         let window = UIWindow(frame: UIScreen.main.bounds)
         
@@ -37,26 +37,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 }
 
-extension AppDelegate: SwiftWatchConnectivityDelegate {
-    func connectivity(_ swiftWatchConnectivity: SwiftWatchConnectivity, updatedWithTask task: SwiftWatchConnectivity.Task) {
-        
-        if case .sendMessage = task {
-            guard let currentUser = CurrentUser.shared.user() else {
-                
-                let data: [String: AnyObject] = [
-                    .command: "logout" as AnyObject
-                ]
-                
-                DispatchQueue.main.async {
-                    self.swiftWatchConnectivity?.sendMesssage(message: data)
-                }
-                return
-            }
-            
-            DispatchQueue.main.async {
-                self.swiftWatchConnectivity?.sendMesssage(message: currentUser.asDict())
-            }
-        }
-        
-    }
-}

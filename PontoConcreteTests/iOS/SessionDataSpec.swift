@@ -29,11 +29,11 @@ class SessionDataSpec: QuickSpec {
         it("should be able to return dictonary") {
             
             let data = sut.asDict()
-            let dict: [String: AnyObject] = [
-                .command: "login" as AnyObject,
-                .token: "abc123" as AnyObject,
-                .email: "email@email.com.br" as AnyObject,
-                .clientId: "def432" as AnyObject
+            let dict: [String: String] = [
+                .command: .login,
+                .token: "abc123",
+                .email: "email@email.com.br",
+                .clientId: "def432"
             ]
             
             let command = data[.command] as! String

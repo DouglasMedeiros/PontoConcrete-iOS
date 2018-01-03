@@ -10,7 +10,7 @@ import CoreLocation
 import UserNotifications
 
 protocol NotificationPoint {
-    var point: CLLocationCoordinate2D { get }
+    var point: Point { get }
     var name: String { get }
     func request() -> UNNotificationRequest
 }

@@ -26,8 +26,8 @@ class NotificationPointBHSpec: QuickSpec {
         
         it("should be able to read params") {
             expect(sut.name).to(equal("ConcreteBH"))
-            expect(sut.point.latitude).to(equal(-19.935331))
-            expect(sut.point.longitude).to(equal(-43.929717))
+            expect(sut.point.point().location.coordinate.latitude).to(equal(-19.935331))
+            expect(sut.point.point().location.coordinate.longitude).to(equal(-43.929717))
         }
         
         it("should be able to build UNNotificationRequest") {

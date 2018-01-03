@@ -42,6 +42,19 @@ class CurrentUser: CurrentUserProtocol {
     }
     
     @discardableResult
+    func saveLocation(point: Point) -> Bool {
+        return self.keychain.set(point.rawValue, forKey: .location, withAccess: .accessibleAfterFirstUnlock)
+    }
+    
+    func configLocation() -> Point {
+        guard let location = keychain.get(.location), let point = Point(rawValue: location) else {
+            return Point.saoPaulo
+        }
+        
+        return point
+    }
+    
+    @discardableResult
     func saveConfigNotification(isEnabled: Bool) -> Bool {
         return self.keychain.set(isEnabled, forKey: .notification, withAccess: .accessibleAfterFirstUnlock)
     }

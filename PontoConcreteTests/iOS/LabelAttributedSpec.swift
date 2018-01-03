@@ -38,14 +38,6 @@ class LabelAttributedSpec: QuickSpec {
             expect(LabelAttributed.errorInternet.attributed().string).to(equal("Verifique sua conexão com a internet!"))
         }
         
-        it("errorLocation") {
-            expect(LabelAttributed.errorLocation.attributed().string).to(equal("Houve um problema ao tentar obter sua localização"))
-        }
-        
-        it("errorGeocodeLocation") {
-            expect(LabelAttributed.errorGeocodeLocation.attributed().string).to(equal("\u{f071}Ops.. não foi possível encontrar um endereço com a sua posição atual, tente novamente"))
-        }
-        
         it("reload") {
             expect(LabelAttributed.reloadButton.attributed().string).to(equal("\u{f021}"))
         }

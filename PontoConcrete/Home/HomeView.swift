@@ -16,6 +16,11 @@ class HomeView: UIView {
         return imageView
     }()
     
+    lazy var highlights: UIScrollView = {
+        let view = UIScrollView(frame: .zero)
+        return view
+    }()
+    
     lazy var containerView: UIView = {
         let view = UIView(frame: .zero)
         view.backgroundColor = .clear
@@ -43,22 +48,19 @@ class HomeView: UIView {
         return imageView
     }()
     
-    lazy var containerRememberView: UIView = {
-        let view = UIView(frame: .zero)
-        view.backgroundColor = .clear
-        return view
-    }()
-    
-    lazy var rememberLabel: UILabel = {
-        let lb = UILabel(frame: .zero)
-        lb.font = UIFont.systemFont(ofSize: 17)
-        lb.textColor = .white
-        lb.text = "Lembrar de bater o ponto"
-        return lb
-    }()
-    
-    lazy var switchControl: UISwitch = { () -> UISwitch in
-        let view = UISwitch(frame: .zero)
+    lazy var changeLocationButton: UIButton = { () -> UIButton in
+        let view = UIButton(frame: .zero)
+        view.setTitle("Meu local: São Paulo", for: .normal)
+        view.setTitleColor(.white, for: .normal)
+        view.titleLabel?.font = .systemFont(ofSize: 15)
+        view.accessibilityIdentifier = "location"
+        view.accessibilityLabel = "location"
+        view.isAccessibilityElement = true
+        view.accessibilityTraits = UIAccessibilityTraitButton
+        view.backgroundColor = UIColor(red:0.11, green:0.24, blue:0.55, alpha:1.00)
+        view.borderColor = UIColor.white.withAlphaComponent(0.5)
+        view.borderWidth = 1
+        view.cornerRadius = 10
         return view
     }()
     
@@ -87,17 +89,34 @@ class HomeView: UIView {
     }
 }
 
+public enum HomeViewUIState {
+    case startup
+    case location(Point)
+}
+
+extension HomeView {
+    
+    func updateUI(state: HomeViewUIState) {
+        switch state {
+        case .startup:
+            self.changeLocationButton.setTitle("Selecione...", for: .normal)
+        case .location(let location):
+            let title = LabelAttributed.location(location.name())
+            self.changeLocationButton.setAttributedTitle(title.attributed(), for: .normal)
+        }
+    }
+}
+
 extension HomeView: ViewConfiguration {
     func buildViewHierarchy() {
         addSubview(containerView)
         containerView.addSubview(backgroundImage)
         containerView.addSubview(logoView)
         containerView.addSubview(infoLabel)
+        containerView.addSubview(highlights)
         containerView.addSubview(tutorialImage)
-        containerView.addSubview(containerRememberView)
-        containerRememberView.addSubview(rememberLabel)
-        containerRememberView.addSubview(switchControl)
         containerView.addSubview(logoutButton)
+        containerView.addSubview(changeLocationButton)
     }
     
     func setupConstraints() {
@@ -130,31 +149,16 @@ extension HomeView: ViewConfiguration {
             make.height.equalTo(343)
         }
         
-        containerRememberView.snp.makeConstraints { make in
-            make.centerX.equalTo(self)
-            make.bottom.equalTo(logoutButton.snp.top).inset(-25)
-            make.width.equalTo(270)
-            make.height.equalTo(32)
-        }
-        
-        rememberLabel.snp.makeConstraints { make in
-            make.left.equalTo(0)
-            make.top.equalTo(0)
-            make.width.equalTo(204)
-            make.height.equalTo(32)
-        }
-        
-        switchControl.snp.makeConstraints { make in
-            make.left.equalTo(216)
-            make.top.equalTo(0)
-            make.width.equalTo(49)
-            make.height.equalTo(31)
-        }
-        
         logoutButton.snp.makeConstraints { make in
             make.height.equalTo(50)
             make.left.right.equalTo(0).inset(20)
             make.bottom.equalTo(0).inset(20)
+        }
+        
+        changeLocationButton.snp.makeConstraints { make in
+            make.height.equalTo(40)
+            make.left.right.equalTo(0).inset(60)
+            make.top.equalTo(highlights.snp.bottom).inset(40)
         }
     }
 }

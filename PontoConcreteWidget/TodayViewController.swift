@@ -12,16 +12,13 @@ import CoreLocation
 
 fileprivate extension Selector {
     static let registerTapped = #selector(TodayViewController.didTapRegisterButton)
-    static let reloadTapped = #selector(TodayViewController.didTapReloadButton)
     static let setupReadyView = #selector(TodayViewController.setupReadyView)
-    static let setupErrorView = #selector(TodayViewController.setupErrorView)
+    //static let setupErrorView = #selector(TodayViewController.setupErrorView)
 }
 
 @objc (TodayViewController)
 class TodayViewController: UIViewController {
     
-    let geocoder = GGeocoderManager()
-    let locationManager: LocationManager = LocationManager()
     let containerView = TodayView()
     
     let api = PontoMaisService()
@@ -31,7 +28,7 @@ class TodayViewController: UIViewController {
     var keychainData: SessionData?
     
     var timerStartup: Timer?
-    var timerTimout: Timer?
+    //var timerTimout: Timer?
     
     init() {
         self.currentUser = CurrentUser.shared
@@ -53,8 +50,10 @@ class TodayViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        containerView.readyView.reloadAddressButton.addTarget(self, action: .reloadTapped, for: .touchUpInside)
+        //containerView.readyView.reloadAddressButton.addTarget(self, action: .reloadTapped, for: .touchUpInside)
         containerView.readyView.registerButton.addTarget(self, action: .registerTapped, for: .touchUpInside)
+        
+        self.containerView.updateUI(state: .loading)
         
         self.checkLogin()
     }
@@ -103,18 +102,28 @@ extension TodayViewController {
                                      selector: .setupReadyView, userInfo: nil, repeats: false)
     }
     
-    private func checkTimout() {
-        self.timerTimout?.invalidate()
-        timerTimout = Timer.scheduledTimer(timeInterval: 15, target: self,
-                                            selector: .setupErrorView, userInfo: nil, repeats: false)
-    }
+//    private func checkTimout() {
+//        self.timerTimout?.invalidate()
+//        timerTimout = Timer.scheduledTimer(timeInterval: 15, target: self,
+//                                            selector: .setupErrorView, userInfo: nil, repeats: false)
+//    }
     
     @discardableResult
     func checkLogin() -> Bool {
         if self.currentUser.isLoggedIn() {
             self.keychainData = self.currentUser.user()
-            self.requestLocationManager()
+            //self.requestLocationManager()
             self.containerView.updateUI(state: .loading)
+            
+            self.pointData = self.currentUser.configLocation().point()
+            
+            guard let address = self.pointData?.address else {
+                return false
+            }
+            
+            let message = LabelAttributed.address(address)
+            self.containerView.updateUI(state: .ready(.start(message)))
+
             return true
         } else {
             self.containerView.updateUI(state: .error(.login))
@@ -122,80 +131,80 @@ extension TodayViewController {
         }
     }
     
-    private func setupLocationCallback() {
-        self.locationManager.locationCallback = { (location, error) in
-            if !self.currentUser.isLoggedIn() {
-                self.containerView.updateUI(state: .error(.login))
-                return
-            }
-            
-            guard let location = location else {
-                let message = LabelAttributed.custom(error?.localizedDescription ?? "Erro")
-                self.containerView.updateUI(state: .error(.custom(message, {
-                    self.requestLocationManager()
-                })))
-                return
-            }
-            
-            self.geocoder.reverse(location: location, completeHandler: { (pointData, error) in
-                if error != nil {
-                    let message = LabelAttributed.errorGeocodeLocation
-                    self.containerView.updateUI(state: .error(.custom(message, {
-                        self.checkLogin()
-                    })))
-                } else {
-                    guard let address = pointData?.address else { return }
-                    self.pointData = pointData
-                    self.timerTimout?.invalidate()
-                    let message = LabelAttributed.address(address)
-                    self.containerView.updateUI(state: .ready(.start(message)))
-                }
-            })
-        }
-    }
+//    private func setupLocationCallback() {
+//        self.locationManager.locationCallback = { (location, error) in
+//            if !self.currentUser.isLoggedIn() {
+//                self.containerView.updateUI(state: .error(.login))
+//                return
+//            }
+//
+//            guard let location = location else {
+//                let message = LabelAttributed.custom(error?.localizedDescription ?? "Erro")
+//                self.containerView.updateUI(state: .error(.custom(message, {
+//                    self.requestLocationManager()
+//                })))
+//                return
+//            }
+//
+//            self.geocoder.reverse(location: location, completeHandler: { (pointData, error) in
+//                if error != nil {
+//                    let message = LabelAttributed.errorGeocodeLocation
+//                    self.containerView.updateUI(state: .error(.custom(message, {
+//                        self.checkLogin()
+//                    })))
+//                } else {
+//                    guard let address = pointData?.address else { return }
+//                    self.pointData = pointData
+//                    self.timerTimout?.invalidate()
+//                    let message = LabelAttributed.address(address)
+//                    self.containerView.updateUI(state: .ready(.start(message)))
+//                }
+//            })
+//        }
+//    }
+//
+//    private func setupAuthorizationStatusCallback() {
+//        self.locationManager.authorizationStatusCallback = { authorizationStatus in
+//            if authorizationStatus == .denied {
+//                let alert = UIAlertController(title: "Localização",
+//                                              message: "O acesso à localização foi negado, ative-a nas Configurações",
+//                                              preferredStyle: UIAlertControllerStyle.alert)
+//                alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
+//
+//                self.present(alert, animated: true, completion: nil)
+//            } else if CLLocationManager.authorizationStatus() == .notDetermined {
+//                self.locationManager.locationManager.requestWhenInUseAuthorization()
+//            } else if CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
+//                self.locationManager.locationManager.requestLocation()
+//            }
+//        }
+//    }
+//
+//    func requestLocationManager() {
+//        self.checkTimout()
+//        self.setupLocationCallback()
+//        self.setupAuthorizationStatusCallback()
+//        locationManager.requestAuthorization()
+//    }
     
-    private func setupAuthorizationStatusCallback() {
-        self.locationManager.authorizationStatusCallback = { authorizationStatus in
-            if authorizationStatus == .denied {
-                let alert = UIAlertController(title: "Localização",
-                                              message: "O acesso à localização foi negado, ative-a nas Configurações",
-                                              preferredStyle: UIAlertControllerStyle.alert)
-                alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
-                
-                self.present(alert, animated: true, completion: nil)
-            } else if CLLocationManager.authorizationStatus() == .notDetermined {
-                self.locationManager.locationManager.requestWhenInUseAuthorization()
-            } else if CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
-                self.locationManager.locationManager.requestLocation()
-            }
-        }
-    }
-    
-    func requestLocationManager() {
-        self.checkTimout()
-        self.setupLocationCallback()
-        self.setupAuthorizationStatusCallback()
-        locationManager.requestAuthorization()
-    }
-    
-    @objc
-    func setupErrorView() {
-        self.timerTimout?.invalidate()
-        containerView.updateUI(state: .error(.custom(LabelAttributed.errorLocation, {
-            self.checkLogin()
-        })))
-    }
+//    @objc
+//    func setupErrorView() {
+//        //self.timerTimout?.invalidate()
+////        containerView.updateUI(state: .error(.custom(LabelAttributed.errorLocation, {
+////            self.checkLogin()
+////        })))
+//    }
     
     @objc
     func setupReadyView() {
         self.timerStartup?.invalidate()
         containerView.updateUI(state: .loading)
-        self.requestLocationManager()
+        //self.requestLocationManager()
     }
     
     @objc
     func didTapReloadButton() {
-        self.requestLocationManager()
+        //self.requestLocationManager()
         containerView.updateUI(state: .loading)
     }
     

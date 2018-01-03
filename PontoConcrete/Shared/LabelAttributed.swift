@@ -18,13 +18,14 @@ public enum LabelAttributed {
     case buttonTry
     case login
     case errorRequest
-    case errorLocation
-    case errorGeocodeLocation
     case errorInternet
+    case location(String)
     
     func attributed() -> NSAttributedString {
         let fontAwesome = UIFont.fontAwesome(ofSize: 24)
         switch self {
+        case .location(let location):
+            return "Meu local ".withFont(.systemFont(ofSize: 14)) + "\u{f101} ".withFont(UIFont.fontAwesome(ofSize: 13)).withTextColor(.white) + location.withFont(.boldSystemFont(ofSize: 15))
         case .address(let address):
             return "Endereço aproximado: ".withFont(.systemFont(ofSize: 11)) + address.withFont(.boldSystemFont(ofSize: 12))
         case .salutationSuccess(let time):
@@ -35,12 +36,8 @@ public enum LabelAttributed {
             return "\u{f021}".withFont(fontAwesome).withTextColor(.catalinaBlue)
         case .buttonTry:
             return "\u{f021}".withFont(fontAwesome).withTextColor(.white) + " Tentar novamente".withFont(.systemFont(ofSize: 24)).withTextColor(.white)
-        case .errorLocation:
-            return "Houve um problema ao tentar obter sua localização".withFont(.systemFont(ofSize: 13)).withTextColor(.black)
         case .errorRequest:
             return "\u{f071}".withFont(UIFont.fontAwesome(ofSize: 13)) + "Ops.. houve um problema no request, tente novamente".withFont(.systemFont(ofSize: 13)).withTextColor(.black)
-        case .errorGeocodeLocation:
-            return "\u{f071}".withFont(UIFont.fontAwesome(ofSize: 13)) + "Ops.. não foi possível encontrar um endereço com a sua posição atual, tente novamente".withFont(.systemFont(ofSize: 13)).withTextColor(.black)
         case .login:
             return "Se logue no app para poder bater o ponto!".withFont(.systemFont(ofSize: 15)).withTextColor(.black)
         case .custom(let message):

@@ -26,8 +26,8 @@ class NotificationPointRJSpec: QuickSpec {
         
         it("should be able to read params") {
             expect(sut.name).to(equal("ConcreteRJ"))
-            expect(sut.point.latitude).to(equal(-22.910222))
-            expect(sut.point.longitude).to(equal(-43.172658))
+            expect(sut.point.point().location.coordinate.latitude).to(equal(-22.910222))
+            expect(sut.point.point().location.coordinate.longitude).to(equal(-43.172658))
         }
         
         it("should be able to build UNNotificationRequest") {
