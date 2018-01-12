@@ -14,6 +14,8 @@ class NotificationDefaultContent: UNMutableNotificationContent {
         super.init()
         self.title = "PontoConcrete"
         self.body = "Está chegando/saindo da Concrete? Não esqueça de bater o ponto!"
+        self.categoryIdentifier = "ReminderCategory"
+        self.sound = UNNotificationSound.default()
     }
     
     required init?(coder aDecoder: NSCoder) {

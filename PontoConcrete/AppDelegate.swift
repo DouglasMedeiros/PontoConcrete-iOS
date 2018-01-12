@@ -24,8 +24,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             CurrentUser.shared.remove()
         }
         
+<<<<<<< Updated upstream
         self.swiftWatchConnectivity = SwiftWatchConnectivity.shared
         self.swiftWatchConnectivity?.delegate = self
+=======
+        
+        
+        self.swiftWatchConnectivity = WatchConnectivityManager()
+        self.swiftWatchConnectivity?.start()
+>>>>>>> Stashed changes
         
         let window = UIWindow(frame: UIScreen.main.bounds)
         

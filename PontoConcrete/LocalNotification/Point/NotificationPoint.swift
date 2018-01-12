@@ -14,3 +14,4 @@ protocol NotificationPoint {
     var name: String { get }
     func request() -> UNNotificationRequest
 }
+

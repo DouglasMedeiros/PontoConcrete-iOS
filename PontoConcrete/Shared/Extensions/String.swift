@@ -17,4 +17,18 @@ extension String {
     static let logout = "logout"
     static let location = "location"
     static let command = "command"
+<<<<<<< Updated upstream
+=======
+    static let headquarter = "headquarter"
+    
+    static let registerAction = "RegisterAction"
+    static let cancelAction = "CancelAction"
+    static let reminderCategory = "ReminderCategory"
+    
+    static let firstLaunch = "firstLaunch"
+}
+
+extension AnyHashable {
+    static let location = "location"
+>>>>>>> Stashed changes
 }

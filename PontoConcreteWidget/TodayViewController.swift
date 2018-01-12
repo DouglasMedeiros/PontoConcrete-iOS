@@ -14,7 +14,10 @@ fileprivate extension Selector {
     static let registerTapped = #selector(TodayViewController.didTapRegisterButton)
     static let reloadTapped = #selector(TodayViewController.didTapReloadButton)
     static let setupReadyView = #selector(TodayViewController.setupReadyView)
+<<<<<<< Updated upstream
     static let setupErrorView = #selector(TodayViewController.setupErrorView)
+=======
+>>>>>>> Stashed changes
 }
 
 @objc (TodayViewController)
@@ -31,7 +34,10 @@ class TodayViewController: UIViewController {
     var keychainData: SessionData?
     
     var timerStartup: Timer?
+<<<<<<< Updated upstream
     var timerTimout: Timer?
+=======
+>>>>>>> Stashed changes
     
     init() {
         self.currentUser = CurrentUser.shared
@@ -53,7 +59,10 @@ class TodayViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+<<<<<<< Updated upstream
         containerView.readyView.reloadAddressButton.addTarget(self, action: .reloadTapped, for: .touchUpInside)
+=======
+>>>>>>> Stashed changes
         containerView.readyView.registerButton.addTarget(self, action: .registerTapped, for: .touchUpInside)
         
         self.checkLogin()
@@ -103,17 +112,23 @@ extension TodayViewController {
                                      selector: .setupReadyView, userInfo: nil, repeats: false)
     }
     
+<<<<<<< Updated upstream
     private func checkTimout() {
         self.timerTimout?.invalidate()
         timerTimout = Timer.scheduledTimer(timeInterval: 15, target: self,
                                             selector: .setupErrorView, userInfo: nil, repeats: false)
     }
     
+=======
+>>>>>>> Stashed changes
     @discardableResult
     func checkLogin() -> Bool {
         if self.currentUser.isLoggedIn() {
             self.keychainData = self.currentUser.user()
+<<<<<<< Updated upstream
             self.requestLocationManager()
+=======
+>>>>>>> Stashed changes
             self.containerView.updateUI(state: .loading)
             return true
         } else {
@@ -122,6 +137,7 @@ extension TodayViewController {
         }
     }
     
+<<<<<<< Updated upstream
     private func setupLocationCallback() {
         self.locationManager.locationCallback = { (location, error) in
             if !self.currentUser.isLoggedIn() {
@@ -186,16 +202,24 @@ extension TodayViewController {
         })))
     }
     
+=======
+>>>>>>> Stashed changes
     @objc
     func setupReadyView() {
         self.timerStartup?.invalidate()
         containerView.updateUI(state: .loading)
+<<<<<<< Updated upstream
         self.requestLocationManager()
+=======
+>>>>>>> Stashed changes
     }
     
     @objc
     func didTapReloadButton() {
+<<<<<<< Updated upstream
         self.requestLocationManager()
+=======
+>>>>>>> Stashed changes
         containerView.updateUI(state: .loading)
     }
     

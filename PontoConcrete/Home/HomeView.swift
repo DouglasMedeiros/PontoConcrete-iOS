@@ -156,5 +156,14 @@ extension HomeView: ViewConfiguration {
             make.left.right.equalTo(0).inset(20)
             make.bottom.equalTo(0).inset(20)
         }
+<<<<<<< Updated upstream
+=======
+        
+        changeLocationButton.snp.makeConstraints { make in
+            make.height.equalTo(40)
+            make.left.right.equalTo(0).inset(60)
+            make.top.equalTo(tutorialImage.snp.bottom).offset(-40)
+        }
+>>>>>>> Stashed changes
     }
 }

@@ -20,21 +20,39 @@ fileprivate extension Selector {
 
 class HomeViewController: UIViewController {
 
+    let api = PontoMaisService()
+    
     weak var delegate: HomeViewControllerDelegate?
     let containerView = HomeView()
     let location: LocationManager
     let userNotificationCenter: UserNotificationCenter
     let currentUser: CurrentUser
     let watchConnectivity: SwiftWatchConnectivity
+<<<<<<< Updated upstream
+=======
+    let firstLaunch: FirstLaunch
+    
+    let notificationDelegate = NotificationDelegate()
+    let notificationCenter = NotificationCenter.default
+>>>>>>> Stashed changes
     
     var uiAlertAction = UIAlertAction.self
     
-    init(location: LocationManager = LocationManager(), userNotificationCenter: UserNotificationCenter = UserNotificationCenter(), currentUser: CurrentUser = CurrentUser.shared, watchConnectivity: SwiftWatchConnectivity = SwiftWatchConnectivity.shared) {
+    init(location: LocationManager = LocationManager(),
+         userNotificationCenter: UserNotificationCenter = UserNotificationCenter(),
+         currentUser: CurrentUser = CurrentUser.shared,
+         watchConnectivity: SwiftWatchConnectivity = SwiftWatchConnectivity.shared) {
         self.location = location
         self.userNotificationCenter = userNotificationCenter
+        self.userNotificationCenter.center.delegate = self.notificationDelegate
+        
         self.currentUser = currentUser
         self.watchConnectivity = watchConnectivity
         super.init(nibName: nil, bundle: nil)
+        
+        self.notificationDelegate.actionCallback = {
+            self.registerAction()
+        }
     }
     
     override func loadView() {
@@ -47,6 +65,7 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.setupView()
     }
     
@@ -123,4 +142,47 @@ extension HomeViewController {
         alert.addAction(actionCancel)
         self.present(alert, animated: true, completion: nil)
     }
+<<<<<<< Updated upstream
+=======
+    
+    
+    private func registerAction() {
+        if !self.currentUser.isLoggedIn() {
+            print("Você não está logado!")
+            return
+        }
+        
+        let pointData = self.currentUser.configLocation().point()
+        
+        guard let sessionData = self.currentUser.user() else {
+            return
+        }
+        
+        self.register(credentials: sessionData, point: pointData)
+    }
+    
+    private func register(credentials: SessionData, point: PointData) {
+        self.api.register(credentials: credentials, point: point) { (response, result) in
+            switch result {
+            case .success:
+                if response != nil {
+                    
+                } else {
+                    // error request
+                }
+            case .failure(let error):
+
+                if case let .underlying(nsError as NSError, _) = error {
+                    if nsError.code == URLError.notConnectedToInternet.rawValue {
+                        //let message = LabelAttributed.errorInternet
+                        // error internet
+                        return
+                    }
+                }
+
+                // error request
+            }
+        }
+    }
+>>>>>>> Stashed changes
 }

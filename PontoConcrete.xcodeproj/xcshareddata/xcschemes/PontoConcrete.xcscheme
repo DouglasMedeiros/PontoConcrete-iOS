@@ -87,7 +87,7 @@
       <AdditionalOptions>
       </AdditionalOptions>
       <LocationScenarioReference
-         identifier = "../PontoConcrete/ConcreteSP.gpx"
+         identifier = "../../PontoConcrete/GPX/ConcreteSP.gpx"
          referenceType = "0">
       </LocationScenarioReference>
    </LaunchAction>

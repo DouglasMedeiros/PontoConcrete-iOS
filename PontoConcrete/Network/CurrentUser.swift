@@ -20,7 +20,7 @@ class CurrentUser: CurrentUserProtocol {
     
     static let shared = CurrentUser()
     
-    private init(keychain: KeychainSwift = KeychainSwift()) {
+    public init(keychain: KeychainSwift = KeychainSwift()) {
         self.keychain = keychain
     }
     

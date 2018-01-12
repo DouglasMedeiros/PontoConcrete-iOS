@@ -101,8 +101,19 @@
 		3CA95B1A1FC8803900383EA7 /* PontoMaisAPISpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA95B191FC8803900383EA7 /* PontoMaisAPISpec.swift */; };
 		3CA95B1C1FC90E8300383EA7 /* SessionDataSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA95B1B1FC90E8300383EA7 /* SessionDataSpec.swift */; };
 		3CA95B1E1FC9119D00383EA7 /* UIViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA95B1D1FC9119D00383EA7 /* UIViewSpec.swift */; };
+<<<<<<< Updated upstream
 		3CF4744A1FCD93ED00B4C984 /* GoogleGeocodeAPISpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF474491FCD93ED00B4C984 /* GoogleGeocodeAPISpec.swift */; };
 		3CF4744C1FCDB29000B4C984 /* GoogleGeocodeServiceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF4744B1FCDB29000B4C984 /* GoogleGeocodeServiceSpec.swift */; };
+=======
+		3CB996141FFD3C2700D63E94 /* NotificationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB996131FFD3C2700D63E94 /* NotificationDelegate.swift */; };
+		3CB996181FFE943100D63E94 /* NotificationRegisterFeedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB996171FFE943100D63E94 /* NotificationRegisterFeedback.swift */; };
+		3CB9961A1FFE970700D63E94 /* NotificationFeedbackType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB996191FFE970700D63E94 /* NotificationFeedbackType.swift */; };
+		3CB9961C1FFE97A500D63E94 /* NotificationFeedbackSuccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB9961B1FFE97A500D63E94 /* NotificationFeedbackSuccess.swift */; };
+		3CB9961E1FFE990F00D63E94 /* NotificationFeedbackFail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB9961D1FFE990F00D63E94 /* NotificationFeedbackFail.swift */; };
+		3CB996201FFE9B8B00D63E94 /* NotificationRegisterFeedbackContentSuccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB9961F1FFE9B8B00D63E94 /* NotificationRegisterFeedbackContentSuccess.swift */; };
+		3CB996221FFE9BC200D63E94 /* NotificationRegisterFeedbackContentFail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB996211FFE9BC200D63E94 /* NotificationRegisterFeedbackContentFail.swift */; };
+		3CF321A91FE8433400BCBD8F /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5398C2D1FB7770C0064CD0D /* Point.swift */; };
+>>>>>>> Stashed changes
 		3CFBA3471FC917C000D96FD4 /* DateSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFBA3461FC917C000D96FD4 /* DateSpec.swift */; };
 		3CFBA3491FC9C46600D96FD4 /* UIButtonSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFBA3481FC9C46600D96FD4 /* UIButtonSpec.swift */; };
 		3CFBA34B1FC9D95900D96FD4 /* NotificationPointFactorySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFBA34A1FC9D95900D96FD4 /* NotificationPointFactorySpec.swift */; };
@@ -378,8 +389,18 @@
 		3CA95B191FC8803900383EA7 /* PontoMaisAPISpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PontoMaisAPISpec.swift; sourceTree = "<group>"; };
 		3CA95B1B1FC90E8300383EA7 /* SessionDataSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionDataSpec.swift; sourceTree = "<group>"; };
 		3CA95B1D1FC9119D00383EA7 /* UIViewSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewSpec.swift; sourceTree = "<group>"; };
+<<<<<<< Updated upstream
 		3CF474491FCD93ED00B4C984 /* GoogleGeocodeAPISpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleGeocodeAPISpec.swift; sourceTree = "<group>"; };
 		3CF4744B1FCDB29000B4C984 /* GoogleGeocodeServiceSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleGeocodeServiceSpec.swift; sourceTree = "<group>"; };
+=======
+		3CB996131FFD3C2700D63E94 /* NotificationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationDelegate.swift; sourceTree = "<group>"; };
+		3CB996171FFE943100D63E94 /* NotificationRegisterFeedback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationRegisterFeedback.swift; sourceTree = "<group>"; };
+		3CB996191FFE970700D63E94 /* NotificationFeedbackType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationFeedbackType.swift; sourceTree = "<group>"; };
+		3CB9961B1FFE97A500D63E94 /* NotificationFeedbackSuccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationFeedbackSuccess.swift; sourceTree = "<group>"; };
+		3CB9961D1FFE990F00D63E94 /* NotificationFeedbackFail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationFeedbackFail.swift; sourceTree = "<group>"; };
+		3CB9961F1FFE9B8B00D63E94 /* NotificationRegisterFeedbackContentSuccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationRegisterFeedbackContentSuccess.swift; sourceTree = "<group>"; };
+		3CB996211FFE9BC200D63E94 /* NotificationRegisterFeedbackContentFail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationRegisterFeedbackContentFail.swift; sourceTree = "<group>"; };
+>>>>>>> Stashed changes
 		3CFBA3461FC917C000D96FD4 /* DateSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSpec.swift; sourceTree = "<group>"; };
 		3CFBA3481FC9C46600D96FD4 /* UIButtonSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonSpec.swift; sourceTree = "<group>"; };
 		3CFBA34A1FC9D95900D96FD4 /* NotificationPointFactorySpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationPointFactorySpec.swift; sourceTree = "<group>"; };
@@ -618,6 +639,34 @@
 			path = SkyFloatingLabelTextField;
 			sourceTree = "<group>";
 		};
+		3CB996151FFE93FE00D63E94 /* Point */ = {
+			isa = PBXGroup;
+			children = (
+				A5398C2F1FB7771A0064CD0D /* NotificationDefaultContent.swift */,
+				A5398C251FB7769F0064CD0D /* NotificationPoint.swift */,
+				A5398C311FB777280064CD0D /* NotificationPointFactory.swift */,
+				A5398C2B1FB776E20064CD0D /* NotificationPointBH.swift */,
+				A5398C291FB776DC0064CD0D /* NotificationPointRJ.swift */,
+				A5398C271FB776BF0064CD0D /* NotificationPointSP.swift */,
+				A5398C2D1FB7770C0064CD0D /* Point.swift */,
+				3CB996131FFD3C2700D63E94 /* NotificationDelegate.swift */,
+			);
+			path = Point;
+			sourceTree = "<group>";
+		};
+		3CB996161FFE941800D63E94 /* RegisterFeedback */ = {
+			isa = PBXGroup;
+			children = (
+				3CB996171FFE943100D63E94 /* NotificationRegisterFeedback.swift */,
+				3CB996191FFE970700D63E94 /* NotificationFeedbackType.swift */,
+				3CB9961B1FFE97A500D63E94 /* NotificationFeedbackSuccess.swift */,
+				3CB9961D1FFE990F00D63E94 /* NotificationFeedbackFail.swift */,
+				3CB9961F1FFE9B8B00D63E94 /* NotificationRegisterFeedbackContentSuccess.swift */,
+				3CB996211FFE9BC200D63E94 /* NotificationRegisterFeedbackContentFail.swift */,
+			);
+			path = RegisterFeedback;
+			sourceTree = "<group>";
+		};
 		A017F3B81F69B528007BB2FA = {
 			isa = PBXGroup;
 			children = (
@@ -749,13 +798,8 @@
 		A5398C241FB776890064CD0D /* LocalNotification */ = {
 			isa = PBXGroup;
 			children = (
-				A5398C2F1FB7771A0064CD0D /* NotificationDefaultContent.swift */,
-				A5398C251FB7769F0064CD0D /* NotificationPoint.swift */,
-				A5398C2B1FB776E20064CD0D /* NotificationPointBH.swift */,
-				A5398C311FB777280064CD0D /* NotificationPointFactory.swift */,
-				A5398C291FB776DC0064CD0D /* NotificationPointRJ.swift */,
-				A5398C271FB776BF0064CD0D /* NotificationPointSP.swift */,
-				A5398C2D1FB7770C0064CD0D /* Point.swift */,
+				3CB996161FFE941800D63E94 /* RegisterFeedback */,
+				3CB996151FFE93FE00D63E94 /* Point */,
 			);
 			path = LocalNotification;
 			sourceTree = "<group>";
@@ -1222,12 +1266,21 @@
 				3C211B3C1FCCEEAE0042300F /* GoogleGeocodeRoute.swift in Sources */,
 				A5398C2C1FB776E20064CD0D /* NotificationPointBH.swift in Sources */,
 				3C9E04CA1FC0CF1F00DC0986 /* SkyFloatingLabelTextField.swift in Sources */,
+				3CB996181FFE943100D63E94 /* NotificationRegisterFeedback.swift in Sources */,
 				A5398C3D1FB791430064CD0D /* HomeViewController.swift in Sources */,
+				3CB996201FFE9B8B00D63E94 /* NotificationRegisterFeedbackContentSuccess.swift in Sources */,
 				3C14ECF01FD36BE70077A33B /* WatchConnectivityManager.swift in Sources */,
 				3C9968D81FD23B3F0012E22F /* ProcessInfo.swift in Sources */,
 				3C0A34C81FBD15DE00567391 /* PontoMaisService.swift in Sources */,
+				3CB9961C1FFE97A500D63E94 /* NotificationFeedbackSuccess.swift in Sources */,
+				3CB9961A1FFE970700D63E94 /* NotificationFeedbackType.swift in Sources */,
 				A017F3EE1F69BD12007BB2FA /* LoginResponse.swift in Sources */,
 				A5398C471FB79FE20064CD0D /* LogoView.swift in Sources */,
+<<<<<<< Updated upstream
+=======
+				3C6E2DA31FE75D8300B2FBAE /* FirstLaunch.swift in Sources */,
+				3CB9961E1FFE990F00D63E94 /* NotificationFeedbackFail.swift in Sources */,
+>>>>>>> Stashed changes
 				3C13F7311FC66123003E50ED /* String.swift in Sources */,
 				A5398C301FB7771A0064CD0D /* NotificationDefaultContent.swift in Sources */,
 				A5398C3B1FB78B930064CD0D /* LoginViewController.swift in Sources */,
@@ -1251,6 +1304,7 @@
 				3C5300191FCB09ED0056553E /* UIAlertAction.swift in Sources */,
 				3C211B421FCCF3660042300F /* GeocodeResponse.swift in Sources */,
 				A50EA7191FB8ECC700F21A88 /* SessionData.swift in Sources */,
+				3CB996221FFE9BC200D63E94 /* NotificationRegisterFeedbackContentFail.swift in Sources */,
 				A5398C321FB777280064CD0D /* NotificationPointFactory.swift in Sources */,
 				A5398C5C1FB7BE5D0064CD0D /* RootViewControllerProvider.swift in Sources */,
 				A5398C621FB7D8590064CD0D /* LoginView.swift in Sources */,
@@ -1260,7 +1314,11 @@
 				A017F3EC1F69BC64007BB2FA /* RegisterResponse.swift in Sources */,
 				A084C7081F96825500F286C5 /* UIButton+Designable.swift in Sources */,
 				A5398C531FB7AC8E0064CD0D /* HomeView.swift in Sources */,
+<<<<<<< Updated upstream
 				A0667DAE1FDB10380083A46C /* GeocoderManager.swift in Sources */,
+=======
+				3CB996141FFD3C2700D63E94 /* NotificationDelegate.swift in Sources */,
+>>>>>>> Stashed changes
 				A5398C261FB7769F0064CD0D /* NotificationPoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

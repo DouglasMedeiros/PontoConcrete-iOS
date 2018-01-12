@@ -34,4 +34,5 @@ class NotificationPointBH: NotificationPoint {
         
         return UNNotificationRequest(identifier: self.name, content: self.content, trigger: trigger)
     }
+    
 }

@@ -10,13 +10,15 @@ import Foundation
 
 enum NotificationPointFactory {
     static func notification(for point: Point) -> NotificationPoint {
+        let content = NotificationDefaultContent()
+        
         switch point {
         case .saoPaulo:
-            return NotificationPointSP(content: NotificationDefaultContent())
+            return NotificationPointSP(content: content)
         case .rioDeJaneiro:
-            return NotificationPointRJ(content: NotificationDefaultContent())
+            return NotificationPointRJ(content: content)
         case .minasGerais:
-            return NotificationPointBH(content: NotificationDefaultContent())
+            return NotificationPointBH(content: content)
         }
     }
 }
