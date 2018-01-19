@@ -158,7 +158,7 @@ extension HomeView: ViewConfiguration {
         changeLocationButton.snp.makeConstraints { make in
             make.height.equalTo(40)
             make.left.right.equalTo(0).inset(60)
-            make.top.equalTo(highlights.snp.bottom).inset(40)
+            make.bottom.equalTo(tutorialImage.snp.bottom).offset(20)
         }
     }
 }
