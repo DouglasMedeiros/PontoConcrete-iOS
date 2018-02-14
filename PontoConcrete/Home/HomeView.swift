@@ -57,7 +57,7 @@ class HomeView: UIView {
         view.accessibilityLabel = "location"
         view.isAccessibilityElement = true
         view.accessibilityTraits = UIAccessibilityTraitButton
-        view.backgroundColor = UIColor(red:0.11, green:0.24, blue:0.55, alpha:1.00)
+        view.backgroundColor = UIColor(red: 0.11, green: 0.24, blue: 0.55, alpha: 1.00)
         view.borderColor = UIColor.white.withAlphaComponent(0.5)
         view.borderWidth = 1
         view.cornerRadius = 10

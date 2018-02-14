@@ -29,7 +29,7 @@ class FirstLaunch {
     }
 }
 
-struct AlwaysFirstLaunchDataSource : FirstLaunchDataSource {
+struct AlwaysFirstLaunchDataSource: FirstLaunchDataSource {
     
     func getWasLaunchedBefore() -> Bool {
         return false
@@ -38,7 +38,7 @@ struct AlwaysFirstLaunchDataSource : FirstLaunchDataSource {
     func setWasLaunchedBefore(_ wasLaunchedBefore: Bool) { }
 }
 
-struct UserDefaultsFirstLaunchDataSource : FirstLaunchDataSource {
+struct UserDefaultsFirstLaunchDataSource: FirstLaunchDataSource {
     
     let defaults: UserDefaults
     let key: String

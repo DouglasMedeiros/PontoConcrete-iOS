@@ -30,7 +30,6 @@ class HomeViewController: UIViewController {
     
     let notificationCenter = NotificationCenter.default
     
-    
     var uiAlertAction = UIAlertAction.self
     
     init(location: LocationManager = LocationManager(), userNotificationCenter: UserNotificationCenter = UserNotificationCenter(), currentUser: CurrentUser = CurrentUser.shared, watchConnectivity: SwiftWatchConnectivity = SwiftWatchConnectivity.shared) {

@@ -161,17 +161,17 @@ public class SwiftWatchConnectivity: NSObject {
     private func invokeSendMessage(_ message: [String: Any]) {
         WCSession.default.sendMessage(message, replyHandler: { (reply) in
             print("reply: \(reply)")
-        }) { (error) in
+        }, errorHandler: { (error) in
             print("error: \(error)")
-        }
+        })
     }
 
     private func invokeSendMessageData(_ data: Data) {
         WCSession.default.sendMessageData(data, replyHandler: { (reply) in
             print("reply: \(reply)")
-        }) { (error) in
+        }, errorHandler: { (error) in
             print("error: \(error)")
-        }
+        })
     }
 
     /**
@@ -238,12 +238,12 @@ extension SwiftWatchConnectivity: WCSessionDelegate {
         //        isReachable = session.isReachable
     }
 
-    public func session(_ session: WCSession, didReceiveApplicationContext applicationContext: [String : Any]) {
+    public func session(_ session: WCSession, didReceiveApplicationContext applicationContext: [String: Any]) {
         print("applicationContext: \(applicationContext)")
         receivedTasks.append(.updateApplicationContext(applicationContext))
         invokeReceivedTasks()
     }
-    public func session(_ session: WCSession, didReceiveUserInfo userInfo: [String : Any] = [:]) {
+    public func session(_ session: WCSession, didReceiveUserInfo userInfo: [String: Any] = [:]) {
         print("userInfo: \(userInfo)")
         receivedTasks.append(.transferUserInfo(userInfo))
         invokeReceivedTasks()
@@ -253,7 +253,7 @@ extension SwiftWatchConnectivity: WCSessionDelegate {
         receivedTasks.append(.transferFile(file.fileURL, file.metadata))
         invokeReceivedTasks()
     }
-    public func session(_ session: WCSession, didReceiveMessage message: [String : Any], replyHandler: @escaping ([String : Any]) -> Void) {
+    public func session(_ session: WCSession, didReceiveMessage message: [String: Any], replyHandler: @escaping ([String: Any]) -> Void) {
         print("message: \(message)")
         #if os(watchOS)
             let device = "watch"
@@ -271,4 +271,3 @@ extension SwiftWatchConnectivity: WCSessionDelegate {
         invokeReceivedTasks()
     }
 }
-
