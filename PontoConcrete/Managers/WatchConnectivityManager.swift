@@ -56,7 +56,7 @@ extension WatchConnectivityManager: SwiftWatchConnectivityDelegate {
                     return
                 }
                 
-                let userInfo: [AnyHashable : Any] = [.location: point.rawValue]
+                let userInfo: [AnyHashable: Any] = [.location: point.rawValue]
                 self.notificationCenter.post(name: .locationChanged, object: self, userInfo: userInfo)
             }
         }

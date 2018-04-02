@@ -48,15 +48,15 @@ class HomeInterfaceController: WKInterfaceController {
             var imageName: String
             
             switch point {
-                case .saoPaulo:
-                    imageName = "brasao-sp"
-                    selector = #selector(HomeInterfaceController.updateHeadquarterSP)
-                case .rioDeJaneiro:
-                    imageName = "brasao-rj"
-                    selector = #selector(HomeInterfaceController.updateHeadquarterRJ)
-                case .minasGerais:
-                    imageName = "brasao-bh"
-                    selector = #selector(HomeInterfaceController.updateHeadquarterMG)
+            case .saoPaulo:
+                imageName = "brasao-sp"
+                selector = #selector(HomeInterfaceController.updateHeadquarterSP)
+            case .rioDeJaneiro:
+                imageName = "brasao-rj"
+                selector = #selector(HomeInterfaceController.updateHeadquarterRJ)
+            case .minasGerais:
+                imageName = "brasao-bh"
+                selector = #selector(HomeInterfaceController.updateHeadquarterMG)
             }
             guard let image = UIImage(named: imageName) else {
                 return
