@@ -5,7 +5,7 @@
   "watchOS" : [
     {
       "name" : "FontAwesome",
-      "hash" : "9ed4cf2aad76a74873e0f4e277c35c654b4728184bb663ace33a2be3a247a798"
+      "hash" : "37645717ebacfc36aab77b7353031cfcf89bfdc36bbfbd26ab917432af1ff380"
     }
   ],
   "tvOS" : [
@@ -15,7 +15,7 @@
   "iOS" : [
     {
       "name" : "FontAwesome",
-      "hash" : "cb686446ac50cbf11ae026f132e55e887eec1d1f11d987bbebf36f64bd5ec17e"
+      "hash" : "b90dd8d4610ca52451d0e2f1620e01c9656dfd46335b0bf3e078d3c8bf6037e9"
     }
   ]
 }

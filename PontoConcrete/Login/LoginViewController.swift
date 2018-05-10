@@ -134,8 +134,8 @@ extension LoginViewController {
     }
     
     private func configureUITests() {
-        let endpointClosure = { (target: PontoMaisRoute) -> Endpoint<PontoMaisRoute> in
-            return Endpoint<PontoMaisRoute>(url: URL(target: target).absoluteString,
+        let endpointClosure = { (target: PontoMaisRoute) -> Endpoint in
+            return Endpoint(url: URL(target: target).absoluteString,
                                             sampleResponseClosure: {
                                                 return .networkResponse(200, target.sampleData)
             }, method: target.method, task: target.task, httpHeaderFields: target.headers)

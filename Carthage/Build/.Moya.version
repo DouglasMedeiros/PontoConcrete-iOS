@@ -1,59 +1,59 @@
 {
   "Mac" : [
     {
-      "name" : "Moya",
-      "hash" : "735c5665211b256bfd6e6284473111d715a76e04a14108865fff266c69d8155f"
+      "name" : "RxMoya",
+      "hash" : "b2589571669e4e331427f71082b316aebee005a724578a4eb3ed043fb0148b99"
     },
     {
       "name" : "ReactiveMoya",
-      "hash" : "7a837d2e5562b4813b5bd4d826822916a88176bde1aba46ab07106d50b67ecd0"
+      "hash" : "be78695350e2be58031756bcd2c796779b8fd82a0a6566f13d7b92a792bce263"
     },
     {
-      "name" : "RxMoya",
-      "hash" : "0b4587bac98e672e3d87668740663e9aa8c7c89c61c9bbcc232a878c57159b21"
+      "name" : "Moya",
+      "hash" : "6c4c214f11a18a4b213e05c2f971eba44ec991f3274f33235386c7246aefef39"
     }
   ],
   "watchOS" : [
     {
-      "name" : "Moya",
-      "hash" : "0ceb0b6a5c23af2937a060527447406563a8cc3dee28573b9dc0ab8dfd1167f0"
-    },
-    {
       "name" : "RxMoya",
-      "hash" : "d1ba3c91ea122b400103e40b3a192380c8753f05d685fdd1254ab9e49d59d692"
+      "hash" : "eb6ec41aaee7f053c768ccbbb8cde73dfb6f6df009d184667741936568452e08"
     },
     {
       "name" : "ReactiveMoya",
-      "hash" : "a09b1fe3b3183895bd58b4f5b937ed1d83713ee15c7c30c7cec152066c62f2b8"
+      "hash" : "d22dfbdcc5df7e8da8b475148fc090994a941b2d70d7e0ffa000eb685ca09e58"
+    },
+    {
+      "name" : "Moya",
+      "hash" : "e376853a824b604d2e840366e39823b5883ae5cf02db6855a89f0d1897b6584b"
     }
   ],
   "tvOS" : [
     {
+      "name" : "RxMoya",
+      "hash" : "abcafee0c0fa1635a258b878bf9492a6ca3dbb28d461cc0876c8030441fe977b"
+    },
+    {
       "name" : "ReactiveMoya",
-      "hash" : "784416f2258a28472e080113a61f9bd7dd55c6342af0f568326febd8e6a3ba63"
+      "hash" : "f99c713ea00ab06108bb16b5980bc9d58ebdfb1f613b05419ee95c5e03ce9454"
     },
     {
       "name" : "Moya",
-      "hash" : "8b0e3eb1dc75b282a50e3da0b729d0440c674658e4840b82d35799a0e672f2fd"
-    },
-    {
-      "name" : "RxMoya",
-      "hash" : "885574276e62652e83af2933f81ce4c5418165df8be9830830d848435f992ef6"
+      "hash" : "3009bbad887452401f147f2467abbb18457e5c81ead076d007bc672cd60b3405"
     }
   ],
-  "commitish" : "10.0.1",
+  "commitish" : "f6d736ea6da7e67d1c219980fe10630699a813d1",
   "iOS" : [
     {
-      "name" : "ReactiveMoya",
-      "hash" : "06a0f0e857a59c51dcf36f41fa0e0cf62c19f8724f05c5af50c0d2ae3b29eed3"
+      "name" : "RxMoya",
+      "hash" : "8cd260d19460e2f1e7954f1b544efb0e49979200b966253125174d4ce21bee95"
     },
     {
-      "name" : "RxMoya",
-      "hash" : "dea6a7f840170e5bf4ac1b6419c0e46d81454d07f9a2e22fc74f2867ccbc6f6a"
+      "name" : "ReactiveMoya",
+      "hash" : "8eb1fa78f72a0bb69ed0a1a7771c6a282365ca045170ed3dd782664878c23e62"
     },
     {
       "name" : "Moya",
-      "hash" : "1ebc965be56ede977343e18276d0a649d88c2b09df103b99640b0a999d6ca63a"
+      "hash" : "aa3e085b04a03abba748b3bdcde582a3ccc21aaf1203a5bcfff26197e6ba1221"
     }
   ]
 }
